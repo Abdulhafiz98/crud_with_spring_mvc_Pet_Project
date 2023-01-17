@@ -1,0 +1,143 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Register</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 15px;
+            background-image: linear-gradient(45deg, #9796f0,#fbc7d4);
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 370px;
+            height: auto;
+            margin: auto;
+        }
+
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 999;
+            width: 100%;
+            padding: 30px 20px;
+            border: solid 1px rgba(255, 255, 255, .5);
+            border-radius: 16px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, .1),
+            -4px -4px 10px rgba(0, 0, 0, .1);
+            background-color: rgba(255, 255, 255, .1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        form input {
+            width: 100%;
+            height: 40px;
+            margin: 10px auto;
+            padding: 15px 20px;
+            border: solid 1px rgba(255, 255, 255, .5);
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, .2);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
+        form input::placeholder {
+            color: rgba(255, 255, 255, .8);
+        }
+        form .btn {
+            width: 50%;
+            height: 50px;
+            margin: 20px auto 10px;
+            border: none;
+            border-radius: 25px;
+            background-color: #fff;
+            color: #3d3935;
+            font-size: 1.25rem;
+            outline: none;
+            cursor: pointer;
+        }
+        .text {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        .text a {
+            color: #fff;
+        }
+        form btn:hover,
+        .text a:hover {
+            opacity: .8;
+        }
+    </style>
+</head>
+<body>
+<div id="container" style="position: fixed;">
+
+<div class="box">
+    <div class="form-box">
+
+        <form class="/register" action="" method="post" enctype="multipart/form-data">
+
+            <input type="text" name="first_name" placeholder="Enter First Name ...">
+            <input type="text" name="last_name" placeholder="Enter Last Name ...">
+            <input type="text" name="phone_number"  placeholder="Enter Telephone Number ...">
+            <input type="text" name="username"  placeholder="Enter Username ...">
+            <input type="password" name="password" placeholder="Enter Password ...">
+
+            <center><button type="submit" class="btn">Registration</button></center>
+
+
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+
+<%--<html>--%>
+<%--<head>--%>
+<%--    <title></title>--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--<center>--%>
+<%--<form action="/register" method="post" >--%>
+<%--    <input type="text" name="first_name" placeholder="enter first name ...">--%>
+<%--    <br>--%>
+<%--    <input type="text" name="last_name" placeholder="enter last name ...">--%>
+<%--    <br>--%>
+<%--    <input type="text" name="phone_number" placeholder="enter phone number ...">--%>
+<%--    <br>--%>
+<%--    <input type="text" name="username" placeholder="enter username ...">--%>
+<%--    <br>--%>
+<%--    <input type="password" name="password" placeholder="enter password ...">--%>
+<%--    <br>--%>
+<%--    <button type="submit">submit</button>--%>
+<%--</form>--%>
+<%--</center>--%>
+
+<%--</body>--%>
+<%--</html>--%>

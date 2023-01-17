@@ -17,10 +17,16 @@ public class HomeController {
 //        model.addAttribute("text","Good");
         return "admin/index";
     }
-    @GetMapping("sign-up")
-    public ModelAndView signUp(){
+    @GetMapping("/login")
+    public ModelAndView login(){
         ModelAndView modelAndView =
-                new ModelAndView("sign-up");
+                new ModelAndView("login");
+        return modelAndView;
+    }
+    @GetMapping("/register")
+    public ModelAndView register(){
+        ModelAndView modelAndView =
+                new ModelAndView("register");
         return modelAndView;
     }
 
