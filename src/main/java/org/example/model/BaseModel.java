@@ -10,8 +10,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public abstract class BaseModel {
     protected int id;
-    protected String createdBy;
+    protected int createdBy;
     protected LocalDateTime createdDate;
     protected LocalDateTime updatedDate;
+
 
 }

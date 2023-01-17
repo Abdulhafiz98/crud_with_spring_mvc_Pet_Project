@@ -27,7 +27,6 @@ public class AuthService {
                 .email(userRegisterRequest.getEmail())
                 .password(userRegisterRequest.getPassword())
                 .build();
-
         return userDao.add(user);
     }
 

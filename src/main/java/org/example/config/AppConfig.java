@@ -1,5 +1,7 @@
 package org.example.config;
 
+import org.example.dao.CategoryDao;
+import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.AuthService;
 import org.example.service.UserService;
@@ -51,6 +53,10 @@ public class AppConfig implements WebMvcConfigurer {
     UserDao userDao() {
         return new UserDao(jdbcTemplate());
     }
+    @Bean
+    ProductDao productDao(){return new ProductDao(jdbcTemplate());}
+    @Bean
+    CategoryDao categoryDao(){return new CategoryDao(jdbcTemplate());}
 
     @Bean
     AuthService authService() {

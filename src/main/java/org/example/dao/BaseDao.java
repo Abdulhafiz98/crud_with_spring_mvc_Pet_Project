@@ -1,7 +1,5 @@
 package org.example.dao;
 
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 public interface BaseDao<T> {
