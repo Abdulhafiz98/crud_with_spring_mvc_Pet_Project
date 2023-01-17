@@ -3,10 +3,12 @@ package org.example.controller;
 import org.example.dto.UserLoginRequest;
 import org.example.dto.UserRegisterRequest;
 import org.example.model.User;
+import org.example.model.UserRole;
 import org.example.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,13 @@ public class AuthController {
     public AuthController(AuthService authService) {
         this.authService = authService;
     }
+
+
+    @GetMapping("/register")
+    public String main() {
+        return "admin/register";
+    }
+
 
     @PostMapping("/register")
     public ModelAndView register(
@@ -41,7 +50,9 @@ public class AuthController {
     ) {
         User currentUser = authService.login(loginRequest);
         model.addAttribute("message", "username or password is incorrect");
-        return "index";
+        model.addAttribute("isSuperAdmin", currentUser.getUserRole().equals(UserRole.SUPER_ADMIN));
+        model.addAttribute("user", currentUser);
+        return "admin/index";
 
     }
 
