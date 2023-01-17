@@ -1,7 +1,11 @@
 package org.example.config;
 
+import org.example.dao.CategoryDao;
+import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.AuthService;
+import org.example.service.CategoryService;
+import org.example.service.ProductService;
 import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -57,9 +61,29 @@ public class AppConfig implements WebMvcConfigurer {
         return new AuthService(userDao());
     }
 
-//    @Bean
-//    UserService userService() {
-//        return new UserService(userDao());
-//    }
+    @Bean
+    CategoryDao categoryDao(){
+        return new CategoryDao(jdbcTemplate());
+    }
+
+    @Bean
+    ProductDao productDao(){
+        return new ProductDao(jdbcTemplate());
+    }
+
+    @Bean
+    CategoryService categoryService(){
+        return new CategoryService(categoryDao());
+    }
+
+    @Bean
+    ProductService productService(){
+        return new ProductService(productDao(),categoryDao());
+    }
+
+    @Bean
+    UserService userService() {
+        return new UserService(userDao());
+    }
 
 }

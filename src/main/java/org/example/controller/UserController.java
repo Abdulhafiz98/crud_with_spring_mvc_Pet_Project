@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/admin/user")
 public class UserController {
 
     private final UserService userService;
@@ -22,7 +22,7 @@ public class UserController {
     @GetMapping("/list")
     public String getUserList(Model model) {
         model.addAttribute("userList", userService.getUserList());
-        return "admin/index";
+        return "admin/user";
     }
 
     @GetMapping("/delete/{id}")
@@ -41,7 +41,8 @@ public class UserController {
     ) {
         User user = userService.getUser(id);
         model.addAttribute("user", user);
-        model.addAttribute("userList", userService.getUserList());        return "admin/index";
+        model.addAttribute("userList", userService.getUserList());
+        return "admin/admin";
     }
 
 }
