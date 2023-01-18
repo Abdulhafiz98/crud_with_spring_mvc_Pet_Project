@@ -44,11 +44,11 @@
 
                 <tbody>
                 <tr th:each="product: ${productList}">
-                    <td th:text="${product.name}"/>
-                    <td th:text="${product.quantity}"/>
-                    <td th:text="${product.price}"/>
-                    <td th:text="${product.info}"/>
-                    <td th:text="${product.categoryName}"/>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.quantity}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.info}"></td>
+                    <td th:text="${product.categoryName}"></td>
                     <td>
                         <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
                         <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>
@@ -60,9 +60,6 @@
         </div>
     </div>
 
-</div>
-</div>
-</div>
 </div>
 
 <script type="text/javascript">

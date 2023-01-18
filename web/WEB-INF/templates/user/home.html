@@ -2,49 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Panel</title>
-
+    <title>user</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
-            <ul class="">
+            <ul >
                 <li>
-                    <a href="/admin/product/list">product</a>
-                </li>
-                <li>
-                    <a href="/admin/category/list">category</a>
+                    <a href="/user/cabinet">Personal Cabinet</a>
                 </li>
                 <li>
-                    <a href="/admin/user/list">user</a>
+                    <a href="">other</a>
                 </li>
-                <li th:if="${isSuperAdmin}">
-                    <a href="/user/list">admin</a>
-                </li>
+                <li>
+                    <a href="">other</a>
                 </li>
             </ul>
         </div>
         <div class="col-md-10">
-            <h1>WELCOME TO OUR ADMIN PANEL</h1>
+            <h1>WELCOME TO OUR USER PANEL</h1>
         </div>
     </div>
 
 </div>
-
-<script type="text/javascript">
-    function getUser(id) {
-        console.log("RAVSHAN")
-        // fetch("/user/update/" + id).then((res) => {
-        //     console.log(res.data)
-        // })
-    }
-</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -55,7 +40,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
 
 </body>
 </html>
