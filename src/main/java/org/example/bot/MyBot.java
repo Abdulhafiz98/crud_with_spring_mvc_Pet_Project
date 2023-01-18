@@ -1,7 +1,6 @@
 package org.example.bot;
 
 import org.example.bot.service.BotConstants;
-import org.example.bot.service.BotService;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
