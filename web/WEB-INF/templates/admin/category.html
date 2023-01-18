@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="ma in.css">
 
 </head>
 <body>
@@ -46,8 +46,12 @@
           <td th:text="${category.name}"/>
           <td th:text="${category.parentId}"/>
           <td>
-            <a th:href="@{/category/delete/{id}(id=${category.id})}">delete</a>
-            <a th:href="@{/category/update/{id}(id=${category.id})}" class="btn btn-primary">update</a>
+           <ul>
+             <a th:href="@{/category/delete/{id}(id=${category.id})}">delete</a>
+             <a th:href="@{/category/update/{id}(id=${category.id})}" class="btn btn-primary">update</a>
+           </ul>
+
+
           </td>
         </tr>
 
@@ -57,9 +61,7 @@
   </div>
 
 </div>
-</div>
-</div>
-</div>
+
 
 <script type="text/javascript">
   function getUser(id) {

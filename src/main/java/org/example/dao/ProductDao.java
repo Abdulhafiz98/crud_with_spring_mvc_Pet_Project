@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import lombok.NoArgsConstructor;
 import org.example.dao.mapper.ProductMapper;
 import org.example.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,7 +18,7 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public Product getById(int id) {
-        return null;
+        return jdbcTemplate.queryForObject("select * from product where id = ?", new Object[]{id},new ProductMapper());
     }
 
     @Override
@@ -27,14 +28,17 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return jdbcTemplate.update("delete from product where id = ?", new Object[]{id}) > 0;
+
     }
 
     @Override
     public boolean add(Product product) {
         return jdbcTemplate.update(
-                "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
+                "insert into product(name, product_url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
                 new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
         ) > 0;
     }
+
+
 }

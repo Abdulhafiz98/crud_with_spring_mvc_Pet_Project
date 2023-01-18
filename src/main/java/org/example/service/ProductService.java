@@ -2,6 +2,7 @@ package org.example.service;
 
 import org.example.dao.CategoryDao;
 import org.example.dao.ProductDao;
+import org.example.dao.mapper.ProductMapper;
 import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
 import org.example.model.Product;
@@ -18,8 +19,26 @@ public class ProductService {
         this.categoryDao = categoryDao;
     }
 
-    public boolean addProduct(Product product) {
+    public boolean addProduct(final ProductResponseDto responseDto) {
+        Product product = Product.builder()
+                .name(responseDto.getName())
+                .productUrl(responseDto.getProductUrl())
+                .price(responseDto.getPrice())
+                .quantity(responseDto.getQuantity())
+                .info(responseDto.getInfo())
+                .categoryId(getCategory(responseDto.getCategoryName()))
+                .build();
         return productDao.add(product);
+    }
+
+    public int getCategory(String name) {
+        List<Category> categoryList = categoryDao.getList();
+        for (Category category : categoryList) {
+            if (category.getName().equals(name)) {
+                return category.getId();
+            }
+        }
+        return -1;
     }
 
     public List<ProductResponseDto> getProductList() {
@@ -42,6 +61,9 @@ public class ProductService {
                     category1 == null ? "" : category1.getName()
             );
         }).toList();
+    }
+    public boolean deleteUser(int id){
+        return productDao.delete(id);
     }
 
 }
