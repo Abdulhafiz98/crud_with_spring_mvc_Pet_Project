@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/auth")
 public class AuthController {
@@ -26,29 +31,38 @@ public class AuthController {
     }
 
 
-
-
-
     @PostMapping("/register")
     public String register(
             Model model,
             @ModelAttribute UserRegisterRequest userRegisterRequest
     ) {
         boolean isSuccess = authService.addUser(userRegisterRequest);
-        return isSuccess ?"login":"register";
+        return isSuccess ? "login" : "register";
     }
 
     @PostMapping("/login")
     public String login(
             Model model,
+            HttpServletRequest httpServletRequest,
+            HttpServletResponse httpServletResponse,
             @ModelAttribute UserLoginRequest loginRequest
     ) {
+
         User currentUser = authService.login(loginRequest);
+
+        if (currentUser != null) {
+            addSession(httpServletRequest, httpServletResponse);
+        }
         model.addAttribute("message", "username or password is incorrect");
-        model.addAttribute("isSuperAdmin", currentUser.getUserRole()!=null&&currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
+        model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
         return "admin/index";
 
+    }
+
+    private void addSession(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(30);
     }
 
 
