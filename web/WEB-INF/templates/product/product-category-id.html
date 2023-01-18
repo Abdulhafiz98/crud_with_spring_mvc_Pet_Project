@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" th:href="@{/css/style.css}"/>
+    <title>Product</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            border: 0;
+            margin: 0;
+        }
+
+        .rowStyle{
+            display: flex;
+            row-gap: 100px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .cardStyle{
+            width: 250px;
+            height: 400px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .cardStyle > .imgIcon {
+            width: 100%;
+            height: 75%;
+            background-color: #0e32670a;
+            position: relative;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .imgIcon img{
+            margin-top: 20%;
+            border-radius: 12px;
+            width: 75%;
+        }
+
+        .cardStyle .product-text{
+            margin: 10px;
+        }
+        .likeIcon{
+            position: absolute;
+            bottom: 88%;
+            right: 15px;
+            font-size: 24px;
+            transition: 0.6s;
+            color: #686262;
+        }
+
+        .like{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conStyle">
+      <div class="rowStyle">
+            <div th:each="productCategory: ${productCategoryIdList}" class="cardStyle">
+             <div class="imgIcon">
+                <i class="fa fa-heart likeIcon" ></i>
+                <img  src="https://olcha.uz/image/440x440/products/UYRsmJUZcWJXbAXV7gyNTLnDEsWCooHlFZBEekS29yusW6Bb81pYQkRrpEsP.">
+             </div>
+              <div class="product-text">
+               <p> <i th:text="${productCategory.name}"></i></p>
+                  <p> <i th:text="${productCategory.info}"></i></p>
+               <p><b th:text="${productCategory.price}"></b></p>
+               <p><mark>1 724 000 сум x 12 мес</mark></p>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- <script src="./main.js"></script> -->
+</body>
+</html>

@@ -17,7 +17,7 @@ public class UserMapper implements RowMapper<User> {
                 .password(rs.getString("password"))
                 .userRole(UserRole.valueOf(rs.getString("role")))
                 .phoneNumber(rs.getString("phone_number"))
-                .chatId(rs.getLong("chatId"))
+                .chatId(rs.getLong("chat_id"))
                 .build();
         return user;
     }
