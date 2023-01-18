@@ -62,6 +62,20 @@
   </div>
 
 
+  <form action="user/update/" method="post" th:object="${user}">
+    <input type="hidden" th:field="*{id}" />
+    <input type="text" th:field="*{name}" class="form-control mb-4 col-4" placeholder="User name">
+    <input type="text" th:field="*{phoneNumber}" class="form-control mb-4 col-4" placeholder="User phone Number">
+    <input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Email">
+    <button type="submit" class="btn btn-info col-2"> Update User</button>
+  </form>
+
+  <hr>
+
+  <a th:href = "@{/user/list}"> Back to User List</a>
+
+
+
 </div>
 
 <script type="text/javascript">
