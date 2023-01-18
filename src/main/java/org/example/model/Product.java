@@ -13,6 +13,5 @@ public class Product extends BaseModel {
     private double price;
     private int quantity;
     private String info;
-
     private int categoryId;
 }
