@@ -10,16 +10,12 @@ public class SessionConfigInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
-        boolean isNew = session.isNew();
-        if (request.getServletPath().equals("/login")){
-            return true;
-        }
-        if (!isNew){
-            session.setMaxInactiveInterval(30);
-            return true;
-        } else{
+        boolean aNew = session.isNew();
+        String password = (String)session.getAttribute("password");
+        if (aNew&&!request.getServletPath().equals("/login")&&password==null){
             response.sendRedirect("/login");
-            return false;
         }
+        return true;
+
     }
 }

@@ -51,13 +51,14 @@ public class AuthController {
         User currentUser = authService.login(loginRequest);
 
         if (currentUser != null) {
-            addSession(httpServletRequest, httpServletResponse);
+            HttpSession session = httpServletRequest.getSession();
+            session.setAttribute("password",currentUser.getPassword());
+//            addSession(httpServletRequest, httpServletResponse);
+            model.addAttribute("user", currentUser);
+            if (currentUser.getUserRole().equals(UserRole.USER)) return "web/index";
+            else  return "admin/index";
         }
-        model.addAttribute("message", "username or password is incorrect");
-        model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
-        model.addAttribute("user", currentUser);
-        return "admin/index";
-
+        return "login";
     }
 
     private void addSession(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
