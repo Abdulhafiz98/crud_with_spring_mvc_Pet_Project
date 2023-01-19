@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.controller.admin;
 
 import org.example.dto.response.ProductResponseDto;
 import org.example.service.ProductService;

@@ -1,5 +1,7 @@
 package org.example.config;
 
+import netscape.javascript.JSObject;
+import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
@@ -12,13 +14,13 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 
 import javax.sql.DataSource;
 
 
 @Configuration
+@EnableWebMvc
 @PropertySource("classpath:application.properties")
 public class AppConfig implements WebMvcConfigurer {
 
