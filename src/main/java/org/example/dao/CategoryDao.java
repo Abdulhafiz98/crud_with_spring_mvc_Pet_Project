@@ -36,4 +36,9 @@ public class CategoryDao implements BaseDao<Category> {
                 new Object[]{category.getName(),category.getParentId()}
                 ) > 0;
     }
+
+    public List<Category> getCategoryById(int id){
+        return jdbcTemplate.query("select * from category where parent_id="+"'"+id+"'", new CategoryMapper());
+    }
+
 }
