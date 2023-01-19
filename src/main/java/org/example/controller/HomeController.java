@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
 
+
     @GetMapping("")
     public String main(){
         return "web/index";
     }
+
     @GetMapping("login")
     public String login(){
-
         return "login";
     }
     @GetMapping("register")

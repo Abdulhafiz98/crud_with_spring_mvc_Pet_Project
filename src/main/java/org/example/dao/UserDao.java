@@ -5,7 +5,6 @@ import org.example.dto.UserLoginRequest;
 import org.example.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -61,5 +60,10 @@ return update>0;
         }catch (Exception e){
             return null;
         }
+    }
+
+    public boolean update(User user){
+        return jdbcTemplate.update("update users set name = ?, password = ? where id = ?;",
+                user.getName(),user.getPassword(),user.getId()) > 0;
     }
 }
