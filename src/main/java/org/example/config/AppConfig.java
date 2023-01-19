@@ -1,7 +1,13 @@
 package org.example.config;
 
+import netscape.javascript.JSObject;
+import org.example.controller.filter.SessionConfigInterceptor;
+import org.example.dao.CategoryDao;
+import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.AuthService;
+import org.example.service.CategoryService;
+import org.example.service.ProductService;
 import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,13 +16,13 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 
 import javax.sql.DataSource;
 
 
 @Configuration
+@EnableWebMvc
 @PropertySource("classpath:application.properties")
 public class AppConfig implements WebMvcConfigurer {
 
@@ -57,9 +63,29 @@ public class AppConfig implements WebMvcConfigurer {
         return new AuthService(userDao());
     }
 
-//    @Bean
-//    UserService userService() {
-//        return new UserService(userDao());
-//    }
+    @Bean
+    CategoryDao categoryDao(){
+        return new CategoryDao(jdbcTemplate());
+    }
+
+    @Bean
+    ProductDao productDao(){
+        return new ProductDao(jdbcTemplate());
+    }
+
+    @Bean
+    CategoryService categoryService(){
+        return new CategoryService(categoryDao());
+    }
+
+    @Bean
+    ProductService productService(){
+        return new ProductService(productDao(),categoryDao());
+    }
+
+    @Bean
+    UserService userService() {
+        return new UserService(userDao());
+    }
 
 }

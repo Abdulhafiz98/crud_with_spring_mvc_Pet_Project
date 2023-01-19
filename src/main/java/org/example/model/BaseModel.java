@@ -8,7 +8,9 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 public abstract class BaseModel {
+
     protected int id;
     protected String createdBy;
     protected LocalDateTime createdDate;

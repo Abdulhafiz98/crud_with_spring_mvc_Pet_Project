@@ -5,6 +5,7 @@ import org.example.dao.UserDao;
 import org.example.dto.UserLoginRequest;
 import org.example.dto.UserRegisterRequest;
 import org.example.model.User;
+import org.example.model.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +27,9 @@ public class AuthService {
                 .name(userRegisterRequest.getName())
                 .email(userRegisterRequest.getEmail())
                 .password(userRegisterRequest.getPassword())
+                .phoneNumber(userRegisterRequest.getPhoneNumber())
+                .userRole(UserRole.valueOf(UserRole.USER.name()))
                 .build();
-
         return userDao.add(user);
     }
 
