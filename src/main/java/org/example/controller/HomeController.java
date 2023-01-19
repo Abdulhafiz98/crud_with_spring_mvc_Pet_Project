@@ -29,9 +29,10 @@ public class HomeController {
     }
 
     @GetMapping("/category/{id}")
-    public String categoryId(Model model, @PathVariable int id){
+    public String categoryId(Model model, @PathVariable int id) {
         model.addAttribute("categoryList", categoryService.getCategoryById(id));
         return "web/categories";
+    }
 
     @GetMapping("login")
     public String login(){
