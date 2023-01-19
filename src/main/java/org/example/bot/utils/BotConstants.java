@@ -1,4 +1,4 @@
-package org.example.bot.service;
+package org.example.bot.utils;
 
 public enum BotConstants {
     CATEGORIES,

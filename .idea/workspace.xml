@@ -1,19 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="B24_Bootcamp:Web exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19260b5f-f73f-400a-913b-be674dd0078a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="19260b5f-f73f-400a-913b-be674dd0078a" name="Changes" comment=" commit done">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.base.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.base.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.base.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/deleteproduct_order.knbNRw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/deleteproduct_order.knbNRw.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.base.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_49_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_49_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MessageType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/exception/SessionNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BaseBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BaseBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BotConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BotConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/FileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BaseBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BaseBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BotConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BotConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/BaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,23 +116,161 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/HP/Spring_PDP/said_Telegram",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.47931033",
-    "spring.configuration.checksum": "8cd73058331a4cd444545420c747513d"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/B24_Bootcamp/web/WEB-INF/image&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.42232454&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8cd73058331a4cd444545420c747513d&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Documents\B24_Bootcamp\web\WEB-INF\image" />
+      <recent name="C:\Users\HP\Documents\B24_Bootcamp\src\main\resources\picture" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Documents\B24_Bootcamp\web\WEB-INF\image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Start">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="B24_Bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bot.Start" />
+      <module name="B24_Bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bot.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="B24_Bootcamp:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="e5d154ee-82f5-480b-97c0-7c2365d73d3c" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61499" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="B24_Bootcamp:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Start" />
+      <item itemvalue="Tomcat Server.Tomcat 9" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Start" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,8 +280,38 @@
       <option name="presentableId" value="Default" />
       <updated>1673928414314</updated>
       <workItem from="1673928415993" duration="1901000" />
-      <workItem from="1673944885616" duration="2455000" />
+      <workItem from="1673944885616" duration="15866000" />
+      <workItem from="1673972190748" duration="6604000" />
+      <workItem from="1674013933471" duration="3940000" />
+      <workItem from="1674027391646" duration="849000" />
+      <workItem from="1674032779124" duration="12759000" />
+      <workItem from="1674055973100" duration="12184000" />
+      <workItem from="1674100361234" duration="15451000" />
+      <workItem from="1674119278103" duration="10723000" />
+      <workItem from="1674144452103" duration="843000" />
     </task>
+    <task id="LOCAL-00001" summary="i send telegram servive">
+      <created>1673947797813</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673947797813</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Axror commit">
+      <created>1674035507051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674035507051</updated>
+    </task>
+    <task id="LOCAL-00003" summary=" commit done">
+      <created>1674035579953</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674035579953</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,10 +322,108 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Axror" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="i send telegram servive" />
+    <MESSAGE value="Axror commit" />
+    <MESSAGE value=" commit done" />
+    <option name="LAST_COMMIT_MESSAGE" value=" commit done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
+          <line>42</line>
+          <properties class="org.example.dao.ProductDao" method="getListOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="e" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
