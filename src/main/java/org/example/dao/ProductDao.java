@@ -75,4 +75,7 @@ public class ProductDao implements BaseDao<Product> {
         return jdbcCall.executeFunction(boolean.class, in);
 
     }
+    public List<Product> getProductCategoryIdList(int id){
+        return jdbcTemplate.query("select * from product p where p.category_id = ?",new Object[]{id}, new ProductMapper());
+    }
 }
