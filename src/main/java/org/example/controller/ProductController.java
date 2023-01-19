@@ -1,4 +1,4 @@
-package org.example.controller.admin;
+package org.example.controller;
 
 import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
@@ -23,18 +23,23 @@ public class ProductController {
     }
 
     @GetMapping("/list")
-    public String  getProductList(
+    public String getProductList(
             Model model
-    ){
+    ) {
         List<ProductResponseDto> productList = productService.getProductList();
-        model.addAttribute("productList",productList);
+        model.addAttribute("productList", productList);
         return "admin/product";
     }
 
-    @GetMapping("/category/{id}")
-    public String getCategoryList(Model model, @PathVariable("id") int id){
-        List<Product> productCategoryIdList = productService.getProductCategoryIdList(id);
-        model.addAttribute("productCategoryIdList",productCategoryIdList);
-        return "product/product-category-id";
+//    @GetMapping("/category/{id}")
+//    public String getCategoryList(Model model, @PathVariable("id") int id) {
+//        List<ProductResponseDto> productList = productService.getProductList();
+//        model.addAttribute("productList", productList);
+//        return "product";
+//    }
+    @GetMapping("/category")
+    public String main(Model model) {
+        model.addAttribute("productList",productService.getProductList());
+        return "index";
     }
 }
