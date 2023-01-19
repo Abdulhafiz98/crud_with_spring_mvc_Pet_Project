@@ -71,7 +71,7 @@ public class AuthController {
 //            httpServletResponse.addCookie(cookie);
 //        }
 
-        return "admin/index";
+//        return "admin/index";
             HttpSession session = httpServletRequest.getSession();
             session.setAttribute("password",currentUser.getPassword());
 //            addSession(httpServletRequest, httpServletResponse);
@@ -79,8 +79,8 @@ public class AuthController {
             if (currentUser.getUserRole().equals(UserRole.USER)) return "web/index";
             else  return "admin/index";
         }
-        return "login";
-    }
+//        return "login";
+
 
     private void addSession(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         HttpSession session = httpServletRequest.getSession();
