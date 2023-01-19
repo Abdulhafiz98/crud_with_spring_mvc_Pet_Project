@@ -27,13 +27,13 @@ public class HomeController {
 
 
     @GetMapping("/category")
-    public String category(Model model) {
+    public String category(Model model){
         model.addAttribute("categoryList", categoryService.getCategoryById(0));
         return "web/categories";
     }
 
     @GetMapping("/category/{id}")
-    public String categoryId(Model model, @PathVariable int id) {
+    public String categoryId(Model model, @PathVariable int id){
         model.addAttribute("categoryList", categoryService.getCategoryById(id));
         return "web/categories";
     }
