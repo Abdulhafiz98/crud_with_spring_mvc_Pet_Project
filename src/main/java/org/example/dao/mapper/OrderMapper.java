@@ -10,7 +10,7 @@ public class OrderMapper implements RowMapper<Order> {
     @Override
     public Order mapRow(ResultSet rs, int rowNum) throws SQLException {
         Order order = Order.builder()
-                .id(rs.getInt("id"))
+                .id(rs.getLong("id"))
                 .userId(rs.getInt("user_id"))
                 .status(rs.getString("status"))
                 .orderTime(rs.getString("order_time"))

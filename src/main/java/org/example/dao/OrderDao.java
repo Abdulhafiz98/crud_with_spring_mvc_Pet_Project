@@ -2,6 +2,8 @@ package org.example.dao;
 
 import org.example.dao.mapper.OrderItemMapper;
 import org.example.dao.mapper.OrderMapper;
+import org.example.dao.mapper.OrderSortedMapper;
+import org.example.dto.response.OrderDto;
 import org.example.model.Order;
 import org.example.model.OrderItem;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -79,5 +81,13 @@ public class OrderDao implements BaseDao<Order> {
                 "update orders set (?) where id = (?)",
                 new Object[]{id,status}
         ) > 0;
+    }
+    public List<OrderDto> getOrdersBySort(int sortNumber){
+        String sortName = "o.order_time";
+        if (sortNumber == 0) sortName = "o.order_time";
+        if (sortNumber == 1) sortName = "u.name";
+        if (sortNumber == 2) sortName = "o.status";
+        return jdbcTemplate.query("select o.id, u.name,u.phone_number,(select count(product_id) from order_item where order_id = o.id) as product_quantity, " +
+                "o.status,o.order_time from orders o join users u on o.user_id = u.id order by "+sortName, new OrderSortedMapper());
     }
 }

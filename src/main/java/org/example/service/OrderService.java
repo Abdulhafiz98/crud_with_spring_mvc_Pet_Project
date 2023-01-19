@@ -2,10 +2,13 @@ package org.example.service;
 
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
+import org.example.dto.response.OrderDto;
 import org.example.dto.response.OrderItemDto;
 import org.example.model.Order;
 import org.example.model.OrderItem;
+import org.example.model.OrderStatus;
 import org.example.model.Product;
+
 import java.util.List;
 
 public class OrderService {
@@ -16,7 +19,8 @@ public class OrderService {
         this.productDao = productDao;
         this.orderDao = orderDao;
     }
-    public List<Order> getList(){
+
+    public List<Order> getList() {
         return orderDao.getList();
     }
 
@@ -36,5 +40,18 @@ public class OrderService {
                     orderItem.getQuantity()
             );
         }).toList();
+    }
+
+    public boolean editRole(int orderId, int statusNumber) {
+        String status;
+        if (statusNumber == 1)
+            status = OrderStatus.ACCEPT.name();
+        else
+            status = OrderStatus.REJECT.name();
+        return orderDao.editStatus(orderId, status);
+    }
+
+    public List<OrderDto> sortOrders(int sortNumber) {
+        return orderDao.getOrdersBySort(sortNumber);
     }
 }
