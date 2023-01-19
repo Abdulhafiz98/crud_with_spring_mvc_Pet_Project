@@ -38,11 +38,14 @@ public class ProductController {
 @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String addProduct(
          HttpServletRequest request) {
- String url= FileUtils.saveFile(request);
-    System.out.println(url);
+
+    String filee = FileUtils.filee(request);
+    System.out.println(filee);
+    //String url= FileUtils.saveFile(request);
+  //  System.out.println(url);
    ProductResponseDto product=ProductResponseDto.builder()
            .name(request.getParameter("name"))
-           .productUrl(request.getParameter("productUrl"))
+           .productUrl(filee)
           .categoryName((request.getParameter("CategoryName")))
            .info(request.getParameter("info"))
            .quantity(Integer.parseInt(request.getParameter("quantity")))
@@ -52,10 +55,10 @@ public class ProductController {
 
     return "admin/addproduct";
     }
-    @GetMapping("/delete")
+    @RequestMapping(value="/delete/{id}",method = RequestMethod.GET)
     public String deleteUser(
             Model model,
-            @PathVariable("id") int id
+            @PathVariable int id
     ) {
         productService.deleteUser(id);
         return getProductList(model);

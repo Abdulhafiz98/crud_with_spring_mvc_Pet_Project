@@ -47,4 +47,5 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
             <property name="templateEngine" ref="templateEngine" />
             <property name="characterEncoding" value="UTF-8"/>
         </bean>
+    <mvc:resources mapping="/**" location="WEB-INF/image/" />
 </beans>
