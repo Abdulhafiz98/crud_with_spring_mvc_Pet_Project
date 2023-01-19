@@ -1,16 +1,17 @@
-package org.example.controller;
+package org.example.controller.web;
 
 import org.example.model.Category;
 import org.example.service.CategoryService;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/admin/category")
+@RequestMapping(value = "/web/category")
 public class CategoryController {
 
     private final CategoryService categoryService;
@@ -19,13 +20,14 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/list")
-    public String getCategoryList(
-            Model model
-    ){
-        List<Category> categoryList = categoryService.getCategoryList();
-        model.addAttribute("categoryList", categoryList);
-        return "admin/category";
+
+    @ResponseBody
+    @GetMapping(
+            value = "/list",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public List<Category> getCategoryList() {
+        return categoryService.getCategoryList();
     }
 
 }

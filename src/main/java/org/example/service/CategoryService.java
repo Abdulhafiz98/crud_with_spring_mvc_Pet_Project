@@ -15,4 +15,10 @@ public class CategoryService {
     public List<Category> getCategoryList(){
         return categoryDao.getList();
     }
+
+    public List<Category> getCategoryById(int id){
+        return categoryDao.getCategoryById(id);
+    }
+
+
 }

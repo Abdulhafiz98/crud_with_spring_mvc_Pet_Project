@@ -10,15 +10,17 @@ public class ProductMapper implements RowMapper<Product> {
 
     @Override
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Product product = Product.builder()
-                .id(rs.getInt("id"))
-                .name(rs.getString("name"))
-                .productUrl(rs.getString("url"))
-                .price(rs.getDouble("price"))
-                .quantity(rs.getInt("quantity"))
-                .info(rs.getString("info"))
-                .categoryId(rs.getInt("category_id"))
-                .build();
+
+        Product product = new Product(
+                rs.getString("name"),
+                rs.getString("product_url"),
+                rs.getDouble("price"),
+                rs.getInt("quantity"),
+                rs.getString("info"),
+                rs.getInt("category_id"),
+                rs.getDouble("discount")
+        );
+        product.setId(rs.getInt("id"));
         return product;
     }
 }
