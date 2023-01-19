@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class Product extends BaseModel {
+    private int id;
     private String name;
     private String productUrl;
     private double price;

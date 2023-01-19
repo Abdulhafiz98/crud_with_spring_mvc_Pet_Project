@@ -43,5 +43,8 @@ public class ProductService {
             );
         }).toList();
     }
+    public Product getProduct(int id) {
+        return productDao.getById(id);
+    }
 
 }
