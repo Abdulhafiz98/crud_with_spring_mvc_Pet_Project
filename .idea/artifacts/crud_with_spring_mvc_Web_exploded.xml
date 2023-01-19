@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="crud_with_spring_mvc:Web exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="crud_with_spring_mvc" />
@@ -28,6 +27,7 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web" />
     </root>
   </artifact>
 </component>

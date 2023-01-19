@@ -13,6 +13,7 @@ public class OrderMapper implements RowMapper<Order> {
                 .id(rs.getInt("id"))
                 .userId(rs.getInt("user_id"))
                 .status(rs.getString("status"))
+                .orderTime(rs.getString("order_time"))
                 .build();
         return order;
     }

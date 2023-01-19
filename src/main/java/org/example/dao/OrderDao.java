@@ -39,7 +39,8 @@ public class OrderDao implements BaseDao<Order> {
                     order.getId(),
                     orderItemList,
                     order.getUserId(),
-                    order.getStatus()
+                    order.getStatus(),
+                    order.getOrderTime()
             );
         }).toList();
     }

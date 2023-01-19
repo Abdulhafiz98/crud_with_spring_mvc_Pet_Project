@@ -66,12 +66,13 @@
         form input::placeholder {
             color: rgba(255, 255, 255, .8);
         }
-        form .btn {
-            width: 50%;
-            height: 50px;
-            margin: 20px auto 10px;
+         form .btn {
+
+            width: 40%;
+            height: 40px;
+            margin: 10px 20px;
             border: none;
-            border-radius: 25px;
+            border-radius: 20px;
             background-color: #fff;
             color: #3d3935;
             font-size: 1.25rem;
@@ -87,7 +88,9 @@
         }
         .text a {
             color: #fff;
+
         }
+
         form btn:hover,
         .text a:hover {
             opacity: .8;
@@ -100,10 +103,10 @@
         <div class="form-box">
             <div class="ic-account"></div>
             <form action="/auth/login" method="post">
-                <input type="text" name="phoneNumber" placeholder="Enter Username ...">
+                <input type="text" name="phoneNumber" placeholder="Enter Phone Number ...">
                 <input type="password" name="password" placeholder="Enter Password ...">
                 <button type="submit" class="btn">Enter</button>
-                <br>
+                <a href="/register"> Register</a>
             </form>
         </div>
     </div>
