@@ -37,4 +37,7 @@ public class ProductDao implements BaseDao<Product> {
                 new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
         ) > 0;
     }
+    public List<Product> getProductCategoryIdList(int id){
+        return jdbcTemplate.query("select * from get_product_category_id(?)",new Object[]{id}, new ProductMapper());
+    }
 }

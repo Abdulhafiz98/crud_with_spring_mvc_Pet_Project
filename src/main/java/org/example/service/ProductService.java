@@ -43,5 +43,8 @@ public class ProductService {
             );
         }).toList();
     }
+    public List<Product> getProductCategoryIdList(int id){
+       return productDao.getProductCategoryIdList(id);
+    }
 
 }
