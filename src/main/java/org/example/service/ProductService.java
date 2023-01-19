@@ -39,9 +39,13 @@ public class ProductService {
                     product.getPrice(),
                     product.getQuantity(),
                     product.getInfo(),
-                    category1 == null ? "" : category1.getName()
+                    category1 == null ? "" : category1.getName(),
+                    product.getDiscount()
             );
         }).toList();
+    }
+    public List<Product> getProductCategoryIdList(int id){
+       return productDao.getProductCategoryIdList(id);
     }
 
 }

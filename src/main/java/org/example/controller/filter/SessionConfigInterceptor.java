@@ -11,8 +11,8 @@ public class SessionConfigInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
         boolean aNew = session.isNew();
-        String password = (String)session.getAttribute("password");
-        if (aNew&&!request.getServletPath().equals("/login")&&password==null){
+        String password = (String) session.getAttribute("password");
+        if (aNew && !request.getServletPath().equals("/login") && password == null) {
             response.sendRedirect("/login");
         }
         return true;
