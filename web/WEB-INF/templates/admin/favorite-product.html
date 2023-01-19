@@ -37,21 +37,17 @@
             <table class="table ">
                 <thead>
                 <tr>
-                    <th>name</th>
-                    <th>quantity</th>
-                    <th>price</th>
-                    <th>info</th>
-                    <th>categoryName</th>
+                    <th>id</th>
+                    <th>productId</th>
+                    <th>userId</th>
                 </tr>
                 </thead>
 
                 <tbody>
-                <tr th:each="product: ${productList}">
-                    <td th:text="${product.name}"/>
-                    <td th:text="${product.quantity}"/>
-                    <td th:text="${product.price}"/>
-                    <td th:text="${product.info}"/>
-                    <td th:text="${product.categoryName}"/>
+                <tr th:each="favoriteProduct: ${favoriteProductList}">
+                    <td th:text="${favoriteProduct.id}"/>
+                    <td th:text="${favoriteProduct.productId}"/>
+                    <td th:text="${favoriteProduct.userId}"/>
                     <td>
                         <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
                         <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>

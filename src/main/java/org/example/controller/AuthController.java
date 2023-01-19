@@ -1,10 +1,12 @@
 package org.example.controller;
 
+import org.example.dao.UserDao;
 import org.example.dto.UserLoginRequest;
 import org.example.dto.UserRegisterRequest;
 import org.example.model.User;
 import org.example.model.UserRole;
 import org.example.service.AuthService;
+import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.Arrays;
+import java.util.Objects;
 
 @Controller
 @RequestMapping("/auth")
@@ -56,8 +60,18 @@ public class AuthController {
         model.addAttribute("message", "username or password is incorrect");
         model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
-        return "admin/index";
 
+//        Cookie[] cookies = httpServletRequest.getCookies();
+//        Cookie signedInUser = Arrays.stream(cookies).filter(
+//                        cookie -> cookie.getName().equals("SignedUser"))
+//                .findFirst().orElse(null);
+//        if (Objects.isNull(signedInUser)) {
+//            Cookie cookie = new Cookie("SignedUser",String.valueOf(currentUser.getId()));
+//            cookie.setMaxAge(30); // this should be the same with MaxInactiveInterval session
+//            httpServletResponse.addCookie(cookie);
+//        }
+
+        return "admin/index";
     }
 
     private void addSession(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {

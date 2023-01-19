@@ -3,12 +3,10 @@ package org.example.config;
 import netscape.javascript.JSObject;
 import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
+import org.example.dao.FavoriteProductDao;
 import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
-import org.example.service.AuthService;
-import org.example.service.CategoryService;
-import org.example.service.ProductService;
-import org.example.service.UserService;
+import org.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -88,4 +86,9 @@ public class AppConfig implements WebMvcConfigurer {
         return new UserService(userDao());
     }
 
+    @Bean
+    FavoriteProductService favoriteProductService()
+    {
+        return new FavoriteProductService(new FavoriteProductDao(jdbcTemplate()));
+    }
 }

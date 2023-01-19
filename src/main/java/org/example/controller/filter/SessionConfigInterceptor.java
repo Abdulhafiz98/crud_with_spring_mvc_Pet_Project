@@ -1,10 +1,16 @@
 package org.example.controller.filter;
 
+import org.example.dao.UserDao;
+import org.example.model.User;
+import org.example.service.UserService;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.Arrays;
 
 public class SessionConfigInterceptor implements HandlerInterceptor {
     @Override

@@ -27,10 +27,9 @@ public class FavoriteProductDao  implements BaseDao<FavoriteProduct>{
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return jdbcTemplate.update("delete from favorite_product where id = ?",id) > 0;
     }
 
-    @Override
     public boolean add(FavoriteProduct favoriteProduct) {
         return jdbcTemplate.update(
                 "insert into favorite_product(product_id,user_id) values (?,?)",

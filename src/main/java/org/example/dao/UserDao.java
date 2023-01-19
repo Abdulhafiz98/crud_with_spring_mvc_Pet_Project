@@ -42,8 +42,8 @@ public class UserDao implements BaseDao<User> {
 try {
 
     update = jdbcTemplate.update(
-            "insert into users(name, email, password, phone_number,role) values (?,?,?,?,?)",
-            user.getName(), user.getEmail(), user.getPassword(), user.getPhoneNumber(), user.getUserRole().name());
+            "insert into users(name, email, password, phone_number) values (?,?,?,?)",
+            user.getName(), user.getEmail(), user.getPassword(), user.getPhoneNumber());
 }
 catch (Exception ex){
     ex.printStackTrace();
