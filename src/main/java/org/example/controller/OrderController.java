@@ -22,17 +22,18 @@ public class OrderController {
         return "admin/order";
     }
 
-//    @GetMapping("/order-item/{id}")
-//    public String orderItemList(
-//            Model model,
-//            @PathVariable("id") int id
-//    ) {
-//        model.addAttribute("orderItemList",orderService.getOrderItemList(id));
-//        return "admin/order";
-//    }
-@GetMapping("/order-item")
-public String getOrderItemList(Model model) {
-    model.addAttribute("orderItemList",orderService.getOrderItemList(1));
-    return "admin/order";
-}
+    @GetMapping("/order-item/{id}")
+    public String orderItemList(
+            Model model,
+            @PathVariable("id") int id
+    ) {
+        model.addAttribute("orderItemList",orderService.getOrderItemList(id));
+        return "admin/order";
+    }
+
+//@GetMapping("/order-item")
+//public String getOrderItemList(Model model) {
+//    model.addAttribute("orderItemList",orderService.getOrderItemList(1));
+//    return "admin/order";
+//}
 }
