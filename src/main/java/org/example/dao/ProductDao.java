@@ -38,6 +38,6 @@ public class ProductDao implements BaseDao<Product> {
         ) > 0;
     }
     public List<Product> getProductCategoryIdList(int id){
-        return jdbcTemplate.query("select * from product where category_id = ?",new Object[]{id}, new ProductMapper());
+        return jdbcTemplate.query("select * from get_product_category_id(?)",new Object[]{id}, new ProductMapper());
     }
 }
