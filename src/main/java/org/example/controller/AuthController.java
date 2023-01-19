@@ -72,6 +72,14 @@ public class AuthController {
 //        }
 
         return "admin/index";
+            HttpSession session = httpServletRequest.getSession();
+            session.setAttribute("password",currentUser.getPassword());
+//            addSession(httpServletRequest, httpServletResponse);
+            model.addAttribute("user", currentUser);
+            if (currentUser.getUserRole().equals(UserRole.USER)) return "web/index";
+            else  return "admin/index";
+        }
+        return "login";
     }
 
     private void addSession(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {

@@ -14,4 +14,5 @@ public class Product extends BaseModel {
     private int quantity;
     private String info;
     private int categoryId;
+    private double discount;
 }
