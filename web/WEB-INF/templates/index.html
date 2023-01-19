@@ -15,9 +15,9 @@
     <div class="header">
         <a href="/login" class="btn btn-outline-primary">Log in</a>
     </div>
-<div class="container ">
-    <div class="card" th:each = "product: ${productList}">
-        <div class="card-header">
+    <div class="container ">
+        <div class="card" th:each = "product: ${productList}">
+            <div class="card-header">
             <img th:src="${product.productUrl}">
         </div>
 
@@ -29,7 +29,7 @@
 
             <br>
             <span class="price">Discount:</span>
-            <span class="card_price" th:text = "${product.discount + ' $'}"></span>
+            <span class="card_price" th:text = "${product.discount + ' %'}"></span>
             <br>
             <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
 

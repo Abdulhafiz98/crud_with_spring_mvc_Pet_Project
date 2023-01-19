@@ -40,7 +40,7 @@ public class ProductService {
                     product.getQuantity(),
                     product.getInfo(),
                     category1 == null ? "" : category1.getName(),
-                    product.getPrice()*0.85
+                    product.getDiscount()
             );
         }).toList();
     }

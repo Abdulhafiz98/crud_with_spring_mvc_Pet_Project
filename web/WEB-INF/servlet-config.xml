@@ -51,4 +51,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <mvc:resources mapping="/**" location="WEB-INF/templates/images/" />
     <mvc:resources mapping="/WEB-INF/templates/**" location="/WEB-INF/templates/" />
 
+    <mvc:resources mapping="/web/**" location="/WEB-INF/templates/" />
+    <mvc:annotation-driven />
+
 </beans>
