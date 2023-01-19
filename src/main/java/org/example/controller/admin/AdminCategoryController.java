@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.controller.admin;
 
 import org.example.model.Category;
 import org.example.service.CategoryService;
@@ -11,11 +11,11 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin/category")
-public class CategoryController {
+public class AdminCategoryController {
 
     private final CategoryService categoryService;
 
-    public CategoryController(CategoryService categoryService) {
+    public AdminCategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
 
