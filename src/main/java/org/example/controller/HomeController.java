@@ -21,6 +21,7 @@ public class HomeController {
         return "web/index";
     }
 
+
     @GetMapping("/category")
     public String category(Model model){
         model.addAttribute("categoryList", categoryService.getCategoryById(0));
@@ -31,6 +32,15 @@ public class HomeController {
     public String categoryId(Model model, @PathVariable int id){
         model.addAttribute("categoryList", categoryService.getCategoryById(id));
         return "web/categories";
+
+    @GetMapping("login")
+    public String login(){
+
+        return "login";
+    }
+    @GetMapping("register")
+    public String register(){
+        return "register";
     }
 
 }
