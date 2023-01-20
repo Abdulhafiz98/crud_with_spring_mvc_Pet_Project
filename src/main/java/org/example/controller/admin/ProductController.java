@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -38,9 +39,9 @@ public class ProductController {
         return "product/product";
     }
 
-    @GetMapping("/search/{productName}")
-    public String getSearchedProductList(Model model, @PathVariable("productName") String productName){
-
+    @GetMapping("/search")
+    public String getSearchedProductList(Model model, HttpServletRequest request){
+        String productName = request.getParameter("productName");
         List<ProductResponseDto> productResponseDtoList = productService.getProductListByName(productName);
 
         model.addAttribute("productList", productResponseDtoList);
