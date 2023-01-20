@@ -41,21 +41,15 @@ public class ProductController {
         return "admin/product";
     }
 
-    @GetMapping("/category/{id}")
-    public String getCategoryList(Model model,HttpServletRequest httpServletRequest){
-        String name = httpServletRequest.getParameter("name");
-        List<Product> productCategoryIdList = productService.getProductCategoryIdList(name);
-        model.addAttribute("productCategoryIdList",productCategoryIdList);
-        return "product/product-category-id";
-    }
-
     @GetMapping("/info")
-    public String getInfoList(Model model){
+    public String getInfoList(Model model,HttpServletRequest httpServletRequest){
+//        String name = httpServletRequest.getParameter("name");
         List<Info> infoList = productService.getInfo(2);
         model.addAttribute("infoList",infoList);
         return "product/info";
     }
-    
+
+    @GetMapping("/category/{id}")
     public String getCategoryList(Model model, @PathVariable("id") int id) {
         List<Product> productList = productService.getProductCategoryIdList(id);
         model.addAttribute("productList", productList);

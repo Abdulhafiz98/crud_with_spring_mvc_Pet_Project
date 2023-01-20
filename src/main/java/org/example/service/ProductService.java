@@ -52,4 +52,7 @@ public class ProductService {
        return productDao.getProductCategoryIdList(name);
     }
 
+    public List<Product> getProductCategoryIdList(int id){
+        return productDao.getProductCategoryIdList(id);
+    }
 }
