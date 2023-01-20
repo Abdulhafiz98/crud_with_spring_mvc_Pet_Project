@@ -13,5 +13,7 @@ public class Order {
     private long id;
     private List<OrderItem> orderItems;
     private int userId;
+    private String status;
+    private String orderTime;
 
 }

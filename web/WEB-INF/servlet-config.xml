@@ -49,6 +49,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven/>
     <mvc:resources mapping="/**" location="WEB-INF/image/" />
-
-
+    <mvc:interceptors>
+        <bean id="loggerInterceptor" class="org.example.controller.filter.SessionConfigInterceptor"/>
+    </mvc:interceptors>
 </beans>

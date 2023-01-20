@@ -5,6 +5,7 @@ import org.example.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -27,5 +28,13 @@ public class UserService {
 
     public User getUser(int id){
         return userDao.getById(id);
+    }
+
+    public boolean updateUser(User user){
+        return userDao.update(user);
+    }
+    public Integer getUserIdFromSession(HttpServletRequest request){
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        return userId;
     }
 }

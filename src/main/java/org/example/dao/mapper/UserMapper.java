@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class UserMapper implements RowMapper<User> {
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-        User user = User.builder()
+        return User.builder()
                 .id(rs.getInt("id"))
                 .name(rs.getString("name"))
                 .phoneNumber(rs.getString("phone_number"))
@@ -19,6 +19,5 @@ public class UserMapper implements RowMapper<User> {
                 .chatId(rs.getLong("chat_id"))
                 .userRole(UserRole.valueOf(rs.getString("user_role")))
                 .build();
-        return user;
     }
 }
