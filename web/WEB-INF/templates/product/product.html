@@ -12,35 +12,31 @@
 </head>
 <body>
 <div class="container1">
-    <div class="header">
-        <a href="/login" class="btn btn-outline-primary">Log in</a>
-        <a href="/admin/product/category">GGGGGGGGGGGGG</a>
-    </div>
     <div class="container ">
         <div class="card" th:each = "product: ${productList}">
             <div class="card-header">
                 <img th:src="@{'~/' + ${product.productUrl}}" >
-        </div>
+            </div>
 
-        <div class="card-footer">
-            <h3 class="card_name" th:text =  "${product.name}"></h3>
+            <div class="card-footer">
+                <h3 class="card_name" th:text =  "${product.name}"></h3>
 
-            <span class="price">Price:</span>
-          <del class="card_price_dic" th:text = "${product.price + ' $'}"></del>
+                <span class="price">Price:</span>
+                <del class="card_price_dic" th:text = "${product.price + ' $'}"></del>
 
-            <br>
-            <span class="price">Discount:</span>
-            <span class="card_price" th:text = "${product.discount + ' %'}"></span>
-            <br>
-            <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
+                <br>
+                <span class="price">Discount:</span>
+                <span class="card_price" th:text = "${product.discount + ' %'}"></span>
+                <br>
+                <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
 
-            <div  class="add-favourite">
-                <i  class='bx bxs-heart box' ></i>
+                <div  class="add-favourite">
+                    <i  class='bx bxs-heart box' ></i>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </div>
 </body>
 <style>
@@ -89,7 +85,7 @@
         font-weight: 400;
     }
     .add-favourite{
-     position: absolute;
+        position: absolute;
         top: 5px;
         right: 10px;
         z-index: 100;
@@ -113,11 +109,11 @@
     }
     @keyframes plus {
         from {
-           scale: 0;
+            scale: 0;
         }
 
         to {
-          scale: 1.5;
+            scale: 1.5;
         }
 
     }

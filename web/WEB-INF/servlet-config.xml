@@ -48,10 +48,10 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
             <property name="characterEncoding" value="UTF-8"/>
         </bean>
 
-    <mvc:resources mapping="/**" location="WEB-INF/templates/images/" />
-    <mvc:resources mapping="/WEB-INF/templates/**" location="/WEB-INF/templates/" />
-
-    <mvc:resources mapping="/web/**" location="/WEB-INF/templates/" />
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
+    <mvc:resources mapping="/image/*" location="WEB-INF/image/" />
+    <mvc:interceptors>
+        <bean id="loggerInterceptor" class="org.example.controller.filter.SessionConfigInterceptor"/>
+    </mvc:interceptors>
 
 </beans>
