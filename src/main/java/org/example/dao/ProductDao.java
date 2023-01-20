@@ -29,8 +29,8 @@ public class ProductDao implements BaseDao<Product> {
     @Override
     public boolean delete(int id) {
         return jdbcTemplate.update("delete from product where id = ?", new Object[]{id}) > 0;
-
     }
+
 
     @Override
     public boolean add(Product product) {
@@ -38,6 +38,13 @@ public class ProductDao implements BaseDao<Product> {
                 "insert into product(name, product_url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
                 new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
         ) > 0;
+    }
+    public boolean update(Product product){
+        return jdbcTemplate.update(
+                "update  product set name = ?, product_url=product_url,  price = ?, quantity = ?, info = ? where id = ?",
+                new Object[]{product.getName(),product.getPrice(), product.getQuantity(),product.getInfo(),product.getId()}
+        )>0;
+
     }
 
 

@@ -18,7 +18,11 @@ public class ProductService {
         this.productDao = productDao;
         this.categoryDao = categoryDao;
     }
+    public  boolean update(Product product){
 
+            return productDao.update(product);
+
+    }
     public boolean addProduct(final ProductResponseDto responseDto) {
         Product product = Product.builder()
                 .name(responseDto.getName())
@@ -53,6 +57,7 @@ public class ProductService {
                     .orElse(null);
 
             return new ProductResponseDto(
+                    product.getId(),
                     product.getName(),
                     product.getProductUrl(),
                     product.getPrice(),
@@ -65,5 +70,8 @@ public class ProductService {
     public boolean deleteUser(int id){
         return productDao.delete(id);
     }
+    public Product getById(int id){return productDao.getById(id);}
+
+
 
 }

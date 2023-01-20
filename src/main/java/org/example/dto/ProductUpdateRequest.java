@@ -1,15 +1,15 @@
-package org.example.dto.response;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.model.Product;
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Data
-@Builder
-public class ProductResponseDto {
+
+public class ProductUpdateRequest extends Product {
     private int id;
     private String name;
     private String productUrl;
