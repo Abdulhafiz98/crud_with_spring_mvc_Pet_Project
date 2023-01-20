@@ -23,7 +23,7 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public Product getById(int id) {
-        return null;
+        return jdbcTemplate.queryForObject("select * from product where id = ?", new Object[]{id}, new ProductMapper());
     }
 
     public List<Info> getInfoList(int i_id){

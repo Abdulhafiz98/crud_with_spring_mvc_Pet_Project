@@ -53,7 +53,6 @@
                     <td th:text="${product.price}"/>
                     <td th:text="${product.info}"/>
                     <td th:text="${product.categoryName}"/>
-
                     <td>
                         <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
                         <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>
