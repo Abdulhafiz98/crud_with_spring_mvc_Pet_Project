@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container1">
+    <form action="admin/product/search" method="get">
+        <input type="search" name="productName" value="productName" placeholder="search..." >
+        <button type="submit">SUBMIT</button>
+    </form>
+    <div class="header">
+        <a href="/login" class="btn btn-outline-primary">Log in</a>
+        <a href="/admin/product/category">GGGGGGGGGGGGG</a>
+    </div>
+    <div class="container ">
+        <div class="card" th:each = "product: ${productList}">
+            <div class="card-header">
+                <img th:src="@{'~/' + ${product.productUrl}}" >
+        </div>
+
+        <div class="card-footer">
+            <h3 class="card_name" th:text =  "${product.name}"></h3>
+
+            <span class="price">Price:</span>
+          <del class="card_price_dic" th:text = "${product.price + ' $'}"></del>
+
+            <br>
+            <span class="price">Discount:</span>
+            <span class="card_price" th:text = "${product.discount + ' %'}"></span>
+            <br>
+            <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
+
+            <div  class="add-favourite">
+                <i  class='bx bxs-heart box' ></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+<style>
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .card{
+        position: relative;
+        width: auto;
+        background: #fff;
+        border: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+    .card_name{
+        color: black;
+        font-size: 14px;
+    }
+    .card-header{
+        border: none;
+        width: 230px;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-header img{
+        width: 100% !important;
+    }
+    .card-footer{
+        border: none;
+    }
+    .card_price_dic{
+        color: red;
+        font-size: 14px;
+    }
+    .card_price{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .price{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .add-favourite{
+     position: absolute;
+        top: 5px;
+        right: 10px;
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .add-favourite i{
+        font-size: 20px;
+    }
+    .add-favourite i.active{
+        color:  red;
+        animation-duration: 1s;
+        animation-name: plus;
+        animation-iteration-count: 1;
+
+    }
+    @keyframes plus {
+        from {
+           scale: 0;
+        }
+
+        to {
+          scale: 1.5;
+        }
+
+    }
+
+</style>
+<script>
+    const boxes = Array.from(document.getElementsByClassName('box'));
+
+    boxes.forEach(box => {
+        box.addEventListener('click', function handleClick(event) {
+            console.log('box clicked', event);
+
+            box.classList.toggle("active");
+        });
+    });
+
+</script>
+</html>
