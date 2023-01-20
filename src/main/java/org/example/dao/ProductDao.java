@@ -32,7 +32,7 @@ public class ProductDao implements BaseDao<Product> {
     }
     @Override
     public List<Product> getList() {
-        return jdbcTemplate.query("select * from product order by discount desc", new ProductMapper());
+        return jdbcTemplate.query("select * from product ", new ProductMapper());
     }
     @Override
     public boolean delete(int id) {
