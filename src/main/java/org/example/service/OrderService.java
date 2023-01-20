@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.OrderDto;
@@ -9,15 +10,18 @@ import org.example.model.OrderItem;
 import org.example.model.OrderStatus;
 import org.example.model.Product;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
-
 public class OrderService {
     private final ProductDao productDao;
     private final OrderDao orderDao;
 
-    public OrderService(ProductDao productDao, OrderDao orderDao) {
-        this.productDao = productDao;
-        this.orderDao = orderDao;
+    public OrderService(OrderDao orderDao,ProductDao productDao) {
+        this.orderDao=orderDao;
+        this.productDao=productDao;
+    }
+    public OrderService() {
     }
 
     public List<Order> getList() {
@@ -54,5 +58,36 @@ public class OrderService {
 
     public List<OrderDto> sortOrders(int sortNumber) {
         return orderDao.getOrdersBySort(sortNumber);
+    }
+    
+    public OrderService(ProductDao productDao) {
+        this.productDao = productDao;
+    }
+
+    public OrderService(OrderDao orderDao) {
+        this.orderDao = orderDao;
+    }
+
+    private Order createOrder(List<Integer> productIdList , HttpServletRequest request) {
+        Order order = new Order();
+        List<OrderItem> orderItemList = new ArrayList<>();
+        OrderItem orderItem = new OrderItem();
+        for (Integer integer : productIdList) {
+            orderItem.setQuantity(1);
+            orderItem.setProductId(integer);
+            orderItemList.add(orderItem);
+            orderItem = new OrderItem();
+        }
+        order.setOrderItems(orderItemList);
+        order.setUserId(getUserIdFromSession(request));
+        return order;
+    }
+    private Integer getUserIdFromSession(HttpServletRequest request){
+        Integer user_id = (Integer) request.getSession().getAttribute("userId");
+        return user_id;
+    }
+    public boolean addOrder(List<Integer> productIdList , HttpServletRequest request){
+        Order order = createOrder(productIdList, request);
+        return orderDao.add(order);
     }
 }

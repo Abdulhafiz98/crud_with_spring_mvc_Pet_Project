@@ -1,7 +1,5 @@
 package org.example.config;
 
-import netscape.javascript.JSObject;
-import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
@@ -15,7 +13,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.*;
-
 import javax.sql.DataSource;
 
 
@@ -90,9 +87,14 @@ public class AppConfig implements WebMvcConfigurer {
     UserService userService() {
         return new UserService(userDao());
     }
+    @Bean
+    BasketService basketService(){ return  new BasketService();}
 
     @Bean
     OrderService orderService() {
-        return new OrderService(productDao(), orderDao());
+        return new OrderService(orderDao(), productDao());
     }
+    @Bean
+    CookieService cookieService(){return  new CookieService();}
+
 }

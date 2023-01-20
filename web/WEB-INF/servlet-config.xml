@@ -12,7 +12,6 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- Add support for component scanning -->
     <context:component-scan base-package="org.example"/>
     <!-- Add support for conversion, formatting and validation support -->
-    <mvc:annotation-driven/>
     <!-- Define Spring MVC view resolver -->
     <!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
     <!--        <property name="prefix" value="/view/"/>-->
@@ -49,7 +48,8 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         </bean>
 
     <mvc:annotation-driven/>
-    <mvc:resources mapping="/image/*" location="WEB-INF/image/" />
-
-
+    <mvc:resources mapping="/**" location="WEB-INF/image/" />
+    <mvc:interceptors>
+        <bean id="loggerInterceptor" class="org.example.controller.filter.SessionConfigInterceptor"/>
+    </mvc:interceptors>
 </beans>
