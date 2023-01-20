@@ -34,6 +34,36 @@
             </ul>
         </div>
         <div class="col-md-10">
+
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th>name</th>
+                    <th>quantity</th>
+                    <th>price</th>
+                    <th>info</th>
+                    <th>categoryName</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr th:each="product: ${productList}">
+                    <td th:text="${product.name}"/>
+                    <td th:text="${product.quantity}"/>
+                    <td th:text="${product.price}"/>
+                    <td th:text="${product.info}"/>
+                    <td th:text="${product.categoryName}"/>
+                    <a th:href="@{/admin/product/info/{id}(id=${product.id})}" class="btn btn-primary">info</a>
+
+                    <!--                    <td>-->
+<!--                        <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>-->
+<!--                        <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>-->
+<!--                    </td>-->
+                </tr>
+
+                </tbody>
+            </table>
+
             <h1>WELCOME TO OUR ADMIN PANEL</h1>
         </div>
     </div>
