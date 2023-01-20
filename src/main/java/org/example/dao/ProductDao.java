@@ -37,7 +37,7 @@ public class ProductDao implements BaseDao<Product> {
     @Override
     public boolean add(Product product) {
         return jdbcTemplate.update(
-                "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
+                "insert into product(name, product_url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
                 product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()) > 0;
     }
     public List<Product> getProductCategoryIdList(int id){
