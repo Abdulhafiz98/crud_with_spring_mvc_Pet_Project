@@ -20,7 +20,8 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public Product getById(int id) {
-        return null;
+        List<Product> productList = jdbcTemplate.query("select * from product_1 where id = ?", new Object[]{id}, new ProductMapper());
+        return productList.stream().findFirst().orElse(null);
     }
 
     @Override
@@ -40,19 +41,10 @@ public class ProductDao implements BaseDao<Product> {
                 new Object[]{product.getCreatedBy(),product.getCreatedDate(), product.getUpdatedDate(), product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(),product.getInfo(),product.getCategoryId()}
         ) > 0;
     }
-//    public boolean add(Product product) {
-//        return jdbcTemplate.update(
-//                "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
-//                new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
-//        ) > 0;
-//    }
     public List<Product> getListOrder(Long chatId){return jdbcTemplate.query("select * from get_order_list(?)",new Object[]{chatId},new ProductMapper());}
     public List<Product> getListBasket(Long chatId){return jdbcTemplate.query("select * from get_basket_list(?)",new Object[]{chatId},new ProductMapper());}
 
     public boolean add_order(long chatId, String product){
-
-//            int update = jdbcTemplate.update("select * from add_order(?,?)",new Object[]{chatId,product});
-//            return update>0;
         try {
             SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("add_order");
             SqlParameterSource in = new MapSqlParameterSource().addValue("i_user", chatId).addValue("i_product", product);
@@ -73,5 +65,41 @@ public class ProductDao implements BaseDao<Product> {
     }
     public List<Product> getProductCategoryIdList(int id){
         return jdbcTemplate.query("select * from product p where p.category_id = ?",new Object[]{id}, new ProductMapper());
+    }
+
+    public List<Product> getProductList(int categoryId, int pageCount){
+        return jdbcTemplate.query("select * from get_product(?,?)",new Object[]{categoryId,pageCount},new ProductMapper());
+    }
+
+    public boolean addFavourites(long userChatId, int productId){
+        try {
+            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("add_favourites");
+            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id",userChatId).addValue("i_product_id",productId);
+            return jdbcCall.executeFunction(boolean.class,in);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean buyProduct(long chatId, int productId) {
+        try {
+            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("buy_product");
+            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_product_id", productId);
+            return jdbcCall.executeFunction(boolean.class,in);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public boolean register_user(long chatId, int productId) {
+        try {
+            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("buy_product");
+            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_product_id", productId);
+            return jdbcCall.executeFunction(boolean.class,in);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 }

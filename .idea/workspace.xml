@@ -10,77 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19260b5f-f73f-400a-913b-be674dd0078a" name="Changes" comment=" commit done">
-      <change beforePath="$PROJECT_DIR$/.idea/B24_Bootcamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/B24_Bootcamp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/B24_Bootcamp_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/B24_Bootcamp_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/CategoryServiceBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/UserServiceBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/a1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/a2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/a3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/a4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/MyBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/dbConnection/DatabaseTelegram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BasketService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/utils/BaseBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/utils/BaseBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/CategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/BaseModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-annotations-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-core-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-databind-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/servlet-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CategoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/CategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/OrderService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +262,8 @@
       <workItem from="1674152538773" duration="608000" />
       <workItem from="1674154448374" duration="402000" />
       <workItem from="1674186540265" duration="462000" />
-      <workItem from="1674187063070" duration="2757000" />
+      <workItem from="1674187063070" duration="13244000" />
+      <workItem from="1674204184737" duration="12776000" />
     </task>
     <task id="LOCAL-00001" summary="i send telegram servive">
       <created>1673947797813</created>
@@ -371,48 +330,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
           <line>19</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
-          <line>46</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
-          <line>60</line>
+          <line>32</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
-          <line>55</line>
+          <line>28</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -426,19 +355,109 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
-          <line>51</line>
+          <line>24</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots/6.3.0/telegrambots-6.3.0-sources.jar!/org/telegram/telegrambots/updatesreceivers/DefaultBotSession.java</url>
+          <line>318</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/ProductService.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/UserServiceBot.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>17</line>
+          <properties class="org.example.bot.service.BasketService" method="getOrderList">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/ProductService.java</url>
+          <line>23</line>
+          <properties class="org.example.bot.service.ProductService" method="getProductInfo">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/ProductService.java</url>
+          <line>17</line>
+          <properties class="org.example.bot.service.ProductService" method="getProductById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java</url>
+          <line>273</line>
+          <properties class="org.example.bot.service.BotService" method="handleContact">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/UserServiceBot.java</url>
+          <line>11</line>
+          <properties class="org.example.bot.service.UserServiceBot" method="checkUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
