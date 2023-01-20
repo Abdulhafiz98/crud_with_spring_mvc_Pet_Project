@@ -4,10 +4,11 @@ import org.example.dao.CategoryDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
+import org.example.model.Info;
 import org.example.model.Product;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ProductService {
     private final ProductDao productDao;
@@ -16,6 +17,9 @@ public class ProductService {
     public ProductService(ProductDao productDao, CategoryDao categoryDao) {
         this.productDao = productDao;
         this.categoryDao = categoryDao;
+    }
+    public List<Info> getInfo(int id) {
+     return productDao.getInfoList(id);
     }
 
     public boolean addProduct(Product product) {
@@ -51,4 +55,22 @@ public class ProductService {
        return productDao.getProductCategoryIdList(id);
     }
 
+    public  List<ProductResponseDto> getProductListByName(String productName){
+
+        List<Product> productListByName = productDao.getProductListByName(productName);
+
+        List<ProductResponseDto> productList = new ArrayList<>();
+
+        productListByName.stream().parallel().forEach(
+                (product)-> productList.add(new ProductResponseDto(
+                        product.getName(),
+                        product.getProductUrl(),
+                        product.getPrice(),
+                        product.getQuantity(),
+                        product.getInfo(),
+                        "",
+                        product.getDiscount())) //TODO
+        );
+        return productList;
+    }
 }

@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class UserDao implements BaseDao<User> {
 
     private JdbcTemplate jdbcTemplate;
@@ -23,19 +23,26 @@ public class UserDao implements BaseDao<User> {
 
     @Override
     public User getById(int id) {
-        return jdbcTemplate.queryForObject("select * from users where id = ?", new Object[]{id}, new UserMapper());
+        try{
+            return jdbcTemplate.queryForObject(
+                    "select * from users where id = ? ",
+                    new Object[]{id},
+                    new UserMapper());
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+            return null;
+        }
     }
-
     @Override
     public List<User> getList() {
+
         return jdbcTemplate.query("select * from users", new UserMapper());
     }
-
     @Override
     public boolean delete(int id) {
-        return jdbcTemplate.update("delete from users where id = ?", new Object[]{id}) > 0;
+        return jdbcTemplate.update("delete from users where id = ?", id) > 0;
     }
-
     @Override
     public boolean add(User user) {
         int update=0;
@@ -51,7 +58,6 @@ catch (Exception ex){
 return update>0;
 
     }
-
     public User login(final UserLoginRequest userLoginRequest) {
         try {
             return jdbcTemplate.queryForObject(
