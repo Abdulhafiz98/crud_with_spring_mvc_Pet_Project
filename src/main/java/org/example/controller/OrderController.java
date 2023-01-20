@@ -10,12 +10,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/admin/order")
 public class OrderController {
    OrderService orderService;
+    private CookieService cookieService;
+
+    public OrderController(OrderService orderService, CookieService cookieService) {
+        this.orderService = orderService;
+        this.cookieService=cookieService;
+    }
+
+    public OrderController() {
+    }
 
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
@@ -54,24 +63,7 @@ public class OrderController {
 //    model.addAttribute("orderItemList",orderService.getOrderItemList(1));
 //    return "admin/order";
 //}
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
-
-@Controller
-@RequestMapping(value = "basket/")
-public class OrderController {
-    private OrderService orderService;
-    private CookieService cookieService;
-
-    public OrderController(OrderService orderService, CookieService cookieService) {
-        this.orderService = orderService;
-        this.cookieService=cookieService;
-    }
-
-    public OrderController() {
-    }
 
     @GetMapping(value = "/pay")
     public String buy(Model model, HttpServletRequest request) {

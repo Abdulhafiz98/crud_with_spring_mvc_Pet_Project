@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.OrderDto;
@@ -9,15 +10,18 @@ import org.example.model.OrderItem;
 import org.example.model.OrderStatus;
 import org.example.model.Product;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
-
 public class OrderService {
     private final ProductDao productDao;
     private final OrderDao orderDao;
 
-    public OrderService(ProductDao productDao, OrderDao orderDao) {
-        this.productDao = productDao;
-        this.orderDao = orderDao;
+    public OrderService(OrderDao orderDao,ProductDao productDao) {
+        this.orderDao=orderDao;
+        this.productDao=productDao;
+    }
+    public OrderService() {
     }
 
     public List<Order> getList() {
@@ -56,7 +60,8 @@ public class OrderService {
         return orderDao.getOrdersBySort(sortNumber);
     }
     
-    public OrderService() {
+    public OrderService(ProductDao productDao) {
+        this.productDao = productDao;
     }
 
     public OrderService(OrderDao orderDao) {

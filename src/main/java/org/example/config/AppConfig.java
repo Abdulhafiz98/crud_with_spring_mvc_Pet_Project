@@ -13,7 +13,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.*;
-
 import javax.sql.DataSource;
 
 
@@ -93,16 +92,9 @@ public class AppConfig implements WebMvcConfigurer {
 
     @Bean
     OrderService orderService() {
-        return new OrderService(productDao(), orderDao());
+        return new OrderService(orderDao(), productDao());
     }
     @Bean
     CookieService cookieService(){return  new CookieService();}
-    
-    @Bean
-    OrderService orderService(){return new OrderService();}
-    
-   @Bean
-    OrderDao orderDao(){
-        return new OrderDao();
-   }
+
 }
