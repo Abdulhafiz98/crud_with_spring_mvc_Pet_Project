@@ -32,7 +32,6 @@ public class MyBot extends TelegramLongPollingBot implements BaseBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-
         if (update.hasMessage()) {
             Message message = update.getMessage();
             Long chatId = message.getChatId();

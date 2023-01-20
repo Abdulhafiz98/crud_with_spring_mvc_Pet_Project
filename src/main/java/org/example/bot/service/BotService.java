@@ -36,10 +36,10 @@ public abstract class BotService {
     public static String BUY = "BUY";
     public static String FAVOURITES = "ADD FAVOURITES";
 
-    String URL = "jdbc:postgresql://localhost:5432/mvc";
+    String URL = "jdbc:postgresql://localhost:5432/postgres";
     String USER = "postgres";
     String DRIVER = "org.postgresql.Driver";
-    String PASSWORD = "admin";
+    String PASSWORD = "abdulatif032200";
 
     public static String CATEGORY = "category";
 

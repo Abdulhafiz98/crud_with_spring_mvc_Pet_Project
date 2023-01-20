@@ -39,7 +39,6 @@ public class UserDao implements BaseDao<User> {
     }
     @Override
     public List<User> getList() {
-
         return jdbcTemplate.query("select * from users", new UserMapper());
     }
     @Override
@@ -75,17 +74,18 @@ return update>0;
         return jdbcTemplate.query("select * from users", new UserMapper());
     }
 
-    public boolean registerUser(long chatId, String phoneNumber){
+    public boolean registerUser(long chatId, String phoneNumber) {
         try {
             SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("register_user");
             SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_phone_number", phoneNumber);
             Boolean aBoolean = jdbcCall.executeFunction(boolean.class, in);
             System.out.println(aBoolean);
             return aBoolean;
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
+    }
 
     public boolean update(User user){
         return jdbcTemplate.update("update users set name = ?, password = ? where id = ?;",

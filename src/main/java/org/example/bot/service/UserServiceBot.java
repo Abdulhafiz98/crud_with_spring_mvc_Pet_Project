@@ -13,12 +13,6 @@ public class UserServiceBot extends BotService {
         UserDao userDao = new UserDao(new JdbcTemplate(dataSource()));
         if (contact == null){
             User user = userDao.getUserList().stream().filter((a) -> a.getChatId() == chatId).findFirst().orElse(null);
-            for (User user1 : userDao.getUserList()) {
-                System.out.println("user1"+ user1.getChatId());
-                System.out.println((user1.getChatId() == chatId) +"   "+ user1.getChatId()+" <> "+chatId);
-                System.out.println(user1.getChatId().equals(chatId));
-                System.out.println("+______________________+");
-            }
             if(user != null){
                 return true;
             }else {

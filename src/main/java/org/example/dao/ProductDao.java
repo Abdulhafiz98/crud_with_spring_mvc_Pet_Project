@@ -80,7 +80,7 @@ public class ProductDao implements BaseDao<Product> {
     }
 
     public boolean deleteProduct(long chatId, String product){
-        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("deleteproduct_order");
+        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("delete_product_order");
         SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_user", chatId).addValue("i_product", product);
         return jdbcCall.executeFunction(boolean.class, in);
 
@@ -106,16 +106,6 @@ public class ProductDao implements BaseDao<Product> {
     }
 
     public boolean buyProduct(long chatId, int productId) {
-        try {
-            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("buy_product");
-            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_product_id", productId);
-            return jdbcCall.executeFunction(boolean.class,in);
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-    }
-    public boolean register_user(long chatId, int productId) {
         try {
             SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("buy_product");
             SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_product_id", productId);
