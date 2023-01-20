@@ -4,6 +4,7 @@ import org.example.dao.CategoryDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
+import org.example.model.Info;
 import org.example.model.Product;
 
 import java.util.List;
@@ -16,6 +17,9 @@ public class ProductService {
     public ProductService(ProductDao productDao, CategoryDao categoryDao) {
         this.productDao = productDao;
         this.categoryDao = categoryDao;
+    }
+    public List<Info> getInfo(int id) {
+     return productDao.getInfoList(id);
     }
 
     public boolean addProduct(Product product) {
