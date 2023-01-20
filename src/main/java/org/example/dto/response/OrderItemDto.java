@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OrderItemDto {
     private String productName;
+    private double productPrice;
     private int quantity;
 }

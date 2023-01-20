@@ -109,7 +109,7 @@
     }
 
     a {
-        color: white;
+
         text-decoration: none;
     }
 
@@ -146,7 +146,7 @@
                 <div class="rowStyle">
                     <div class="cardStyle" th:each="orderList : ${orderList}">
                             <div class="imgIcon">
-                            <h3 style="  color: white;"><a th:href="'/admin/order/order-item/'+${orderList.id}"
+                            <h3 ><a style=" color: white;" th:href="'/admin/order/order-item/'+${orderList.id}"
                                                            th:text="${orderList.userName}"></a></h3>
                             <p>phone number: <a th:href="${'tel:' + orderList.phoneNumber}"><i class="fa fa-phone"
                                                                                                aria-hidden="true"

@@ -73,7 +73,7 @@ public class OrderDao implements BaseDao<Order> {
     }
 
     public List<OrderItem> getOrderItemList(int id) {
-        return getById(id).getOrderItems();
+        return jdbcTemplate.query("select * from order_item where order_id = ?",  new Object[]{id}, new OrderItemMapper());
     }
 
     public boolean editStatus(int id, String status) {

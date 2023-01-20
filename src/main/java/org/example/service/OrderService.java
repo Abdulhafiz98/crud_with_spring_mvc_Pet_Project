@@ -31,12 +31,13 @@ public class OrderService {
         return orderItemList.stream().parallel().map((orderItem) -> {
             Product product1 = productList.stream()
                     .filter(
-                            (product -> product.getId() == orderItem.getProductId())
+                            (product -> orderItem.getProductId() == product.getId())
                     ).findFirst()
                     .orElse(null);
 
             return new OrderItemDto(
                     product1 == null ? "" : product1.getName(),
+                    product1 == null ? 0 : product1.getPrice(),
                     orderItem.getQuantity()
             );
         }).toList();
