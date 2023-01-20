@@ -32,7 +32,6 @@ public class SessionConfigInterceptor implements HandlerInterceptor {
         if (split[0].equals("add")) {
             cookieService.addOrDeleteCookie(request, response, productId);
             response.sendRedirect("basket/basket");
-
         } else {
             idList = cookieService.getProductIdFromCookie(request);
             response.sendRedirect("basket/basket");

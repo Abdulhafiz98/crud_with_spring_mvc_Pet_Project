@@ -30,8 +30,8 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.4" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web2" />
       <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web" />
+      <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web2" />
       <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web3" />
       <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web3" />
     </root>

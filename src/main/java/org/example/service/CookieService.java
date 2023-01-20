@@ -54,4 +54,13 @@ public class CookieService {
         }
         return productIdList;
     }
+
+    public boolean deleteCookie(HttpServletRequest request){
+        for (Cookie cookie : request.getCookies()) {
+            if (cookie.getName().equals("product")) {
+                cookie.setMaxAge(0);
+            }
+        }
+        return false;
+    }
 }

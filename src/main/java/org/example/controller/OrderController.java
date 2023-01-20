@@ -28,6 +28,7 @@ public class OrderController {
     public String buy(Model model, HttpServletRequest request) {
         List<Integer> productIdFromCookie = cookieService.getProductIdFromCookie(request);
         if (orderService.addOrder(productIdFromCookie, request)) {
+            cookieService.deleteCookie(request);
             model.addAttribute("massage", "Your order successfully completed." +
                     "You can see orders from your account");
         } else {
