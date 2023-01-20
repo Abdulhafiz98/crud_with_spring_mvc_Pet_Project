@@ -10,19 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bf29ddd-ff91-4f7a-8e52-be2c536e21a6" name="Changes" comment="commit qildim">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/templates/product/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/admin/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/admin/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/response/ProductResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/response/ProductResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/admin/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/admin/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/product/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/product/info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +28,7 @@
       <list>
         <option value="Class" />
         <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -196,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674109766909</updated>
       <workItem from="1674109768100" duration="1084000" />
-      <workItem from="1674110878973" duration="8662000" />
+      <workItem from="1674110878973" duration="12308000" />
     </task>
     <task id="LOCAL-00001" summary="commit qildim">
       <created>1674110614458</created>

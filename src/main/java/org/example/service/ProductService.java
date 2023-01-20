@@ -48,8 +48,8 @@ public class ProductService {
             );
         }).toList();
     }
-    public List<Product> getProductCategoryIdList(int id){
-       return productDao.getProductCategoryIdList(id);
+    public List<Product> getProductCategoryIdList(String name){
+       return productDao.getProductCategoryIdList(name);
     }
 
 }
