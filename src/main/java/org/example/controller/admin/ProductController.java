@@ -62,4 +62,13 @@ public class ProductController {
         return "product/product";
     }
 
+    @GetMapping("/search")
+    public String getSearchedProductList(Model model, HttpServletRequest request){
+        String productName = request.getParameter("productName");
+        List<ProductResponseDto> productResponseDtoList = productService.getProductListByName(productName);
+
+        model.addAttribute("productList", productResponseDtoList);
+        return "admin/product";
+    }
+
 }
