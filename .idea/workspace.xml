@@ -10,219 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4af4988-3478-42f2-8ca7-415f4df41b4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/OrderItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/OrderSortedMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/response/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/response/OrderItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/image/kaktus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/crud_with_spring_mvc_Web4_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/crud_with_spring_mvc_Web4_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b098c492-2262-43b3-a1bd-ffe46cc5c126.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b098c492-2262-43b3-a1bd-ffe46cc5c126.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b098c492-2262-43b3-a1bd-ffe46cc5c126/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b098c492-2262-43b3-a1bd-ffe46cc5c126/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1e8fe5d-a1ba-4352-9f68-684bc1d26e32/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud_with_spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crud_with_spring_mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/BasketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/BasketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/AdminCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/AdminCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/admin/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/filter/SessionConfigInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/OrderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Order$OrderBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/OrderItem$OrderItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/OrderItem$OrderItemBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/classes/org/example/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/servlet-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/admin/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/basket/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/basket/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/basket/order.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/basket/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/basket/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/product/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/product/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/config/AppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/BasketController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/admin/AdminCategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/admin/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/admin/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/filter/SessionConfigInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/controller/web/CategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/BaseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/mapper/CategoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dao/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dto/UserLoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dto/UserRegisterRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/exception/SessionNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Category$CategoryBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Order$OrderBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/OrderItem$OrderItemBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/OrderItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/model/UserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/AuthService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/BasketService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/CategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/CookieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/classes/org/example/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/image/111.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/image/222.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/image/333.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/image/444.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/attoparser-2.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/checker-qual-3.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/jackson-annotations-2.13.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/jackson-core-2.13.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/jackson-databind-2.13.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/lombok-1.18.24.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/postgresql-42.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/slf4j-api-2.0.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-aop-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-beans-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-context-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-core-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-expression-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-jcl-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-jdbc-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-tx-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-web-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/spring-webmvc-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/thymeleaf-3.1.1.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/thymeleaf-spring5-3.1.1.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/servlet-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/order-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/admin/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/product/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/basket/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/basket/payment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/product/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/product/product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/web/categories.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/templates/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/crud_with_spring_mvc_Web4_exploded/WEB-INF/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/BasketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/AdminCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/AdminCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/admin/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/filter/SessionConfigInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/filter/SessionConfigInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/response/ProductResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/response/ProductResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/BasketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/BasketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/admin/AdminCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/admin/AdminCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/admin/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/admin/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/admin/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/OrderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Order$OrderBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/OrderItem$OrderItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/OrderItem$OrderItemBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/admin/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/product/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/product/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/basket/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/basket/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/basket/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,7 +196,8 @@
       <workItem from="1674192167490" duration="447000" />
       <workItem from="1674192618720" duration="9622000" />
       <workItem from="1674207365622" duration="1692000" />
-      <workItem from="1674209062738" duration="1449000" />
+      <workItem from="1674209062738" duration="8978000" />
+      <workItem from="1674226364036" duration="1999000" />
     </task>
     <servers />
   </component>
@@ -408,5 +214,39 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/UserService.java</url>
+          <line>33</line>
+          <properties class="org.example.service.UserService" method="getUserIdFromSession">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/OrderController.java</url>
+          <line>60</line>
+          <properties class="org.example.controller.OrderController" method="buy">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/BasketController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.example.dao.UserDao" memberName="jdbcTemplate" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

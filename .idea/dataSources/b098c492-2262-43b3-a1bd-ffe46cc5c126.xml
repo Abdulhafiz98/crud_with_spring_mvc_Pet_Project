@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>5637</IntrospectionStateNumber>
+      <IntrospectionStateNumber>5663</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1673594279</StartupTime>
       <TimeZones>true ACDT
@@ -829,7 +829,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>5637</IntrospectionStateNumber>
+      <IntrospectionStateNumber>5663</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4286,7 +4286,7 @@ false Zulu
     <schema id="273" parent="9" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>5637</IntrospectionStateNumber>
+      <IntrospectionStateNumber>5663</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4918,10 +4918,10 @@ false Zulu
       <StateNumber>5568</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="365" parent="301" name="chatId">
+    <column id="365" parent="301" name="chat_id">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
-      <StateNumber>5568</StateNumber>
+      <StateNumber>5656</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="366" parent="301" name="role">
@@ -4930,31 +4930,7 @@ false Zulu
       <StateNumber>5568</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="367" parent="301" name="first_name">
-      <DasType>varchar|0s</DasType>
-      <Position>8</Position>
-      <StateNumber>5625</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="368" parent="301" name="last_name">
-      <DasType>varchar|0s</DasType>
-      <Position>9</Position>
-      <StateNumber>5626</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="369" parent="301" name="address">
-      <DasType>varchar|0s</DasType>
-      <Position>10</Position>
-      <StateNumber>5627</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="370" parent="301" name="city">
-      <DasType>varchar|0s</DasType>
-      <Position>11</Position>
-      <StateNumber>5628</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="371" parent="301" name="users_pkey">
+    <index id="367" parent="301" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19923</ObjectId>
@@ -4963,7 +4939,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="372" parent="301" name="users_name_key">
+    <index id="368" parent="301" name="users_name_key">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19925</ObjectId>
@@ -4974,7 +4950,7 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="373" parent="301" name="users_phone_number_key">
+    <index id="369" parent="301" name="users_phone_number_key">
       <ColNames>phone_number</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19927</ObjectId>
@@ -4985,20 +4961,20 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="374" parent="301" name="users_pkey">
+    <key id="370" parent="301" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19924</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5568</StateNumber>
       <UnderlyingIndexId>19923</UnderlyingIndexId>
     </key>
-    <key id="375" parent="301" name="users_name_key">
+    <key id="371" parent="301" name="users_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19926</ObjectId>
       <StateNumber>5568</StateNumber>
       <UnderlyingIndexId>19925</UnderlyingIndexId>
     </key>
-    <key id="376" parent="301" name="users_phone_number_key">
+    <key id="372" parent="301" name="users_phone_number_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19928</ObjectId>
       <StateNumber>5568</StateNumber>
