@@ -28,11 +28,11 @@ public class BasketController {
     }
 
     //    test
-//    @GetMapping(value = "/basket")
-//    public String basket(Model model) {
-//        model.addAttribute("basket", productService.getProductList());
-//        return "basket/basket";
-//    }
+    @GetMapping(value = "/basket")
+    public String basket(Model model) {
+        model.addAttribute("basket", productService.getProductList());
+        return "basket/basket";
+    }
 
     @GetMapping(value = "/order")
     public String order() {
@@ -53,14 +53,14 @@ public class BasketController {
 
 
 //    do not delete
-    @GetMapping(value = "/basket")
-    public String productsFromBasket(Model model, HttpServletRequest httpServletRequest) {
-        List<Product> productList = new ArrayList<>();
-        for (Integer integer : cookieService.getProductIdFromCookie(httpServletRequest)) {
-            Product product = productService.getProduct(integer);
-            productList.add(product);
-        }
-        model.addAttribute("basket", productList);
-        return "basket/basket";
-    }
+//    @GetMapping(value = "/basket")
+//    public String productsFromBasket(Model model, HttpServletRequest httpServletRequest) {
+//        List<Product> productList = new ArrayList<>();
+//        for (Integer integer : cookieService.getProductIdFromCookie(httpServletRequest)) {
+//            Product product = productService.getProduct(integer);
+//            productList.add(product);
+//        }
+//        model.addAttribute("basket", productList);
+//        return "basket/basket";
+//    }
 }

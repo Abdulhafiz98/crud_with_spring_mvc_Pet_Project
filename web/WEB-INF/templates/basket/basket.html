@@ -56,8 +56,8 @@
                                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                                     <!-- Data -->
                                     <p><strong>
-                                        <td th:text="${product.name}"/>
-                                    </strong></p>
+                                        <a th:href="@{/admin/product/info/{id}(id=${product.name})}" action="get" ><td th:text="${product.name}"/>
+                                        </a> </strong></p>
                                     <p>
                                     <td th:text="${product.info}"/>
                                     </p>

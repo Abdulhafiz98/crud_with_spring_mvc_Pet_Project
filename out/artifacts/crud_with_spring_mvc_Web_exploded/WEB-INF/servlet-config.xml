@@ -52,5 +52,5 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         <bean id="loggerInterceptor" class="org.example.controller.filter.SessionConfigInterceptor"/>
     </mvc:interceptors>
 
-<!--    <mvc:resources mapping="/**" location="WEB-INF/image/" />-->
+    <mvc:resources mapping="/**" location="WEB-INF/image/" />
 </beans>
