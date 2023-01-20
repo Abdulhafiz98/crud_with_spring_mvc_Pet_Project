@@ -38,4 +38,13 @@ public class ProductController {
         return "product/product";
     }
 
+    @GetMapping("/search/{productName}")
+    public String getSearchedProductList(Model model, @PathVariable("productName") String productName){
+
+        List<ProductResponseDto> productResponseDtoList = productService.getProductListByName(productName);
+
+        model.addAttribute("productList", productResponseDtoList);
+        return "admin/product";
+    }
+
 }

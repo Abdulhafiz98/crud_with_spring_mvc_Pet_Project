@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class UserDao implements BaseDao<User> {
 
     private JdbcTemplate jdbcTemplate;
@@ -33,7 +33,7 @@ public class UserDao implements BaseDao<User> {
 
     @Override
     public boolean delete(int id) {
-        return jdbcTemplate.update("delete from users where id = ?", new Object[]{id}) > 0;
+        return jdbcTemplate.update("delete from users where id = ?", id) > 0;
     }
 
     @Override
