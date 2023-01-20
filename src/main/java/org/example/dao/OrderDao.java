@@ -6,9 +6,9 @@ import org.example.dto.response.OrderDto;
 import org.example.model.Order;
 import org.example.model.OrderItem;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 public class OrderDao implements BaseDao<Order> {
     JdbcTemplate jdbcTemplate;
 
