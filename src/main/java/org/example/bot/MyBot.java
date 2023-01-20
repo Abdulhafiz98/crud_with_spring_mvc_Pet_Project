@@ -49,44 +49,10 @@ public class MyBot extends TelegramLongPollingBot implements BaseBot {
 
                 } else if (message.getText().equals(BotConstants.ORDERS.name())) {
                     List<Product> orderList = new BasketService().getOrderList(chatId);
-                    System.out.println(orderList.size());
-                    for (Product product : orderList) {
-                        File file = new File("web/WEB-INF/image/" + product.getName());
-                        InputFile inputFile = new InputFile(file, product.getName());
-                        SendPhoto sendPhoto = new SendPhoto();
-                        System.out.println(file);
-                        System.out.println(inputFile);
-                        sendPhoto.setChatId(chatId);
-                        sendPhoto.setPhoto(inputFile);
-                        sendPhoto.setCaption(
-                                "Name : " + product.getName() + "\n" +
-                                        "Price : " + product.getPrice() + "\n" +
-                                        "Info : " + product.getInfo()+"\n"+
-                                        "Date : "+product.getCreatedDate()
-                        );
-//                        sendPhoto.setReplyMarkup(BotService.buildInlineDifferentCallBack(List.of("\uD83D\uDED2 Buy", "❌"), List.of("Yes: " + product.getId(), "No:" + product.getName()), 2));
-                        botExecute(MessageType.SEND_PHOTO, sendPhoto);
-                    }
-
+                    printFoto(orderList,chatId,0);
                 } else if (message.getText().equals(BotConstants.BASKET.name())) {
-
                     List<Product> basketList=new BasketService().getBasketList(chatId);
-                    for (Product product : basketList) {
-                        File file = new File("web/WEB-INF/image/" + product.getName());
-                        InputFile inputFile = new InputFile(file, product.getName());
-                        SendPhoto sendPhoto = new SendPhoto();
-                        System.out.println(file);
-                        System.out.println(inputFile);
-                        sendPhoto.setChatId(chatId);
-                        sendPhoto.setPhoto(inputFile);
-                        sendPhoto.setCaption(
-                                "Name : " + product.getName() + "\n" +
-                                        "Price : " + product.getPrice() + "\n" +
-                                        "Info : " + product.getInfo()
-                        );
-                        sendPhoto.setReplyMarkup(BotService.buildInlineDifferentCallBack(List.of("\uD83D\uDED2 Buy", "❌"), List.of("Yes: " + product.getName(), "No:" + product.getName()), 2));
-                        botExecute(MessageType.SEND_PHOTO, sendPhoto);
-                    }
+                    printFoto(basketList,chatId,1);
                 }
             }
         } else if (update.hasCallbackQuery()) {
@@ -116,12 +82,23 @@ public class MyBot extends TelegramLongPollingBot implements BaseBot {
             e.printStackTrace();
         }
     }
-
-    private void botExecute(SendPhoto sendPhoto) {
-        try {
-            execute(sendPhoto);
-        } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
+    private void printFoto(List<Product> list , Long chatId, int a){
+        for (Product product : list) {
+            File file = new File("web/WEB-INF/image/" + product.getName());
+            InputFile inputFile = new InputFile(file, product.getName());
+            SendPhoto sendPhoto = new SendPhoto();
+            sendPhoto.setChatId(chatId);
+            sendPhoto.setPhoto(inputFile);
+            sendPhoto.setCaption(
+                    "Name : " + product.getName().substring(0,product.getName().length()-4) + "\n" +
+                            "Price : " + product.getPrice() + "\n" +
+                            "Info : " + product.getInfo()+"\n"+
+                            "Date : "+product.getCreatedDate()
+            );
+            if (a!=0){
+                sendPhoto.setReplyMarkup(BotService.buildInlineDifferentCallBack(List.of("\uD83D\uDED2 Buy", "❌"), List.of("Yes: " + product.getName(), "No:" + product.getName()), 2));
+            }
+            botExecute(MessageType.SEND_PHOTO, sendPhoto);
         }
     }
 }

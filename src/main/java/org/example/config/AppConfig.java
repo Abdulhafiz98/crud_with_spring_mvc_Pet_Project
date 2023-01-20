@@ -28,10 +28,14 @@ public class AppConfig implements WebMvcConfigurer {
 
     private final Environment environment;
 
-    private final String URL = "url";
-    private final String USER = "dbuser";
-    private final String DRIVER = "driver";
-    private final String PASSWORD = "dbpassword";
+    //    private final String URL = "url";
+//    private final String USER = "m";
+//    private final String DRIVER = "driver";
+//    private final String PASSWORD = "dbpassword";
+    String URL = "jdbc:postgresql://localhost:5432/mvc";
+    String USER = "postgres";
+    String DRIVER = "org.postgresql.Driver";
+    String PASSWORD = "admin";
 
     @Autowired
     public AppConfig(Environment environment) {
@@ -64,23 +68,23 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    CategoryDao categoryDao(){
+    CategoryDao categoryDao() {
         return new CategoryDao(jdbcTemplate());
     }
 
     @Bean
-    ProductDao productDao(){
+    ProductDao productDao() {
         return new ProductDao(jdbcTemplate());
     }
 
     @Bean
-    CategoryService categoryService(){
+    CategoryService categoryService() {
         return new CategoryService(categoryDao());
     }
 
     @Bean
-    ProductService productService(){
-        return new ProductService(productDao(),categoryDao());
+    ProductService productService() {
+        return new ProductService(productDao(), categoryDao());
     }
 
     @Bean

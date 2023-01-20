@@ -25,7 +25,7 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public List<Product> getList() {
-        return jdbcTemplate.query("select * from product", new ProductMapper());
+        return jdbcTemplate.query("select * from product_1", new ProductMapper());
     }
 
     @Override
@@ -36,10 +36,16 @@ public class ProductDao implements BaseDao<Product> {
     @Override
     public boolean add(Product product) {
         return jdbcTemplate.update(
-                "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
-                new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
+                "insert into product_1(created_by, created_date, updated_date, name, product_url,price, quantity, info, category_id) values (?,?,?,?,?,?,?,?,?)",
+                new Object[]{product.getCreatedBy(),product.getCreatedDate(), product.getUpdatedDate(), product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(),product.getInfo(),product.getCategoryId()}
         ) > 0;
     }
+//    public boolean add(Product product) {
+//        return jdbcTemplate.update(
+//                "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
+//                new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
+//        ) > 0;
+//    }
     public List<Product> getListOrder(Long chatId){return jdbcTemplate.query("select * from get_order_list(?)",new Object[]{chatId},new ProductMapper());}
     public List<Product> getListBasket(Long chatId){return jdbcTemplate.query("select * from get_basket_list(?)",new Object[]{chatId},new ProductMapper());}
 
@@ -53,16 +59,6 @@ public class ProductDao implements BaseDao<Product> {
             Boolean aBoolean = jdbcCall.executeFunction(boolean.class, in);
             System.out.println(aBoolean);
             return aBoolean;
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-    }
-    public boolean buyProduct(long chatId, int productId) {
-        try {
-            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("buy_product");
-            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_product_id", productId);
-            return jdbcCall.executeFunction(boolean.class,in);
         }catch (Exception e){
             e.printStackTrace();
             return false;

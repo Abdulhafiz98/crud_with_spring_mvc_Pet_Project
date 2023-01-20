@@ -10,66 +10,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19260b5f-f73f-400a-913b-be674dd0078a" name="Changes" comment=" commit done">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.j8xqSw.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zqDR3A.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/add_order.zybxCA.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/deleteproduct_order.knbNRw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/deleteproduct_order.knbNRw.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_staging_/database/mvc.2qcBAA/schema/public.abK9xQ/routine/get_order_list.xo9uOw.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_49_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_49_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MessageType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/exception/SessionNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1549a8-29a2-4fed-a142-6d4cea1b246a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/B24_Bootcamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/B24_Bootcamp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/B24_Bootcamp_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/B24_Bootcamp_Web_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9774c72-c55c-4df8-926d-682553b04cb8/storage_v2/_src_/database/mvc.2qcBAA/schema/public.abK9xQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/MyBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/dbConnection/DatabaseTelegram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BasketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/service/BotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/utils/BaseBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/bot/utils/BaseBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/ProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dao/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/BaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/classes/org/example/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-annotations-2.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-core-2.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/lib/jackson-databind-2.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/servlet-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/admin/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/templates/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B24_Bootcamp_Web_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/BotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BaseBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BaseBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BotConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bot/utils/BotConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/MyBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BasketService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/service/BotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/service/FileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BaseBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BaseBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BotConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/bot/utils/BotConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/AppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/CategoryController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/filter/SessionConfigInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/CategoryDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/BaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dao/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/ProductResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product$ProductBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +136,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/B24_Bootcamp/web/WEB-INF/image&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.42232454&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;8cd73058331a4cd444545420c747513d&quot;
@@ -173,6 +184,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="B24_Bootcamp:Web exploded">
@@ -289,6 +301,10 @@
       <workItem from="1674100361234" duration="15451000" />
       <workItem from="1674119278103" duration="10723000" />
       <workItem from="1674144452103" duration="843000" />
+      <workItem from="1674152538773" duration="608000" />
+      <workItem from="1674154448374" duration="402000" />
+      <workItem from="1674186540265" duration="462000" />
+      <workItem from="1674187063070" duration="2757000" />
     </task>
     <task id="LOCAL-00001" summary="i send telegram servive">
       <created>1673947797813</created>
@@ -333,7 +349,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Axror" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -356,7 +372,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
-          <line>40</line>
+          <line>46</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -371,18 +387,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>92</line>
+          <line>89</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
           <line>37</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
@@ -405,18 +416,29 @@
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java</url>
-          <line>42</line>
-          <properties class="org.example.dao.ProductDao" method="getListOrder">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="29" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/MyBot.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bot/service/BasketService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

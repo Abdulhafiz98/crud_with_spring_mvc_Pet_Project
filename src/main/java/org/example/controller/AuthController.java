@@ -46,6 +46,7 @@ public class AuthController {
             HttpServletRequest httpServletRequest,
             HttpServletResponse httpServletResponse,
             @ModelAttribute UserLoginRequest loginRequest
+
     ) {
 
         User currentUser = authService.login(loginRequest);

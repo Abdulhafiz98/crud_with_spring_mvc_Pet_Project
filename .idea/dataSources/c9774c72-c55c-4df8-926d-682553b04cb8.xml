@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>6283</IntrospectionStateNumber>
+      <IntrospectionStateNumber>6290</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1672063952</StartupTime>
       <TimeZones>true ACDT
@@ -816,7 +816,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>6283</IntrospectionStateNumber>
+      <IntrospectionStateNumber>6290</IntrospectionStateNumber>
       <ObjectId>18251</ObjectId>
       <Relations>sequence|table|18301|18296|1
 sequence|table|18302|18291|1
@@ -4254,7 +4254,7 @@ sequence|table|18547|18548|1
     <schema id="267" parent="6" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>6283</IntrospectionStateNumber>
+      <IntrospectionStateNumber>6290</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4650,7 +4650,7 @@ sequence|table|18547|18548|1
     </table>
     <table id="319" parent="267" name="product_1">
       <ObjectId>18333</ObjectId>
-      <StateNumber>6187</StateNumber>
+      <StateNumber>6289</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -5723,7 +5723,14 @@ sequence|table|18547|18548|1
       <StateNumber>5940</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="497" parent="319" name="mvc_product_pkey">
+    <column id="497" parent="319" name="discount">
+      <DataType>double precision|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>11</Position>
+      <StateNumber>6289</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="498" parent="319" name="mvc_product_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18422</ObjectId>
@@ -5732,13 +5739,13 @@ sequence|table|18547|18548|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="498" parent="319" name="mvc_product_pkey">
+    <key id="499" parent="319" name="mvc_product_pkey">
       <ObjectId>18423</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6038</StateNumber>
       <UnderlyingIndexId>18422</UnderlyingIndexId>
     </key>
-    <column id="499" parent="320" name="id">
+    <column id="500" parent="320" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;question_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -5746,37 +5753,37 @@ sequence|table|18547|18548|1
       <StateNumber>5997</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="500" parent="320" name="description">
+    <column id="501" parent="320" name="description">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
       <StateNumber>5962</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="501" parent="320" name="problem_id">
+    <column id="502" parent="320" name="problem_id">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>5962</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="502" parent="320" name="attachment_id">
+    <column id="503" parent="320" name="attachment_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>5962</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="503" parent="320" name="type">
+    <column id="504" parent="320" name="type">
       <DataType>varchar|0s</DataType>
       <Position>5</Position>
       <StateNumber>5962</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="504" parent="320" name="orders">
+    <column id="505" parent="320" name="orders">
       <DataType>integer|0s</DataType>
       <Position>6</Position>
       <StateNumber>5962</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="505" parent="320" name="question_problem_id_fkey">
+    <foreign-key id="506" parent="320" name="question_problem_id_fkey">
       <ColNames>problem_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18485</ObjectId>
@@ -5787,7 +5794,7 @@ sequence|table|18547|18548|1
       <RefTableName>problem</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="506" parent="320" name="question_attachment_id_fkey">
+    <foreign-key id="507" parent="320" name="question_attachment_id_fkey">
       <ColNames>attachment_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18480</ObjectId>
@@ -5798,7 +5805,7 @@ sequence|table|18547|18548|1
       <RefTableName>attachment</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="507" parent="320" name="question_pkey">
+    <index id="508" parent="320" name="question_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18430</ObjectId>
@@ -5807,14 +5814,14 @@ sequence|table|18547|18548|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="508" parent="320" name="question_pkey">
+    <key id="509" parent="320" name="question_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18431</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6042</StateNumber>
       <UnderlyingIndexId>18430</UnderlyingIndexId>
     </key>
-    <column id="509" parent="321" name="id">
+    <column id="510" parent="321" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -5822,13 +5829,13 @@ sequence|table|18547|18548|1
       <StateNumber>5998</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="510" parent="321" name="name">
+    <column id="511" parent="321" name="name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
       <StateNumber>5967</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="511" parent="321" name="role_pkey">
+    <index id="512" parent="321" name="role_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18432</ObjectId>
@@ -5837,14 +5844,14 @@ sequence|table|18547|18548|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="512" parent="321" name="role_pkey">
+    <key id="513" parent="321" name="role_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18433</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6043</StateNumber>
       <UnderlyingIndexId>18432</UnderlyingIndexId>
     </key>
-    <column id="513" parent="322" name="id">
+    <column id="514" parent="322" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;subdomains_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -5852,19 +5859,19 @@ sequence|table|18547|18548|1
       <StateNumber>5999</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="514" parent="322" name="name">
+    <column id="515" parent="322" name="name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
       <StateNumber>5972</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="515" parent="322" name="topic_id">
+    <column id="516" parent="322" name="topic_id">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>5972</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="516" parent="322" name="subdomains_topic_id_fkey">
+    <foreign-key id="517" parent="322" name="subdomains_topic_id_fkey">
       <ColNames>topic_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18490</ObjectId>
@@ -5875,7 +5882,7 @@ sequence|table|18547|18548|1
       <RefTableName>topic</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="517" parent="322" name="subdomains_pkey">
+    <index id="518" parent="322" name="subdomains_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18434</ObjectId>
@@ -5884,14 +5891,14 @@ sequence|table|18547|18548|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="518" parent="322" name="subdomains_pkey">
+    <key id="519" parent="322" name="subdomains_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18435</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6044</StateNumber>
       <UnderlyingIndexId>18434</UnderlyingIndexId>
     </key>
-    <column id="519" parent="323" name="id">
+    <column id="520" parent="323" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;topic_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -5899,13 +5906,13 @@ sequence|table|18547|18548|1
       <StateNumber>6000</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="520" parent="323" name="name">
+    <column id="521" parent="323" name="name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
       <StateNumber>5894</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="521" parent="323" name="topic_pkey">
+    <index id="522" parent="323" name="topic_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18436</ObjectId>
@@ -5914,32 +5921,32 @@ sequence|table|18547|18548|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="522" parent="323" name="topic_pkey">
+    <key id="523" parent="323" name="topic_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18437</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6045</StateNumber>
       <UnderlyingIndexId>18436</UnderlyingIndexId>
     </key>
-    <column id="523" parent="324" name="topic_id">
+    <column id="524" parent="324" name="topic_id">
       <DataType>integer|0s</DataType>
       <Position>1</Position>
       <StateNumber>5980</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="524" parent="324" name="state">
+    <column id="525" parent="324" name="state">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>5980</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="525" parent="324" name="user_id">
+    <column id="526" parent="324" name="user_id">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>5980</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="526" parent="324" name="user_preparation_topic_id_fkey">
+    <foreign-key id="527" parent="324" name="user_preparation_topic_id_fkey">
       <ColNames>topic_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18495</ObjectId>
@@ -5950,25 +5957,25 @@ sequence|table|18547|18548|1
       <RefTableName>topic</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="527" parent="325" name="user_id">
+    <column id="528" parent="325" name="user_id">
       <DataType>bigint|0s</DataType>
       <Position>1</Position>
       <StateNumber>5982</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="528" parent="325" name="problem_id">
+    <column id="529" parent="325" name="problem_id">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>5982</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="529" parent="325" name="state">
+    <column id="530" parent="325" name="state">
       <DataType>boolean|0s</DataType>
       <Position>3</Position>
       <StateNumber>5982</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <foreign-key id="530" parent="325" name="user_problem_status_problem_id_fkey">
+    <foreign-key id="531" parent="325" name="user_problem_status_problem_id_fkey">
       <ColNames>problem_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18500</ObjectId>
@@ -5979,19 +5986,19 @@ sequence|table|18547|18548|1
       <RefTableName>problem</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="531" parent="326" name="user_id">
+    <column id="532" parent="326" name="user_id">
       <DataType>bigint|0s</DataType>
       <Position>1</Position>
       <StateNumber>5984</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="532" parent="326" name="role_id">
+    <column id="533" parent="326" name="role_id">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>5984</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="533" parent="326" name="user_role_role_id_fkey">
+    <foreign-key id="534" parent="326" name="user_role_role_id_fkey">
       <ColNames>role_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18505</ObjectId>
@@ -6002,7 +6009,7 @@ sequence|table|18547|18548|1
       <RefTableName>role</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="534" parent="326" name="uk_user_id_role_id">
+    <index id="535" parent="326" name="uk_user_id_role_id">
       <ColNames>user_id
 role_id</ColNames>
       <ObjectId>18438</ObjectId>
@@ -6010,18 +6017,18 @@ role_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="535" parent="326" name="uk_user_id_role_id">
+    <key id="536" parent="326" name="uk_user_id_role_id">
       <ObjectId>18439</ObjectId>
       <StateNumber>6046</StateNumber>
       <UnderlyingIndexId>18438</UnderlyingIndexId>
     </key>
-    <check id="536" parent="327" name="account_ck">
+    <check id="537" parent="327" name="account_ck">
       <ColNames>account</ColNames>
       <ObjectId>18407</ObjectId>
       <Predicate>account &gt; (0)::double precision</Predicate>
       <StateNumber>6030</StateNumber>
     </check>
-    <column id="537" parent="327" name="id">
+    <column id="538" parent="327" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -6029,44 +6036,44 @@ role_id</ColNames>
       <StateNumber>6001</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="538" parent="327" name="first_name">
+    <column id="539" parent="327" name="first_name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="539" parent="327" name="last_name">
+    <column id="540" parent="327" name="last_name">
       <DataType>varchar|0s</DataType>
       <Position>3</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="540" parent="327" name="username">
+    <column id="541" parent="327" name="username">
       <DataType>varchar|0s</DataType>
       <Position>4</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="541" parent="327" name="password">
+    <column id="542" parent="327" name="password">
       <DataType>varchar|0s</DataType>
       <Position>5</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="542" parent="327" name="age">
+    <column id="543" parent="327" name="age">
       <DataType>integer|0s</DataType>
       <Position>6</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="543" parent="327" name="account">
+    <column id="544" parent="327" name="account">
       <DataType>double precision|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <Position>7</Position>
       <StateNumber>5950</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <index id="544" parent="327" name="users_pkey">
+    <index id="545" parent="327" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18440</ObjectId>
@@ -6075,35 +6082,35 @@ role_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="545" parent="327" name="users_pkey">
+    <key id="546" parent="327" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18441</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6047</StateNumber>
       <UnderlyingIndexId>18440</UnderlyingIndexId>
     </key>
-    <trigger id="546" parent="327" name="trigger_users">
+    <trigger id="547" parent="327" name="trigger_users">
       <Events>IUD</Events>
       <ObjectId>18444</ObjectId>
       <StateNumber>6050</StateNumber>
       <Turn>after-stmt</Turn>
       <CallRoutineId>18286</CallRoutineId>
     </trigger>
-    <trigger id="547" parent="327" name="log_my_trigger">
+    <trigger id="548" parent="327" name="log_my_trigger">
       <Events>I</Events>
       <ObjectId>18442</ObjectId>
       <StateNumber>6048</StateNumber>
       <Turn>after-row</Turn>
       <CallRoutineId>18286</CallRoutineId>
     </trigger>
-    <trigger id="548" parent="327" name="new_trigger">
+    <trigger id="549" parent="327" name="new_trigger">
       <Events>I</Events>
       <ObjectId>18443</ObjectId>
       <StateNumber>6049</StateNumber>
       <Turn>after-stmt</Turn>
       <CallRoutineId>18286</CallRoutineId>
     </trigger>
-    <column id="549" parent="328" name="id">
+    <column id="550" parent="328" name="id">
       <DataType>integer|0s</DataType>
       <Position>1</Position>
       <StateNumber>6194</StateNumber>
