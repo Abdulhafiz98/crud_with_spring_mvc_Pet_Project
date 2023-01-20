@@ -32,8 +32,8 @@ public class CategoryDao implements BaseDao<Category> {
     @Override
     public boolean add(Category category) {
         return jdbcTemplate.update(
-                "insert into category(name, parent_id) values (?,?)",
-                new Object[]{category.getName(),category.getParentId()}
+                "insert into category(name, parent_name) values (?,?)",
+                new Object[]{category.getName(),category.getParentName()}
                 ) > 0;
     }
 }

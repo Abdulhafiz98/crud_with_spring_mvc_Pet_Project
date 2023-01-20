@@ -9,5 +9,5 @@ import lombok.*;
 @Builder
 public class Category extends BaseModel{
     private String name;
-    private int parentId;
+    private String parentName;
 }

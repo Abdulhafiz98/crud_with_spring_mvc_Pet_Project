@@ -3,7 +3,6 @@ package org.example.model;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.jdbc.core.RowMapper;
-
 @Data
 @Builder
 public class User {
