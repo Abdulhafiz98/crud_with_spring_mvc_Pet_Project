@@ -316,16 +316,23 @@
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <ul class="">
-        <li>
+        <li th:if="${userRole.equals('ADMIN')}">
           <a href="/admin/product/list">product</a>
         </li>
-        <li>
+        <li th:if="${userRole.equals('ADMIN')}">
           <a href="/admin/category/list">category</a>
         </li>
         <li>
+          <a href="/admin/order/list">order</a>
+        </li>
+        <li>
+        <li th:if="${userRole.equals('ADMIN')}">
           <a href="/admin/user/list">user</a>
         </li>
-        <li th:if="${isSuperAdmin}">
+        <li th:if="${userRole.equals('SELLER')}">
+          <a href="/admin/order/list">order</a>
+        </li>
+        <li th:if="${userRole.equals('SUPER_ADMIN')}">
           <a href="/user/list">admin</a>
         </li>
       </ul>

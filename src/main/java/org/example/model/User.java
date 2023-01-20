@@ -1,10 +1,12 @@
 package org.example.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 import org.springframework.jdbc.core.RowMapper;
-@Data
+
+@Getter
+@Setter
 @Builder
+@ToString
 public class User {
     private int id;
     private String name;
