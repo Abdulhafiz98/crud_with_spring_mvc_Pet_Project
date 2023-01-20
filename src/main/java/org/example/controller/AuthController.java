@@ -70,11 +70,9 @@ public class AuthController {
             HttpServletRequest httpServletRequest,
             @ModelAttribute UserLoginRequest loginRequest
     ) {
-
         User currentUser = authService.login(loginRequest);
         HttpSession session = httpServletRequest.getSession();
         if (currentUser != null) {
-HttpSession session = httpServletRequest.getSession();
             session.setAttribute("userId",currentUser.getId());
 //            addSession(httpServletRequest, httpServletResponse);
             model.addAttribute("userRole", currentUser.getUserRole().name());
@@ -85,6 +83,5 @@ HttpSession session = httpServletRequest.getSession();
         model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
         return currentUser.getUserRole().name().equals("USER") ? "user/home" : "admin/index";
-
     }
 }

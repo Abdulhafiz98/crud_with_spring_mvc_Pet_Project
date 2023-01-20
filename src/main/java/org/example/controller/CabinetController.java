@@ -25,7 +25,7 @@ public class CabinetController {
 
     @GetMapping ("/page")
     public String reDirectCabPage(HttpServletRequest req,HttpServletResponse resp, Model model){
-        int id = (int)(req.getSession().getAttribute("id"));
+        Integer id = (Integer) ( req.getSession().getAttribute("userId"));
         if(id!=0){
             Optional<User> first = userService.getUserList().stream().filter(user -> user.getId()==id).findFirst();
             if(first.isPresent()) {
