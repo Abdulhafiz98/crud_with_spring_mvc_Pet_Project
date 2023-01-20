@@ -16,13 +16,14 @@ import org.example.model.Product;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+
 public class OrderService {
-    private  ProductDao productDao=null;
-    private  OrderDao orderDao=null;
+    private final ProductDao productDao;
+    private final OrderDao orderDao;
 
     public OrderService(OrderDao orderDao,ProductDao productDao) {
-        this.orderDao=orderDao;
         this.productDao=productDao;
+        this.orderDao=orderDao;
     }
     public List<Order> getList() {
         return orderDao.getList();
@@ -59,14 +60,6 @@ public class OrderService {
     public List<OrderDto> sortOrders(int sortNumber) {
         return orderDao.getOrdersBySort(sortNumber);
     }
-    
-    public OrderService(ProductDao productDao) {
-        this.productDao = productDao;
-    }
-
-    public OrderService(OrderDao orderDao) {
-        this.orderDao = orderDao;
-    }
 
     private Order createOrder(List<Integer> productIdList , HttpServletRequest request) {
         Order order = new Order();
@@ -78,13 +71,10 @@ public class OrderService {
             orderItemList.add(orderItem);
             orderItem = new OrderItem();
         }
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
         order.setOrderItems(orderItemList);
-        order.setUserId(getUserIdFromSession(request));
+        order.setUserId(userId);
         return order;
-    }
-    private Integer getUserIdFromSession(HttpServletRequest request){
-        Integer user_id = (Integer) request.getSession().getAttribute("userId");
-        return user_id;
     }
     public boolean addOrder(List<Integer> productIdList , HttpServletRequest request){
         Order order = createOrder(productIdList, request);

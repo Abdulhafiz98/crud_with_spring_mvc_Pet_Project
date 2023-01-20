@@ -33,4 +33,8 @@ public class UserService {
     public boolean updateUser(User user){
         return userDao.update(user);
     }
+    public Integer getUserIdFromSession(HttpServletRequest request){
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        return userId;
+    }
 }
