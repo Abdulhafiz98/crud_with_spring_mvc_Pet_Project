@@ -14,5 +14,6 @@ public class Order {
     private List<OrderItem> orderItems;
     private int userId;
     private String status;
+    private String orderTime;
 
 }

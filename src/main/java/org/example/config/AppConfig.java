@@ -60,23 +60,28 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    CategoryDao categoryDao(){
+    CategoryDao categoryDao() {
         return new CategoryDao(jdbcTemplate());
     }
 
     @Bean
-    ProductDao productDao(){
+    ProductDao productDao() {
         return new ProductDao(jdbcTemplate());
     }
 
     @Bean
-    CategoryService categoryService(){
+    OrderDao orderDao() {
+        return new OrderDao(jdbcTemplate());
+    }
+
+    @Bean
+    CategoryService categoryService() {
         return new CategoryService(categoryDao());
     }
 
     @Bean
-    ProductService productService(){
-        return new ProductService(productDao(),categoryDao());
+    ProductService productService() {
+        return new ProductService(productDao(), categoryDao());
     }
 
     @Bean
@@ -87,9 +92,15 @@ public class AppConfig implements WebMvcConfigurer {
     BasketService basketService(){ return  new BasketService();}
 
     @Bean
+    OrderService orderService() {
+        return new OrderService(productDao(), orderDao());
+    }
+    @Bean
     CookieService cookieService(){return  new CookieService();}
+    
     @Bean
     OrderService orderService(){return new OrderService();}
+    
    @Bean
     OrderDao orderDao(){
         return new OrderDao();
