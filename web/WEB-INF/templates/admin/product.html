@@ -15,25 +15,31 @@
     <div class="row">
         <div class="col-md-2">
             <ul class="">
-                <li>
+                <li th:if="${userRole.equals('ADMIN')}">
                     <a href="/admin/product/list">product</a>
                 </li>
-                <li>
+                <li th:if="${userRole.equals('ADMIN')}">
                     <a href="/admin/category/list">category</a>
                 </li>
                 <li>
                     <a href="/admin/order/list">order</a>
                 </li>
                 <li>
+                <li th:if="${userRole.equals('ADMIN')}">
+
                     <a href="/admin/user/list">user</a>
                 </li>
-                <li th:if="${isSuperAdmin}">
+                <li th:if="${userRole.equals('SELLER')}">
+                    <a href="/admin/order/list">order</a>
+                </li>
+                <li th:if="${userRole.equals('SUPER_ADMIN')}">
                     <a href="/user/list">admin</a>
                 </li>
                 </li>
             </ul>
         </div>
         <div class="col-md-10">
+
             <table class="table ">
                 <thead>
                 <tr>
@@ -52,14 +58,18 @@
                     <td th:text="${product.price}"/>
                     <td th:text="${product.info}"/>
                     <td th:text="${product.categoryName}"/>
-<!--                    <td>-->
-<!--                        <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>-->
-<!--                        <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>-->
-<!--                    </td>-->
+                    <td>
+                        <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
+                        <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>
+                    </td>
+
+                    <a th:href="@{/admin/product/info/{id}(id=${product.id})}" class="btn btn-primary">info</a>
                 </tr>
 
                 </tbody>
             </table>
+
+            <h1>WELCOME TO OUR ADMIN PANEL</h1>
         </div>
     </div>
 

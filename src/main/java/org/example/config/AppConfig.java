@@ -1,7 +1,5 @@
 package org.example.config;
 
-import netscape.javascript.JSObject;
-import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
@@ -90,9 +88,21 @@ public class AppConfig implements WebMvcConfigurer {
     UserService userService() {
         return new UserService(userDao());
     }
+    @Bean
+    BasketService basketService(){ return  new BasketService();}
 
     @Bean
     OrderService orderService() {
         return new OrderService(productDao(), orderDao());
     }
+    @Bean
+    CookieService cookieService(){return  new CookieService();}
+    
+    @Bean
+    OrderService orderService(){return new OrderService();}
+    
+   @Bean
+    OrderDao orderDao(){
+        return new OrderDao();
+   }
 }
