@@ -17,4 +17,9 @@ public class User {
     private String email;
     private Long chatId;
     private UserRole userRole;
+    private String firstName;
+    private String lastName;
+    private  String address;
+    private  String city;
+
 }

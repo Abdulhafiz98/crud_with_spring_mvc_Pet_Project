@@ -1,7 +1,6 @@
 package org.example.config;
 
 import org.example.dao.CategoryDao;
-import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.*;
