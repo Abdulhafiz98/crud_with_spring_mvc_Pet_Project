@@ -47,7 +47,7 @@ public class CategoryController {
         Category category = categoryService.getCategory(id);
         model.addAttribute("category", category);
         model.addAttribute("categoryList", categoryService.getCategoryList());
-        return "admin/admin";
+        return getCategoryList(model);
     }
 
     @PostMapping("/add")
@@ -56,7 +56,7 @@ public class CategoryController {
             @ModelAttribute CategoryRequest categoryRequest
     ) {
         categoryService.addCategory(categoryRequest);
-        return "admin/admin";
+        return getCategoryList(model);
     }
 
 
