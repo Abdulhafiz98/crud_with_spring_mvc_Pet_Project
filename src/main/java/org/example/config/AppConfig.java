@@ -1,6 +1,9 @@
 package org.example.config;
 
+import netscape.javascript.JSObject;
+import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
+import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.*;
@@ -59,23 +62,28 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    CategoryDao categoryDao(){
+    CategoryDao categoryDao() {
         return new CategoryDao(jdbcTemplate());
     }
 
     @Bean
-    ProductDao productDao(){
+    ProductDao productDao() {
         return new ProductDao(jdbcTemplate());
     }
 
     @Bean
-    CategoryService categoryService(){
+    OrderDao orderDao() {
+        return new OrderDao(jdbcTemplate());
+    }
+
+    @Bean
+    CategoryService categoryService() {
         return new CategoryService(categoryDao());
     }
 
     @Bean
-    ProductService productService(){
-        return new ProductService(productDao(),categoryDao());
+    ProductService productService() {
+        return new ProductService(productDao(), categoryDao());
     }
 
     @Bean
@@ -83,7 +91,8 @@ public class AppConfig implements WebMvcConfigurer {
         return new UserService(userDao());
     }
 
-//    @Bean
-//    CookieService cookieService(){return new CookieService();}
-
+    @Bean
+    OrderService orderService() {
+        return new OrderService(productDao(), orderDao());
+    }
 }

@@ -22,9 +22,8 @@ public class ProductDao implements BaseDao<Product> {
 
     @Override
     public List<Product> getList() {
-        return jdbcTemplate.query("select * from product", new ProductMapper());
+        return jdbcTemplate.query("select * from product ", new ProductMapper());
     }
-
     @Override
     public boolean delete(int id) {
         return false;
@@ -36,5 +35,8 @@ public class ProductDao implements BaseDao<Product> {
                 "insert into product(name, url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
                 new Object[]{product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()}
         ) > 0;
+    }
+    public List<Product> getProductCategoryIdList(int id){
+        return jdbcTemplate.query("select * from product p where p.category_id = ?",new Object[]{id}, new ProductMapper());
     }
 }
