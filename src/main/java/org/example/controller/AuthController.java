@@ -69,6 +69,7 @@ public class AuthController {
             Model model,
             HttpServletRequest httpServletRequest,
             @ModelAttribute UserLoginRequest loginRequest
+
     ) {
         User currentUser = authService.login(loginRequest);
         HttpSession session = httpServletRequest.getSession();

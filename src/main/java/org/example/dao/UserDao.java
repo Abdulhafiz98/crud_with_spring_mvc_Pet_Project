@@ -5,6 +5,9 @@ import org.example.dto.UserLoginRequest;
 import org.example.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -68,6 +71,21 @@ return update>0;
             return null;
         }
     }
+    public List<User> getUserList() {
+        return jdbcTemplate.query("select * from users", new UserMapper());
+    }
+
+    public boolean registerUser(long chatId, String phoneNumber){
+        try {
+            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("register_user");
+            SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_id", chatId).addValue("i_phone_number", phoneNumber);
+            Boolean aBoolean = jdbcCall.executeFunction(boolean.class, in);
+            System.out.println(aBoolean);
+            return aBoolean;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
 
     public boolean update(User user){
         return jdbcTemplate.update("update users set name = ?, password = ? where id = ?;",
