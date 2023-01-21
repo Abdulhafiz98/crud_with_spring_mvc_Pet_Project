@@ -69,6 +69,7 @@ public class AuthController {
             Model model,
             HttpServletRequest httpServletRequest,
             @ModelAttribute UserLoginRequest loginRequest
+
     ) {
         boolean condition;
         User currentUser = authService.login(loginRequest);
