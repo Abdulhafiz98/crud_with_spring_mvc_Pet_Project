@@ -31,12 +31,12 @@ public class ProductController {
         return "admin/product";
     }
 
-    @GetMapping("/category/{id}")
-    public String getCategoryList(Model model, @PathVariable("id") int id) {
-        List<Product> productList = productService.getProductCategoryIdList(id);
-        model.addAttribute("productList", productList);
-        return "product/product";
-    }
+//    @GetMapping("/category/{id}")
+//    public String getCategoryList(Model model, @PathVariable("id") int id) {
+//        List<Product> productList = productService.getProductCategoryIdList(id);
+//        model.addAttribute("productList", productList);
+//        return "product/product";
+//    }
 
     @GetMapping("/search")
     public String getSearchedProductList(@RequestParam("productName") String productName , Model model){

@@ -3,7 +3,6 @@ package org.example.dao;
 import org.example.dao.mapper.ProductMapper;
 import org.example.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
