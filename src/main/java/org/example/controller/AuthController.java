@@ -70,13 +70,16 @@ public class AuthController {
             HttpServletRequest httpServletRequest,
             @ModelAttribute UserLoginRequest loginRequest
     ) {
+        boolean condition;
         User currentUser = authService.login(loginRequest);
-        HttpSession session = httpServletRequest.getSession();
-        if (currentUser != null) {
-            session.setAttribute("userId",currentUser.getId());
-//            addSession(httpServletRequest, httpServletResponse);
-            model.addAttribute("userRole", currentUser.getUserRole().name());
+        if(currentUser==null){
+            condition = true;
+            model.addAttribute("condition",condition);
+            return "/index";
         }
+        HttpSession session = httpServletRequest.getSession();
+        session.setAttribute("userId",currentUser.getId());
+        model.addAttribute("userRole", currentUser.getUserRole().name());
         model.addAttribute("message", "username or password is incorrect");
         model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
