@@ -2,12 +2,8 @@ package org.example.model;
 
 import lombok.*;
 
-import java.util.Date;
-import java.util.List;
-
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -16,7 +12,7 @@ public class Product extends BaseModel {
     private String productUrl;
     private double price;
     private int quantity;
-    private List<Info> info;
+    private String info;
     private int categoryId;
     private double discount;
 }
