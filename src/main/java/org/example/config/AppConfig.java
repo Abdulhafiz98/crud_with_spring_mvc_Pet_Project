@@ -96,7 +96,7 @@ public class AppConfig implements WebMvcConfigurer {
 
     @Bean
     OrderService orderService() {
-        return new OrderService(orderDao(), productDao());
+        return new OrderService(productDao(),orderDao());
     }
     @Bean
     CookieService cookieService(){return  new CookieService();}

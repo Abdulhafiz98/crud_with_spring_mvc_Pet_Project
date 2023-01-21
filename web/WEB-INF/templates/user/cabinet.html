@@ -368,15 +368,35 @@
           <td th:text="${orderItem.status}"/>
           <td th:text="${orderItem.orderTime}"/>
           <td>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+            <a th:attr="onclick=|respons('${orderItem.id}','REJECT')|" class="delete" data-toggle="modal">
               <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
           </td>
         </tr>
         </tbody>
       </table>
+      <script type="text/javascript">
+        function respons(id,status) {
+          let statusC = document.getElementById(id);
+          let result = "";
+          fetch('/admin/order/edit-status/' + id+"/"+status).then((res) => {
+            return res.json()
+          }).then((data)=>{
+            result+=data;
+            console.log(result);
+            if(result==="true"){
+              if(status==="ACCEPT"){
+                statusC.innerHTML = `<b style="color:#28a745;">${status}</b>`;
+              }else{
+                statusC.innerHTML = `<b style="color:red;">${status}</b>`;
+              }
+            }
+          })
+        }
+      </script>
     </div>
   </div>
 </div>
+
 
 
 <!-- Add Modal HTML -->
@@ -445,7 +465,7 @@
         </div>
         <div class="modal-footer">
           <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-          <a href="order delete link" type="submit" class="btn btn-danger">Delete</a>
+          <a type="submit" class="btn btn-danger">Delete</a>
         </div>
       </form>
     </div>
