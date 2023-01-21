@@ -76,7 +76,4 @@ public class ProductService {
         return productList;
     }
 
-    public List<Product> getProductCategoryIdList(int id){
-        return productDao.getProductCategoryIdList(id);
-    }
 }
