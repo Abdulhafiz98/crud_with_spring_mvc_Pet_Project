@@ -48,12 +48,7 @@ public class OrderService {
         }).toList();
     }
 
-    public boolean editRole(int orderId, int statusNumber) {
-        String status;
-        if (statusNumber == 1)
-            status = OrderStatus.ACCEPT.name();
-        else
-            status = OrderStatus.REJECT.name();
+    public boolean editStatus(int orderId, String status) {
         return orderDao.editStatus(orderId, status);
     }
 
@@ -76,6 +71,7 @@ public class OrderService {
         order.setUserId(userId);
         return order;
     }
+
     public boolean addOrder(List<Integer> productIdList , HttpServletRequest request){
         Order order = createOrder(productIdList, request);
         return orderDao.add(order);
