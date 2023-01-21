@@ -18,15 +18,20 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin/order")
 public class OrderController {
+    private  final OrderService orderService;
     private final CookieService cookieService;
-    private final OrderService orderService;
+
+    public OrderController(OrderService orderService, CookieService cookieService) {
+        this.orderService = orderService;
+        this.cookieService=cookieService;
+    }
     public OrderController() {
     }
-    public OrderController(CookieService cookieService, OrderService orderService) {
-        this.cookieService = cookieService;
-        this.orderService = orderService;
-    }
-
+   // public OrderController(CookieService cookieService, OrderService orderService) {
+     //   this.cookieService = cookieService;
+       // this.orderService = orderService;
+    //}
+    
     @GetMapping("/list")
     public String getOrderList(Model model,
                                HttpServletRequest httpServletRequest,

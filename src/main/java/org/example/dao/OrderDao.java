@@ -78,7 +78,10 @@ public class OrderDao implements BaseDao<Order> {
     public boolean editStatus(int orderId, String status) {
         return jdbcTemplate.update(
                 "update orders set status = (?) where id = (?)",
+// samandar
+     //           new Object[]{id,status}
                 new Object[]{status,orderId}
+
         ) > 0;
     }
     public List<OrderDto> getOrdersBySort(int sortNumber){
