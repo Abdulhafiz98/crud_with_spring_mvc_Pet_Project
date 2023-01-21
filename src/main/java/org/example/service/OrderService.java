@@ -1,9 +1,5 @@
 package org.example.service;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.OrderDto;
@@ -21,10 +17,11 @@ public class OrderService {
     private final ProductDao productDao;
     private final OrderDao orderDao;
 
-    public OrderService(OrderDao orderDao,ProductDao productDao) {
-        this.productDao=productDao;
-        this.orderDao=orderDao;
+    public OrderService(ProductDao productDao, OrderDao orderDao) {
+        this.productDao = productDao;
+        this.orderDao = orderDao;
     }
+
     public List<Order> getList() {
         return orderDao.getList();
     }
@@ -48,18 +45,14 @@ public class OrderService {
         }).toList();
     }
 
-    public boolean editRole(int orderId, int statusNumber) {
-        String status;
-        if (statusNumber == 1)
-            status = OrderStatus.ACCEPT.name();
-        else
-            status = OrderStatus.REJECT.name();
+    public boolean editStatus(int orderId, String status) {
         return orderDao.editStatus(orderId, status);
     }
 
     public List<OrderDto> sortOrders(int sortNumber) {
         return orderDao.getOrdersBySort(sortNumber);
     }
+
 
     private Order createOrder(List<Integer> productIdList , HttpServletRequest request) {
         Order order = new Order();
@@ -76,6 +69,7 @@ public class OrderService {
         order.setUserId(userId);
         return order;
     }
+
     public boolean addOrder(List<Integer> productIdList , HttpServletRequest request){
         Order order = createOrder(productIdList, request);
         return orderDao.add(order);
