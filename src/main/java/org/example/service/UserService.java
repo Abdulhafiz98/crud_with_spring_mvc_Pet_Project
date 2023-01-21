@@ -29,8 +29,11 @@ public class UserService {
     public User getUser(int id){
         return userDao.getById(id);
     }
-
-    private Integer getUserIdFromSession(HttpServletRequest request){
+    
+    public boolean updateUser(User user){
+        return userDao.update(user);
+    }
+    public Integer getUserIdFromSession(HttpServletRequest request){
         Integer userId = (Integer) request.getSession().getAttribute("userId");
         return userId;
     }

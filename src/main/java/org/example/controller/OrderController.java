@@ -20,7 +20,8 @@ import java.util.List;
 public class OrderController {
     private final CookieService cookieService;
     private final OrderService orderService;
-
+    public OrderController() {
+    }
     public OrderController(CookieService cookieService, OrderService orderService) {
         this.cookieService = cookieService;
         this.orderService = orderService;
@@ -45,6 +46,20 @@ public class OrderController {
         model.addAttribute("orderItemList", orderService.getOrderItemList(id));
         return "admin/order-item";
     }
+    @GetMapping("/edit-status/{id}")
+    public String edit(Model model,
+        @PathVariable("id") int id
+    ){
+        System.out.println("Hallo" + id);
+        return "index";
+    }
+
+//@GetMapping("/order-item")
+//public String getOrderItemList(Model model) {
+//    model.addAttribute("orderItemList",orderService.getOrderItemList(1));
+//    return "admin/order";
+//}
+
 
     @GetMapping(value = "/pay")
     public String buy(Model model, HttpServletRequest request) {
