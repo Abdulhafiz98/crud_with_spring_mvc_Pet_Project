@@ -12,46 +12,46 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- Add support for component scanning -->
     <context:component-scan base-package="org.example"/>
     <!-- Add support for conversion, formatting and validation support -->
-    <mvc:annotation-driven/>
+
     <!-- Define Spring MVC view resolver -->
     <!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
     <!--        <property name="prefix" value="/view/"/>-->
     <!--        <property name="suffix" value=".html"/>-->
     <!--    </bean>-->
 
-        <bean id="templateResolver"
-              class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
-            <property name="prefix" value="/WEB-INF/templates/" />
-            <property name="suffix" value=".html" />
-            <!-- HTML is the default value, added here for the sake of clarity.          -->
-            <property name="templateMode" value="HTML" />
-            <property name="characterEncoding" value="UTF-8"/>
-            <!-- Template cache is true by default. Set to false if you want             -->
-            <!-- templates to be automatically updated when modified.                    -->
-            <property name="cacheable" value="true" />
-        </bean>
+    <bean id="templateResolver"
+          class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+        <property name="prefix" value="/WEB-INF/templates/" />
+        <property name="suffix" value=".html" />
+        <!-- HTML is the default value, added here for the sake of clarity.          -->
+        <property name="templateMode" value="HTML" />
+        <property name="characterEncoding" value="UTF-8"/>
+        <!-- Template cache is true by default. Set to false if you want             -->
+        <!-- templates to be automatically updated when modified.                    -->
+        <property name="cacheable" value="true" />
+    </bean>
 
-        <!-- SpringTemplateEngine automatically applies SpringStandardDialect and      -->
-        <!-- enables Spring's own MessageSource message resolution mechanisms.         -->
-        <bean id="templateEngine"
-              class="org.thymeleaf.spring5.SpringTemplateEngine">
-            <property name="templateResolver" ref="templateResolver" />
-            <!-- Enabling the SpringEL compiler can speed up execution in most           -->
-            <!-- scenarios, but might be incompatible with specific cases when           -->
-            <!-- expressions in one template are reused across different data types, so  -->
-            <!-- this flag is "false" by default for safer backwards compatibility.      -->
-            <property name="enableSpringELCompiler" value="true" />
-        </bean>
+    <!-- SpringTemplateEngine automatically applies SpringStandardDialect and      -->
+    <!-- enables Spring's own MessageSource message resolution mechanisms.         -->
+    <bean id="templateEngine"
+          class="org.thymeleaf.spring5.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver" />
+        <!-- Enabling the SpringEL compiler can speed up execution in most           -->
+        <!-- scenarios, but might be incompatible with specific cases when           -->
+        <!-- expressions in one template are reused across different data types, so  -->
+        <!-- this flag is "false" by default for safer backwards compatibility.      -->
+        <property name="enableSpringELCompiler" value="true" />
+    </bean>
 
-        <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
-            <property name="templateEngine" ref="templateEngine" />
-            <property name="characterEncoding" value="UTF-8"/>
-        </bean>
-
+    <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine" />
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
 
     <mvc:annotation-driven/>
     <mvc:resources mapping="/**" location="WEB-INF/image/" />
     <mvc:interceptors>
         <bean id="loggerInterceptor" class="org.example.controller.filter.SessionConfigInterceptor"/>
     </mvc:interceptors>
+
 </beans>

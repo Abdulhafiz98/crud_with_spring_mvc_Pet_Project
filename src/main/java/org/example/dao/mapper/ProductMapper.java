@@ -16,7 +16,7 @@ public class ProductMapper implements RowMapper<Product> {
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
         Product product = new Product(
                 rs.getString("name"),
-                rs.getString("url"),
+                rs.getString("product_url"),
                 rs.getDouble("price"),
                 rs.getInt("quantity"),
                 List.of(new Gson().fromJson(rs.getString("info"), Info[].class)),
