@@ -35,4 +35,5 @@ public class AdminCategoryController {
         model.addAttribute("categoryList", categoryList);
         return "admin/category";
     }
+
 }

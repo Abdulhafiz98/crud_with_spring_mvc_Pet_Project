@@ -53,8 +53,8 @@
           <td th:text="${category.name}"/>
           <td th:text="${category.parentId}"/>
           <td>
-            <a th:href="@{/category/delete/{id}(id=${category.id})}">delete</a>
-            <a th:href="@{/category/update/{id}(id=${category.id})}" class="btn btn-primary">update</a>
+            <a th:href="@{/admin/category/delete/{id}(id=${category.id})}">delete</a>
+            <a th:href="@{/admin/category/update/{id}(id=${category.id})}" class="btn btn-primary">update</a>
           </td>
         </tr>
 
