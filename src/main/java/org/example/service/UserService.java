@@ -30,12 +30,16 @@ public class UserService {
         return userDao.getById(id);
     }
 
-
-    private Integer getUserIdFromSession(HttpServletRequest request){
-        Integer user_id = (Integer) request.getSession().getAttribute("userId");
-        return user_id;
-    }
     public User getUserById(HttpServletRequest request){
         return userDao.getById(getUserIdFromSession(request));
+    }
+    
+    public boolean updateUser(User user){
+        return userDao.update(user);
+    }
+    
+    public Integer getUserIdFromSession(HttpServletRequest request){
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        return userId;
     }
 }

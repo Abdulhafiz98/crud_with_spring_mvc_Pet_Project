@@ -1,5 +1,6 @@
 package org.example.controller;
 
+
 import org.example.dao.UserDao;
 import org.example.dto.UserLoginRequest;
 import org.example.dto.UserRegisterRequest;
@@ -9,17 +10,17 @@ import org.example.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/auth")
 public class AuthController {
-    //TODO @Asror auth service
+
     private final AuthService authService;
     private final UserDao userDao;
 
@@ -70,22 +71,28 @@ public class AuthController {
             Model model,
             HttpServletRequest httpServletRequest,
             @ModelAttribute UserLoginRequest loginRequest
+
     ) {
-
+        boolean condition;
         User currentUser = authService.login(loginRequest);
-
-        if (currentUser != null) {
-            HttpSession session = httpServletRequest.getSession();
-            session.setAttribute("userId",currentUser.getId());
-//            addSession(httpServletRequest, httpServletResponse);
-            model.addAttribute("userRole", currentUser.getUserRole().name());
-            if (currentUser.getUserRole().equals(UserRole.USER)) return "web/index";
-            else  return "admin/index";
+        if(currentUser==null){
+            condition = true;
+            model.addAttribute("condition",condition);
+            return "/index";
         }
-        return "login";
+        HttpSession session = httpServletRequest.getSession();
+        session.setAttribute("userId",currentUser.getId());
+        model.addAttribute("userRole", currentUser.getUserRole().name());
+        model.addAttribute("message", "username or password is incorrect");
+        model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
+        model.addAttribute("user", currentUser);
+        return currentUser.getUserRole().name().equals("USER") ? "web/index" : "admin/index";
     }
 
-
-
-
+    @GetMapping("/logOut")
+    public String logOut(HttpServletRequest req){
+        req.getSession().setAttribute("userId",null);
+        req.getSession().setMaxInactiveInterval(0);
+        return "/index";
+    }
 }

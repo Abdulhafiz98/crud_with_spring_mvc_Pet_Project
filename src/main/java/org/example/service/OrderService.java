@@ -1,5 +1,8 @@
 package org.example.service;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
@@ -13,15 +16,15 @@ import org.example.model.Product;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+
 public class OrderService {
     private final ProductDao productDao;
     private final OrderDao orderDao;
 
     public OrderService(OrderDao orderDao,ProductDao productDao) {
-        this.orderDao=orderDao;
         this.productDao=productDao;
+        this.orderDao=orderDao;
     }
-
     public List<Order> getList() {
         return orderDao.getList();
     }
@@ -45,12 +48,7 @@ public class OrderService {
         }).toList();
     }
 
-    public boolean editRole(int orderId, int statusNumber) {
-        String status;
-        if (statusNumber == 1)
-            status = OrderStatus.ACCEPT.name();
-        else
-            status = OrderStatus.REJECT.name();
+    public boolean editStatus(int orderId, String status) {
         return orderDao.editStatus(orderId, status);
     }
 
