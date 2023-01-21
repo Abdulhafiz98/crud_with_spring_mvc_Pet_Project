@@ -1,14 +1,10 @@
 package org.example.config;
 
-import netscape.javascript.JSObject;
-import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
+import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
-import org.example.service.AuthService;
-import org.example.service.CategoryService;
-import org.example.service.ProductService;
-import org.example.service.UserService;
+import org.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +13,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.*;
-
 import javax.sql.DataSource;
 
 
@@ -28,10 +23,14 @@ public class AppConfig implements WebMvcConfigurer {
 
     private final Environment environment;
 
-    private final String URL = "url";
+        private final String URL = "url";
     private final String USER = "dbuser";
     private final String DRIVER = "driver";
     private final String PASSWORD = "dbpassword";
+//    String URL = "jdbc:postgresql://localhost:5432/postgres";
+//    String USER = "postgres";
+//    String DRIVER = "org.postgresql.Driver";
+//    String PASSWORD = "admin";
 
     @Autowired
     public AppConfig(Environment environment) {
@@ -64,28 +63,42 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    CategoryDao categoryDao(){
+    CategoryDao categoryDao() {
         return new CategoryDao(jdbcTemplate());
     }
 
     @Bean
-    ProductDao productDao(){
+    ProductDao productDao() {
         return new ProductDao(jdbcTemplate());
     }
 
     @Bean
-    CategoryService categoryService(){
+    OrderDao orderDao() {
+        return new OrderDao(jdbcTemplate());
+    }
+
+    @Bean
+    CategoryService categoryService() {
         return new CategoryService(categoryDao());
     }
 
     @Bean
-    ProductService productService(){
-        return new ProductService(productDao(),categoryDao());
+    ProductService productService() {
+        return new ProductService(productDao(), categoryDao());
     }
 
     @Bean
     UserService userService() {
         return new UserService(userDao());
     }
+    @Bean
+    BasketService basketService(){ return  new BasketService();}
+
+    @Bean
+    OrderService orderService() {
+        return new OrderService(orderDao(), productDao());
+    }
+    @Bean
+    CookieService cookieService(){return  new CookieService();}
 
 }

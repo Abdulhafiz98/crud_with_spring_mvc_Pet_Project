@@ -22,6 +22,10 @@
                     <a href="/admin/category/list">category</a>
                 </li>
                 <li>
+                    <a href="/admin/order/list">order</a>
+                </li>
+                <li>
+                <li th:if="${userRole.equals('ADMIN')}">
                     <a href="/admin/user/list">user</a>
                 </li>
                 <li th:if="${isSuperAdmin}">
@@ -54,7 +58,7 @@
                     <td th:text="${product.quantity}"></td>
                     <td th:text="${product.price}"></td>
                     <td th:text="${product.info}"></td>
-                    <td th:text="${product.categoryName}"></td>
+                    <td th:text="${product.categoryName}"></td>>
                     <td>
                         <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
                         <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>

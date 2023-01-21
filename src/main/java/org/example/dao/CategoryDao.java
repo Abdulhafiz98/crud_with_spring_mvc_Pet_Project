@@ -41,4 +41,11 @@ public class CategoryDao implements BaseDao<Category> {
         return jdbcTemplate.query("select * from category where parent_id="+"'"+id+"'", new CategoryMapper());
     }
 
+    public List<Category> getCategoryList(int parentId){
+        return jdbcTemplate.query("select * from get_category_list(?)", new Object[]{parentId}, new CategoryMapper());
+    }
+    public List<Category> getBackList(int parentId){
+        return jdbcTemplate.query("select * from get_back_list(?)",new Object[]{parentId},new CategoryMapper());
+    }
+
 }

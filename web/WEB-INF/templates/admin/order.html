@@ -7,40 +7,173 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+        border: 0;
+        margin: 0;
+    }
+
+    .rowStyle {
+        display: flex;
+        row-gap: 100px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .cardStyle {
+        width: 250px;
+        height: 400px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    .cardStyle > .imgIcon {
+        width: 100%;
+        height: 75%;
+        background-color: #0e32670a;
+        position: relative;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        background-color: #050408bf;
+        color: white;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .imgIcon img {
+        margin-top: 20%;
+        border-radius: 12px;
+        width: 75%;
+    }
+
+    .cardStyle .product-text {
+        margin: 10px;
+    }
+
+    .product-text > p {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .likeIcon {
+        position: absolute;
+        bottom: 88%;
+        right: 15px;
+        font-size: 24px;
+        transition: 0.6s;
+        color: #686262;
+    }
+
+    .like {
+        color: red;
+    }
+
+    .row {
+        display: flex;
+        width: 20%;
+        height: 100vh;
+        background-color: #9191912e;
+        font-size: 20px;
+    }
+
+    .col-md-2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .col-md-2 li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    li a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .col-md-2 a:hover {
+        background-color: #0e32670a;;
+    }
+
+    a {
+
+        text-decoration: none;
+    }
+
+    .container-fluid {
+        padding-left: 0;
+        display: flex;
+    }
+
+    .panel a {
+        color: #702d22;
+    }
+</style>
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <ul class="">
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/product/list">product</a>
-                </li>
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/category/list">category</a>
-                </li>
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/user/list">user</a>
-                </li>
-                <li th:if="${userRole.equals('SELLER')}">
-                    <a href="/admin/order/list">order</a>
-                </li>
-                <li th:if="${userRole.equals('SUPER_ADMIN')}">
-                    <a href="/user/list">admin</a>
-                </li>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            <h1>WELCOME TO OUR ADMIN PANEL</h1>
+<div class="container-left">
+    <div class="container-fluid">
+        <div class="col">
+            <div class="conStyle">
+                <h1 id="hhh"></h1>
+                <div class="rowStyle">
+                    <div class="cardStyle" th:each="orderList : ${orderList}">
+                        <div class="imgIcon">
+                            <h3><a style=" color: white;" th:href="'/admin/order/order-item/'+${orderList.id}"
+                                   th:text="${orderList.userName}"></a></h3>
+                            <p>phone number: <a th:href="${'tel:' + orderList.phoneNumber}">
+                                <i class="fa fa-phone" aria-hidden="true" th:text="${orderList.phoneNumber}"></i></a>
+                            </p>
+                            <p>Product quantity: <u th:text="${orderList.productQuantity}"></u></p>
+                            <p>Status: <u th:text="${orderList.status}" th:id="${orderList.id}"></u></p>
+                            <button type="button" class="btn btn-success"
+                                    th:attr="onclick=|respons('${orderList.id}','ACCEPT')|">Accept
+                            </button>
+                            <button type="button" class="btn btn-danger"
+                                    th:attr="onclick=|respons('${orderList.id}','REJECT')|"
+                            >Reject</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script type="text/javascript">
+                function respons(id,status) {
+                    let statusC = document.getElementById(id);
+                    let result = "";
+                    fetch('/admin/order/edit-status/' + id+"/"+status).then((res) => {
+                        return res.json()
+                    }).then((data)=>{
+                        result+=data;
+                        console.log(result);
+                        if(result==="true"){
+                            if(status==="ACCEPT"){
+                                statusC.innerHTML = `<b style="color:#28a745;">${status}</b>`;
+                            }else{
+                                statusC.innerHTML = `<b style="color:red;">${status}</b>`;
+                            }
+                        }
+                    })
+
+                }
+
+            </script>
+
+
         </div>
     </div>
-
-</div>
-</div>
-</div>
 </div>
 
 <script type="text/javascript">
