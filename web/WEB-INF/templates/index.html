@@ -15,6 +15,10 @@
     <div class="header">
         <a href="/login" class="btn btn-outline-primary">Log in</a>
     </div>
+    <li th:if="${condition}">
+        <h5 style="color: red">Login failed !!! Phone number or password is incorrect</h5>
+        <h5 style="color: red">Please try again</h5>
+    </li>
     <div class="container ">
         <div class="card" th:each = "product: ${productList}">
             <div class="card-header">
