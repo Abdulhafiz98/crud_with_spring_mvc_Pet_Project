@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="crud_with_spring_mvc:Web4 exploded" />
+      <artifact name="crud_with_spring_mvc:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,6 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c4af4988-3478-42f2-8ca7-415f4df41b4d" name="Changes" comment="some added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud_with_spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crud_with_spring_mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/basket/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/basket/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -65,7 +69,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.291954&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;e02cda82cbf6d5bcc350e7cece31f27f&quot;,
@@ -82,14 +86,14 @@
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="crud_with_spring_mvc:Web4 exploded">
+        <artifact name="crud_with_spring_mvc:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="589ed3d0-57c1-4e99-82b3-73359f03f1b2" />
+        <option name="BASE_DIRECTORY_NAME" value="d35c67fd-ca04-42cb-bf0e-4c3ae0fe1b7b" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -97,7 +101,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="13948" />
+        <option name="DEBUG_PORT" value="8311" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -162,7 +166,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="crud_with_spring_mvc:Web4 exploded" />
+          <artifact name="crud_with_spring_mvc:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -183,6 +187,12 @@
       <workItem from="1674226364036" duration="3152000" />
       <workItem from="1674229528011" duration="341000" />
       <workItem from="1674238324012" duration="599000" />
+      <workItem from="1674282382153" duration="548000" />
+      <workItem from="1674282933963" duration="886000" />
+      <workItem from="1674284676892" duration="2101000" />
+      <workItem from="1674297984100" duration="205000" />
+      <workItem from="1674298243158" duration="2350000" />
+      <workItem from="1674317452925" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="some added">
       <created>1674229452493</created>
