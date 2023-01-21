@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Repository
+
 public class CategoryDao implements BaseDao<Category> {
 
     private final JdbcTemplate jdbcTemplate;

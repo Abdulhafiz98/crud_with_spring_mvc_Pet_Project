@@ -6,9 +6,11 @@ import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
 import org.example.model.Info;
 import org.example.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ProductService {
     private final ProductDao productDao;
@@ -73,4 +75,5 @@ public class ProductService {
         );
         return productList;
     }
+
 }

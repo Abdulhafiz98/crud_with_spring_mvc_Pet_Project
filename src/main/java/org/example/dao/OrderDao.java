@@ -81,7 +81,6 @@ public class OrderDao implements BaseDao<Order> {
 // samandar
      //           new Object[]{id,status}
                 new Object[]{status,orderId}
-
         ) > 0;
     }
     public List<OrderDto> getOrdersBySort(int sortNumber){

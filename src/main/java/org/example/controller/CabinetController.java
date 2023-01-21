@@ -2,6 +2,7 @@ package org.example.controller;
 
 import org.example.dao.OrderDao;
 import org.example.dto.response.OrderItemDto;
+import org.example.model.OrderStatus;
 import org.example.model.User;
 import org.example.service.OrderService;
 import org.example.service.UserService;
@@ -40,9 +41,13 @@ public class CabinetController {
                 model.addAttribute("text1",first.get().getName()+"'s personal Cabinet");
                 model.addAttribute("orderList", orderService.getOrdersBySort(0)
                         .stream()
-                        .filter(orderDto -> orderDto.getPhoneNumber().equals(first.get().getPhoneNumber()))
+                        .filter(orderDto -> (!orderDto.getStatus().equals(OrderStatus.REJECT.name()))&&orderDto.getPhoneNumber().equals(first.get().getPhoneNumber()))
                         .toList());
             }
+            System.out.println(orderService.getOrdersBySort(0)
+                    .stream()
+                    .filter(orderDto -> (!orderDto.getStatus().equals(OrderStatus.REJECT.name()))&&orderDto.getPhoneNumber().equals(first.get().getPhoneNumber()))
+                    .toList());
         }
         return "user/cabinet";
     }

@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Repository
+
 public class UserDao implements BaseDao<User> {
 
     private JdbcTemplate jdbcTemplate;

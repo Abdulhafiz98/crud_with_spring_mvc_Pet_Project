@@ -1,9 +1,5 @@
 package org.example.service;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.example.dao.OrderDao;
 import org.example.dao.ProductDao;
 import org.example.dto.response.OrderDto;
@@ -21,10 +17,11 @@ public class OrderService {
     private final ProductDao productDao;
     private final OrderDao orderDao;
 
-    public OrderService(OrderDao orderDao,ProductDao productDao) {
-        this.productDao=productDao;
-        this.orderDao=orderDao;
+    public OrderService(ProductDao productDao, OrderDao orderDao) {
+        this.productDao = productDao;
+        this.orderDao = orderDao;
     }
+
     public List<Order> getList() {
         return orderDao.getList();
     }
@@ -55,6 +52,7 @@ public class OrderService {
     public List<OrderDto> sortOrders(int sortNumber) {
         return orderDao.getOrdersBySort(sortNumber);
     }
+
 
     private Order createOrder(List<Integer> productIdList , HttpServletRequest request) {
         Order order = new Order();
