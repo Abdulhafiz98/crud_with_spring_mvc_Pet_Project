@@ -6,9 +6,9 @@ import org.example.dto.response.OrderDto;
 import org.example.model.Order;
 import org.example.model.OrderItem;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 public class OrderDao implements BaseDao<Order> {
     JdbcTemplate jdbcTemplate;
 
@@ -75,10 +75,13 @@ public class OrderDao implements BaseDao<Order> {
         return jdbcTemplate.query("select * from order_item where order_id = ?",  new Object[]{id}, new OrderItemMapper());
     }
 
-    public boolean editStatus(int id, String status) {
+    public boolean editStatus(int orderId, String status) {
         return jdbcTemplate.update(
                 "update orders set status = (?) where id = (?)",
-                new Object[]{id,status}
+// samandar
+     //           new Object[]{id,status}
+                new Object[]{status,orderId}
+
         ) > 0;
     }
     public List<OrderDto> getOrdersBySort(int sortNumber){

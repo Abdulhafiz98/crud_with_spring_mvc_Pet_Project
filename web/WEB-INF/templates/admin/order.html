@@ -124,82 +124,56 @@
 
 <div class="container-left">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <ul class="panel">
-                    <li>
-                        <a href="/admin/product/list">product</a>
-                    </li>
-                    <li>
-                        <a href="/admin/category/list">category</a>
-                    </li>
-                    <li>
-                        <a href="/admin/user/list">user</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="col">
             <div class="conStyle">
+                <h1 id="hhh"></h1>
                 <div class="rowStyle">
                     <div class="cardStyle" th:each="orderList : ${orderList}">
-                            <div class="imgIcon">
-                            <h3 ><a style=" color: white;" th:href="'/admin/order/order-item/'+${orderList.id}"
-                                                           th:text="${orderList.userName}"></a></h3>
-                            <p>phone number: <a th:href="${'tel:' + orderList.phoneNumber}"><i class="fa fa-phone"
-                                                                                               aria-hidden="true"
-                                                                                               th:text="${orderList.phoneNumber}"></i></a>
+                        <div class="imgIcon">
+                            <h3><a style=" color: white;" th:href="'/admin/order/order-item/'+${orderList.id}"
+                                   th:text="${orderList.userName}"></a></h3>
+                            <p>phone number: <a th:href="${'tel:' + orderList.phoneNumber}">
+                                <i class="fa fa-phone" aria-hidden="true" th:text="${orderList.phoneNumber}"></i></a>
                             </p>
                             <p>Product quantity: <u th:text="${orderList.productQuantity}"></u></p>
-                            <p>Status: <u th:text="${orderList.status}"></u></p>
-                            <p>Date: <u th:text="${orderList.orderTime}"></u></p>
-                            <button type="button" class="btn btn-success">Accept</button>
-                            <button type="button" class="btn btn-danger">Reject</button>
+                            <p>Status: <u th:text="${orderList.status}" th:id="${orderList.id}"></u></p>
+                            <button type="button" class="btn btn-success"
+                                    th:attr="onclick=|respons('${orderList.id}','ACCEPT')|">Accept
+                            </button>
+                            <button type="button" class="btn btn-danger"
+                                    th:attr="onclick=|respons('${orderList.id}','REJECT')|"
+                            >Reject</button>
                         </div>
                     </div>
                 </div>
             </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <ul class="">
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/product/list">product</a>
-                </li>
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/category/list">category</a>
-                </li>
-                <li th:if="${userRole.equals('ADMIN')}">
-                    <a href="/admin/user/list">user</a>
-                </li>
-                <li th:if="${userRole.equals('SELLER')}">
-                    <a href="/admin/order/list">order</a>
-                </li>
-                <li th:if="${userRole.equals('SUPER_ADMIN')}">
-                    <a href="/user/list">admin</a>
-                </li>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            <h1>WELCOME TO OUR ADMIN PANEL</h1>
+
+
+            <script type="text/javascript">
+                function respons(id,status) {
+                    let statusC = document.getElementById(id);
+                    let result = "";
+                    fetch('/admin/order/edit-status/' + id+"/"+status).then((res) => {
+                        return res.json()
+                    }).then((data)=>{
+                        result+=data;
+                        console.log(result);
+                        if(result==="true"){
+                            if(status==="ACCEPT"){
+                                statusC.innerHTML = `<b style="color:#28a745;">${status}</b>`;
+                            }else{
+                                statusC.innerHTML = `<b style="color:red;">${status}</b>`;
+                            }
+                        }
+                    })
+
+                }
+
+            </script>
+
+
         </div>
     </div>
-
-</div>
-
-<script>
-    function respons(id) {
-        fetch('/edit-status/' + id)
-            .then((response) => response.json())
-            .then((data) => console.log(data));
-    }
-
-</script>
-
-
-</div>
-</div>
 </div>
 
 <script type="text/javascript">
