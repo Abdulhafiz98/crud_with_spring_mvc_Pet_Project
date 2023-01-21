@@ -76,12 +76,10 @@ public class AuthController {
             session.setAttribute("userId",currentUser.getId());
 //            addSession(httpServletRequest, httpServletResponse);
             model.addAttribute("userRole", currentUser.getUserRole().name());
-            if (currentUser.getUserRole().equals(UserRole.USER)) return "web/index";
-            else  return "admin/index";
         }
         model.addAttribute("message", "username or password is incorrect");
         model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
-        return currentUser.getUserRole().name().equals("USER") ? "user/home" : "admin/index";
+        return currentUser.getUserRole().name().equals("USER") ? "web/index" : "admin/index";
     }
 }

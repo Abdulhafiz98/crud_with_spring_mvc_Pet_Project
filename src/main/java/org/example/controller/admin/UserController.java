@@ -69,15 +69,17 @@ private final UserDao userDao;
         return "admin/admin";
     }
 
-    @PostMapping("/update")
+    @PostMapping("/user/update")
     public String updateUser(HttpServletRequest req, Model model){
         String resultText;
-        User user = userService.getUser((int) req.getSession().getAttribute("id"));
+        User user = userService.getUser((int) req.getSession().getAttribute("userId"));
         String name = req.getParameter("name");
+        String email = req.getParameter("email");
         String oldPassword = req.getParameter("oldPassword");
         String newPassword = req.getParameter("newPassword");
         if(user.getPassword().equals(oldPassword)){
             user.setName(name);
+            user.setEmail(email);
             user.setPassword(newPassword);
             userService.updateUser(user);
             resultText = "User's info updated successfully";
@@ -85,7 +87,10 @@ private final UserDao userDao;
             resultText = "Previous password is wrong !!! Please try again";
         }
         model.addAttribute("resText",resultText);
-        return "user/home";
+        model.addAttribute("user",user);
+        model.addAttribute("name", user.getName()+"'s personal info");
+        model.addAttribute("text1",user.getName()+"'s personal Cabinet");
+        return "user/cabinet";
     }
 
 }

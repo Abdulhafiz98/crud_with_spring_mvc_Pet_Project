@@ -52,9 +52,10 @@ public class ProductDao implements BaseDao<Product> {
 
     }
 
-    public List<Product> getProductCategoryIdList(String  name) {
-        return jdbcTemplate.query("select * from product where name=?", new Object[]{name}, new ProductMapper());
-    }
+//    public List<Product> getProductCategoryIdList(String  name) {
+//        return jdbcTemplate.query("select * from product where name=?", new Object[]{name}, new ProductMapper());
+//    }
+
     public List<Product> getProductCategoryIdList(int id){
         return jdbcTemplate.query("select * from product p where p.category_id = ?",new Object[]{id}, new ProductMapper());
 

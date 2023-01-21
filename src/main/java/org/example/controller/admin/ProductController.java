@@ -6,11 +6,13 @@ import org.example.model.Category;
 import org.example.model.Info;
 import org.example.model.Product;
 import org.example.service.ProductService;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -49,11 +51,13 @@ public class ProductController {
         return "product/info";
     }
 
-    @GetMapping("/category/{id}")
-    public String getCategoryList(Model model, @PathVariable("id") int id) {
-        List<Product> productList = productService.getProductCategoryIdList(id);
-        model.addAttribute("productList", productList);
-        return "product/product";
+    @ResponseBody
+    @GetMapping(
+            value = "/category/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public List<Product> getCategoryList(@PathVariable("id") int id){
+        return productService.getProductCategoryIdList(id);
     }
 
     @GetMapping("/search")
