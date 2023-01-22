@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="">
+                <li>
+                    <a href="/admin/product/list">product</a>
+                </li>
+                <li>
+                    <a href="/admin/category/list">category</a>
+                </li>
+                <li>
+                    <a href="/admin/user/list">user</a>
+                </li>
+                <li th:if="${isSuperAdmin}">
+                    <a href="/user/list">admin</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th>name</th>
+                    <th>quantity</th>
+                    <th>price</th>
+                    <th>info</th>
+                    <th>categoryName</th>
+                    <th><a href="/admin/product/add"  type="submit" class="btn btn-primary">Add Product</a>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="product: ${productList}">
+                    <td th:text="${product.name}"/>
+                    <td th:text="${product.quantity}"/>
+                    <td th:text="${product.price}"/>
+                    <td th:text="${product.info}"/>
+                    <td th:text="${product.categoryName}"/>
+                    <td>
+                        <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" >delete</a>
+                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">update</a>
+                    </td>
+                    <div th:action="@{/admin/product/update/{id}(id=${product.id})}" id="myModal" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Product Update</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form th:action="@{/admin/product/update/{id}(id=${product.id})}" method="post">
+
+                                        <div class="form-group">
+                                            <label    class="control-label" >Name:</label>
+                                            <input type="text" name="name" th:value= "${product.name}"   class="form-control" placeholder="Enter product name" >
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="quantity" class="control-label">quantity</label>
+                                            <input type="text" name="quantity" th:value="${product.quantity}" id="quantity" class="form-control">
+                                            <span validation-for="CategoryName" class="text-dander"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price" class="control-label" >price</label>
+                                            <input type="text" name="price" th:value="${product.price}" id="price"class="form-control">
+                                            <span validation-for="CategoryName" class="text-dander"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="info" class="control-label" >info </label>
+                                            <input type="text" name="info" th:value="${product.info}" id="info"class="form-control">
+                                            <span validation-for="CategoryName" class="text-dander"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="CategoryName" class="control-label">category Name</label>
+                                            <input type="text" name="CategoryName" th:value="${product.CategoryName}" id="CategoryName"  class="form-control">
+                                            <span validation-for="CategoryName" class="text-dander"></span>
+                                        </div>
+<!--                                        <div class="form-group">-->
+<!--                                            <label for="productUrl" class="control-label">Photo</label>-->
+<!--                                            <input type="file" name="productUrl" id="productUrl" class="form-control">-->
+<!--                                            <span validation-for="CategoryName" class="text-dander"></span>-->
+<!--                                        </div>-->
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    function getUser(id) {
+        console.log("RAVSHAN")
+        // fetch("/user/update/" + id).then((res) => {
+        //     console.log(res.data)
+        // })
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
