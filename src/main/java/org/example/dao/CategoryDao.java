@@ -27,14 +27,14 @@ public class CategoryDao implements BaseDao<Category> {
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return jdbcTemplate.update("delete from category where id = ?",id)>0;
     }
 
     @Override
     public boolean add(Category category) {
         return jdbcTemplate.update(
                 "insert into category(name, parent_id) values (?,?)",
-                category.getName(),category.getParentId()) > 0;
+                new Object[] {category.getName(),category.getParentId()}) > 0;
     }
 
     public List<Category> getCategoryById(int id){

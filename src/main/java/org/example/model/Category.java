@@ -7,7 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
 public class Category extends BaseModel{
     private String name;
-    private String parentName;
+    private int parentId;
 }
