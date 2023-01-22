@@ -28,7 +28,7 @@ public class AdminCategoryController {
 
 
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping("/list")
     public String getCategoryList(
             Model model,
             HttpServletRequest httpServletRequest
@@ -50,7 +50,7 @@ public class AdminCategoryController {
     ) {
 //        int id = Integer.parseInt(request.getParameter("id"));
         categoryService.deleteCategory(id);
-        return "redirect:/admin/category";
+        return "redirect:/admin/category/list";
     }
 
     @GetMapping("/update/{id}")
@@ -61,7 +61,7 @@ public class AdminCategoryController {
         Category category = categoryService.getCategory(id);
         model.addAttribute("category", category);
         model.addAttribute("categoryList", categoryService.getCategoryList());
-        return "/admin/category";
+        return "/admin/category/list";
     }
 
     @GetMapping("/add")
@@ -69,7 +69,7 @@ public class AdminCategoryController {
             @ModelAttribute CategoryRequest categoryRequest
     ) {
         categoryService.addCategory(categoryRequest);
-        return "redirect:/admin/category";
+        return "redirect:/admin/category/list";
     }
 
 }
