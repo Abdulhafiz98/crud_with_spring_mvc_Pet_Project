@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.NoArgsConstructor;
 import org.example.dao.CategoryDao;
 import org.example.dao.ProductDao;
 import org.example.dao.mapper.ProductMapper;
@@ -19,9 +20,7 @@ public class ProductService {
         this.categoryDao = categoryDao;
     }
     public  boolean update(Product product){
-
-            return productDao.update(product);
-
+        return productDao.update(product);
     }
     public boolean addProduct(final ProductResponseDto responseDto) {
         Product product = Product.builder()

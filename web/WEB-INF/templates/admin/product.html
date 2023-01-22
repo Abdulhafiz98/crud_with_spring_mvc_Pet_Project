@@ -50,9 +50,9 @@
                     <td th:text="${product.categoryName}"/>
                     <td>
                         <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" >delete</a>
-                        <a th:href="/admin/product/update/38" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">update</a>
+                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">update</a>
                     </td>
-                    <div th:action="@{/admin/product/update/{id}(id=${product.id})}" method="post" id="myModal" class="modal" tabindex="-1" role="dialog">
+                    <div th:action="@{/admin/product/update/{id}(id=${product.id})}" id="myModal" class="modal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -62,12 +62,12 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form  method="post">
-                                        <span validation-for="CategoryName" class="text-dander"></span>
+                                    <form th:action="@{/admin/product/update/{id}(id=${product.id})}" method="post">
+
                                         <div class="form-group">
                                             <label    class="control-label" >Name:</label>
                                             <input type="text" name="name" th:value= "${product.name}"   class="form-control" placeholder="Enter product name" >
-                                            <span validation-for="CategoryName" class="text-dander"></span>
+
 
                                         </div>
                                         <div class="form-group">
@@ -90,11 +90,11 @@
                                             <input type="text" name="CategoryName" th:value="${product.CategoryName}" id="CategoryName"  class="form-control">
                                             <span validation-for="CategoryName" class="text-dander"></span>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="productUrl" class="control-label">Photo</label>
-                                            <input type="file" name="productUrl" id="productUrl" class="form-control">
-                                            <span validation-for="CategoryName" class="text-dander"></span>
-                                        </div>
+<!--                                        <div class="form-group">-->
+<!--                                            <label for="productUrl" class="control-label">Photo</label>-->
+<!--                                            <input type="file" name="productUrl" id="productUrl" class="form-control">-->
+<!--                                            <span validation-for="CategoryName" class="text-dander"></span>-->
+<!--                                        </div>-->
                                         <button type="submit" class="btn btn-success">Submit</button>
                                     </form>
                                 </div>

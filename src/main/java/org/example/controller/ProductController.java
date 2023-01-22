@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.dao.ProductDao;
 import org.example.dto.ProductUpdateRequest;
 import org.example.dto.response.ProductResponseDto;
 import org.example.file.FileUtils;
@@ -86,20 +87,19 @@ public class ProductController {
 //    }
 
 
-    @PostMapping("/update/{id}")
+    @RequestMapping("/update/{id}")
     public String updateProduct(
             Model model,
             @PathVariable("id") int id,
-            @ModelAttribute ProductUpdateRequest productUpdateRequest
+            @ModelAttribute ProductResponseDto productResponseDto
     ) {
         Product product = productService.getById(id);
-product.setId(productUpdateRequest.getId());
-        product.setName(productUpdateRequest.getName());
-        product.setPrice(productUpdateRequest.getPrice());
-        product.setCategoryId(productUpdateRequest.getCategoryId());
-        product.setQuantity(productUpdateRequest.getQuantity());
-product.setInfo(productUpdateRequest.getInfo());
-productService.update(product);
+        product.setName(productResponseDto.getName());
+        product.setPrice(productResponseDto.getPrice());
+        product.setCategoryId(productService.getCategory(productResponseDto.getCategoryName()));
+        product.setQuantity(productResponseDto.getQuantity());
+        product.setInfo(productResponseDto.getInfo());
+        productService.update(product);
         return getProductList(model);
 
     }

@@ -41,10 +41,9 @@ public class ProductDao implements BaseDao<Product> {
     }
     public boolean update(Product product){
         return jdbcTemplate.update(
-                "update  product set name = ?, product_url=product_url,  price = ?, quantity = ?, info = ? where id = ?",
+                "update  product set name = ?,   price = ?, quantity = ?, info = ? where id = ?",
                 new Object[]{product.getName(),product.getPrice(), product.getQuantity(),product.getInfo(),product.getId()}
         )>0;
-
     }
 
 
