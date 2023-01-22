@@ -3,6 +3,7 @@ package org.example.dao;
 import org.example.dao.mapper.UserMapper;
 import org.example.dto.UserLoginRequest;
 import org.example.model.User;
+import org.example.model.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -42,8 +43,8 @@ public class UserDao implements BaseDao<User> {
 try {
 
     update = jdbcTemplate.update(
-            "insert into users(name, email, password, phone_number) values (?,?,?,?)",
-            user.getName(), user.getEmail(), user.getPassword(), user.getPhoneNumber());
+            "insert into users(name, email, password, phone_number, role) values (?,?,?,?,?)",
+            user.getName(), user.getEmail(), user.getPassword(), user.getPhoneNumber(), UserRole.USER.name());
 }
 catch (Exception ex){
     ex.printStackTrace();

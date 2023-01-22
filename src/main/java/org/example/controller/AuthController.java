@@ -61,17 +61,6 @@ public class AuthController {
         model.addAttribute("isSuperAdmin", currentUser.getUserRole() != null && currentUser.getUserRole().name().equals(UserRole.SUPER_ADMIN.name()));
         model.addAttribute("user", currentUser);
 
-//        Cookie[] cookies = httpServletRequest.getCookies();
-//        Cookie signedInUser = Arrays.stream(cookies).filter(
-//                        cookie -> cookie.getName().equals("SignedUser"))
-//                .findFirst().orElse(null);
-//        if (Objects.isNull(signedInUser)) {
-//            Cookie cookie = new Cookie("SignedUser",String.valueOf(currentUser.getId()));
-//            cookie.setMaxAge(30); // this should be the same with MaxInactiveInterval session
-//            httpServletResponse.addCookie(cookie);
-//        }
-
-//        return "admin/index";
             HttpSession session = httpServletRequest.getSession();
             session.setAttribute("password",currentUser.getPassword());
 //            addSession(httpServletRequest, httpServletResponse);

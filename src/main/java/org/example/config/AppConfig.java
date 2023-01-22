@@ -1,9 +1,7 @@
 package org.example.config;
 
-import netscape.javascript.JSObject;
-import org.example.controller.filter.SessionConfigInterceptor;
 import org.example.dao.CategoryDao;
-import org.example.dao.FavoriteProductDao;
+import org.example.dao.FavoriteDao;
 import org.example.dao.ProductDao;
 import org.example.dao.UserDao;
 import org.example.service.*;
@@ -87,8 +85,8 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    FavoriteProductService favoriteProductService()
+    FavoriteService favoriteProductService()
     {
-        return new FavoriteProductService(new FavoriteProductDao(jdbcTemplate()));
+        return new FavoriteService(new FavoriteDao(jdbcTemplate()));
     }
 }

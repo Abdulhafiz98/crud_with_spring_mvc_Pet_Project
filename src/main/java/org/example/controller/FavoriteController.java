@@ -1,11 +1,7 @@
 package org.example.controller;
 
-import org.example.dao.UserDao;
-import org.example.model.Category;
-import org.example.model.FavoriteProduct;
-import org.example.service.CategoryService;
-import org.example.service.FavoriteProductService;
-import org.example.service.UserService;
+import org.example.model.Favorite;
+import org.example.service.FavoriteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,16 +17,16 @@ import java.util.Objects;
 
 @Controller
 @RequestMapping("/admin/favorite-product")
-public class FavoriteProductController {
+public class FavoriteController {
 
-    private final FavoriteProductService favoriteProductService;
+    private final FavoriteService favoriteProductService;
 
-    public FavoriteProductController(FavoriteProductService favoriteProductService) {
+    public FavoriteController(FavoriteService favoriteProductService) {
         this.favoriteProductService = favoriteProductService;
     }
 
     @GetMapping("/list")
-    public String getCategoryList(
+    public String getList(
             Model model, HttpServletRequest request, HttpServletResponse response
     ) {
         Cookie[] cookies = request.getCookies();
@@ -38,7 +34,7 @@ public class FavoriteProductController {
                         cookie -> cookie.getName().equals("SignedUser"))
                 .findFirst().orElse(null);
 
-        List<FavoriteProduct> favoriteProducts = new ArrayList<>();
+        List<Favorite> favoriteProducts = new ArrayList<>();
         List<String> favorites = new ArrayList<>();
         if (signedInUser != null) {
             favoriteProducts = favoriteProductService.getUserFavorites(

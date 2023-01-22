@@ -14,7 +14,7 @@
 <div class="container1">
     <div class="header">
         <a href="/login" class="btn btn-outline-primary">Log in</a>
-        <a href="/admin/product/category">GGGGGGGGGGGGG</a>
+        <a href="/admin/product/category">Category</a>
     </div>
     <div class="container ">
         <div class="card" th:each = "product: ${productList}">
@@ -35,7 +35,9 @@
             <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
 
             <div  class="add-favourite">
-                <i  class='bx bxs-heart box' ></i>
+                <i  class='bx bxs-heart box' >
+                    <a href="/admin/category/list"></a>
+                </i>
             </div>
         </div>
     </div>
@@ -109,7 +111,6 @@
         animation-duration: 1s;
         animation-name: plus;
         animation-iteration-count: 1;
-
     }
     @keyframes plus {
         from {

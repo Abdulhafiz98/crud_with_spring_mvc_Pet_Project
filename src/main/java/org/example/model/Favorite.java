@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class FavoriteProduct {
+public class Favorite {
     private int id;
     private int productId;
     private int userId;
