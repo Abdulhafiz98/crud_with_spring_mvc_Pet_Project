@@ -1,0 +1,36 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="archive" name="spring-mvc.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.24" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.5.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.18" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.18" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.18" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.18" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.18" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.4.2" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="crud_with_spring_mvc" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="crud_with_spring_mvc/web/Web" />
+    </root>
+  </artifact>
+</component>
