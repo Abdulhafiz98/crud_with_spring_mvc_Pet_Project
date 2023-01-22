@@ -19,6 +19,4 @@ public class CategoryService {
     public List<Category> getCategoryById(int id){
         return categoryDao.getCategoryById(id);
     }
-
-
 }

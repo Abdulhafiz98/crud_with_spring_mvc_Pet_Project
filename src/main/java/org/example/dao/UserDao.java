@@ -19,7 +19,6 @@ public class UserDao implements BaseDao<User> {
     public UserDao() {
     }
 
-    @Autowired
     public UserDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
@@ -88,7 +87,7 @@ return update>0;
     }
 
     public boolean update(User user){
-        return jdbcTemplate.update("update users set name = ?, password = ? where id = ?;",
-                user.getName(),user.getPassword(),user.getId()) > 0;
+        return jdbcTemplate.update("update users set name = ?, password = ?,email = ? where id = ?;",
+                user.getName(),user.getPassword(),user.getEmail(),user.getId()) > 0;
     }
 }
