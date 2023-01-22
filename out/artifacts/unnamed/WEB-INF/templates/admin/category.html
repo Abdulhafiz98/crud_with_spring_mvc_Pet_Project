@@ -434,8 +434,12 @@
                         <input type="text" class="form-control" required name="name">
                     </div>
                     <div class="form-group">
-                        <label>Parent Name</label>
-                        <input type="text" class="form-control" required name="parentName">
+                        <label>Parent Id</label>
+                        <select class="btn-group" required name="parentId">
+                            <option>0</option>
+                            <option th:each="category : ${categoryList}"
+                                    th:text="${category.parentId}"/>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -445,7 +449,9 @@
             </form>
         </div>
     </div>
-</div><!-- Delete Modal HTML -->
+</div>
+
+<!-- Delete Modal HTML -->
 <div id="deleteEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
