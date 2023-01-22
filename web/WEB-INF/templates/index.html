@@ -16,6 +16,10 @@
         <a href="/login" class="btn btn-outline-primary">Log in</a>
         <a href="/admin/product/category">Category</a>
     </div>
+    <li th:if="${condition}">
+        <h5 style="color: red">Login failed !!! Phone number or password is incorrect</h5>
+        <h5 style="color: red">Please try again</h5>
+    </li>
     <div class="container ">
         <div class="card" th:each = "product: ${productList}">
             <div class="card-header">
@@ -35,9 +39,7 @@
             <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
 
             <div  class="add-favourite">
-                <i  class='bx bxs-heart box' >
-                    <a href="/admin/category/list"></a>
-                </i>
+                <i  class='bx bxs-heart box' ></i>
             </div>
         </div>
     </div>
@@ -111,6 +113,7 @@
         animation-duration: 1s;
         animation-name: plus;
         animation-iteration-count: 1;
+
     }
     @keyframes plus {
         from {

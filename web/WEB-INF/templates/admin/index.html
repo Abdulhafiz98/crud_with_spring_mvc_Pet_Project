@@ -19,6 +19,11 @@
                     <a href="/admin/product/list">product</a>
                 </li>
                 <li>
+                    <a href="/admin/order/list">order</a>
+                </li>
+                <li>
+
+                <li th:if="${userRole.equals('ADMIN')}">
                     <a href="/admin/category/list">category</a>
                 </li>
                 <li>
@@ -26,6 +31,10 @@
                 </li>
                 <li th:if="${isSuperAdmin}">
                     <a href="/user/list">admin</a>
+                </li>=====
+                <li th:if="${userRole.equals('SUPER_ADMIN')}">
+                    <a href="/admin/adminseller/list">admin and Seller</a>
+                </li>
                 </li>
 
             </ul>
@@ -34,11 +43,8 @@
             <h1>WELCOME TO OUR ADMIN PANEL</h1>
         </div>
     </div>
+</div>
 
-</div>
-</div>
-</div>
-</div>
 
 <script type="text/javascript">
     function getUser(id) {

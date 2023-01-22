@@ -38,5 +38,25 @@ public class AuthService {
     }
 
 
+    public boolean addAdmin(UserRegisterRequest userRegisterRequest) {
+        User user = User.builder()
+                .name(userRegisterRequest.getName())
+                .email(userRegisterRequest.getEmail())
+                .password(userRegisterRequest.getPassword())
+                .phoneNumber(userRegisterRequest.getPhoneNumber())
+                .userRole(UserRole.valueOf(UserRole.ADMIN.name()))
+                .build();
+        return userDao.add(user);
+    }
 
+    public boolean addSeller(UserRegisterRequest userRegisterRequest) {
+        User user = User.builder()
+                .name(userRegisterRequest.getName())
+                .email(userRegisterRequest.getEmail())
+                .password(userRegisterRequest.getPassword())
+                .phoneNumber(userRegisterRequest.getPhoneNumber())
+                .userRole(UserRole.valueOf(UserRole.SELLER.name()))
+                .build();
+        return userDao.add(user);
+    }
 }

@@ -3,6 +3,7 @@ package org.example.dao;
 import org.example.model.Category;
 import org.example.dao.mapper.CategoryMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -33,12 +34,18 @@ public class CategoryDao implements BaseDao<Category> {
     public boolean add(Category category) {
         return jdbcTemplate.update(
                 "insert into category(name, parent_id) values (?,?)",
-                new Object[]{category.getName(),category.getParentId()}
-                ) > 0;
+                category.getName(),category.getParentId()) > 0;
     }
 
     public List<Category> getCategoryById(int id){
         return jdbcTemplate.query("select * from category where parent_id="+"'"+id+"'", new CategoryMapper());
+    }
+
+    public List<Category> getCategoryList(int parentId){
+        return jdbcTemplate.query("select * from get_category_list(?)", new Object[]{parentId}, new CategoryMapper());
+    }
+    public List<Category> getBackList(int parentId){
+        return jdbcTemplate.query("select * from get_back_list(?)",new Object[]{parentId},new CategoryMapper());
     }
 
 }
