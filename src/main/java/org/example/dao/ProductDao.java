@@ -43,7 +43,6 @@ public class ProductDao implements BaseDao<Product> {
         return jdbcTemplate.update(
               //  "insert into product(name, product_url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
              //   product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()) > 0;
-    }
                 "insert into product(created_by, created_date, updated_date, name, product_url,price, quantity, info, category_id) values (?,?,?,?,?,?,?,?,?)",
                 new Object[]{product.getCreatedBy(),product.getCreatedDate(), product.getUpdatedDate(), product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(),product.getInfo(),product.getCategoryId()}
         ) > 0;
