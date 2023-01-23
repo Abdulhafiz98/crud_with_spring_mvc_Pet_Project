@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.example.dto.CategoryRequest;
 import org.example.model.Category;
 import org.example.dao.mapper.CategoryMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,14 +28,19 @@ public class CategoryDao implements BaseDao<Category> {
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return jdbcTemplate.update("delete from category where id = ?",id)>0;
+    }
+
+    public boolean updateCategory(CategoryRequest cRequest, int id){
+        return jdbcTemplate.update("update category set name = ?, parent_id = ? where id = ?",
+                new Object[]{cRequest.getName(), cRequest.getParentId(), id}) > 0;
     }
 
     @Override
     public boolean add(Category category) {
         return jdbcTemplate.update(
                 "insert into category(name, parent_id) values (?,?)",
-                category.getName(),category.getParentId()) > 0;
+                new Object[] {category.getName(),category.getParentId()}) > 0;
     }
 
     public List<Category> getCategoryById(int id){

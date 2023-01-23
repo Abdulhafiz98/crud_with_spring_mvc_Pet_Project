@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import org.example.dao.mapper.ProductMapper;
+import org.example.model.Info;
 import org.example.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -43,7 +44,6 @@ public class ProductDao implements BaseDao<Product> {
         return jdbcTemplate.update(
               //  "insert into product(name, product_url, price, quantity, category_id, info) values (?,?,?,?,?,?)",
              //   product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(), product.getCategoryId(), product.getInfo()) > 0;
-    }
                 "insert into product(created_by, created_date, updated_date, name, product_url,price, quantity, info, category_id) values (?,?,?,?,?,?,?,?,?)",
                 new Object[]{product.getCreatedBy(),product.getCreatedDate(), product.getUpdatedDate(), product.getName(), product.getProductUrl(), product.getPrice(), product.getQuantity(),product.getInfo(),product.getCategoryId()}
         ) > 0;
@@ -73,6 +73,10 @@ public class ProductDao implements BaseDao<Product> {
         SqlParameterSource in = new MapSqlParameterSource().addValue("i_chat_user", chatId).addValue("i_product", product);
         return jdbcCall.executeFunction(boolean.class, in);
 
+    }
+    public List<Info> getInfoList(int i_id){
+        Product product = jdbcTemplate.queryForObject("select * from product where id=?", new Object[]{i_id}, new ProductMapper());
+        return product.getInfo();
     }
     public List<Product> getProductCategoryIdList(int id){
         return jdbcTemplate.query("select * from product p where p.category_id = ?",new Object[]{id}, new ProductMapper());
