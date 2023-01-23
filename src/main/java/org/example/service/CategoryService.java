@@ -1,6 +1,7 @@
 package org.example.service;
 
 import org.example.dao.CategoryDao;
+import org.example.dto.CategoryRequest;
 import org.example.model.Category;
 
 import java.util.List;
@@ -19,4 +20,27 @@ public class CategoryService {
     public List<Category> getCategoryById(int id){
         return categoryDao.getCategoryById(id);
     }
+
+
+    public boolean deleteCategory(int id){
+        return categoryDao.delete(id);
+    }
+
+    public Category getCategory(int id){
+        return categoryDao.getById(id);
+    }
+
+    public boolean updateCategory(int id, CategoryRequest categoryRequest){
+        return categoryDao.updateCategory(categoryRequest, id);
+    }
+
+    public boolean addCategory(final CategoryRequest categoryRequest){
+        Category category1 = Category.builder()
+                .name(categoryRequest.getName())
+                .parentId(categoryRequest.getParentId()).build();
+        return categoryDao.add(category1);
+    }
 }
+
+
+
