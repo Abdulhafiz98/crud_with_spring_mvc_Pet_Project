@@ -31,16 +31,28 @@ public class CategoryDao implements BaseDao<Category> {
         return jdbcTemplate.update("delete from category where id = ?",id)>0;
     }
 
+    @Override
+    public boolean add(Category category) {
+        return false;
+    }
+
     public boolean updateCategory(CategoryRequest cRequest, int id){
         return jdbcTemplate.update("update category set name = ?, parent_id = ? where id = ?",
                 new Object[]{cRequest.getName(), cRequest.getParentId(), id}) > 0;
     }
 
-    @Override
-    public boolean add(Category category) {
-        return jdbcTemplate.update(
-                "insert into category(name, parent_id) values (?,?)",
-                new Object[] {category.getName(),category.getParentId()}) > 0;
+
+    public boolean addCat(CategoryRequest category) {
+       try {
+           System.out.println(category.getName());
+           System.out.println(category.getParentId());
+           return jdbcTemplate.update(
+                   "insert into category(name, parent_id) values (?,?)",
+                   category.getName(),category.getParentId()) > 0;
+       }catch (Exception e){
+           e.printStackTrace();
+           return false;
+       }
     }
 
     public List<Category> getCategoryById(int id){

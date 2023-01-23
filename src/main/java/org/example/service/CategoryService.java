@@ -35,10 +35,7 @@ public class CategoryService {
     }
 
     public boolean addCategory(final CategoryRequest categoryRequest){
-        Category category1 = Category.builder()
-                .name(categoryRequest.getName())
-                .parentId(categoryRequest.getParentId()).build();
-        return categoryDao.add(category1);
+        return categoryDao.addCat(categoryRequest);
     }
 }
 
