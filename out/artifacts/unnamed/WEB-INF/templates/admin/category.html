@@ -374,12 +374,65 @@
                     <td th:text="${category.name}"/>
                     <td th:text="${category.parentId}"/>
                     <td>
-                        <a href="@{/admin/category/update/(id=${category.id})}"  class="btn btn-primary ebtn"
-                            type="submit"  > EDIT </a>
-                        <a th:href="@{/admin/category/delete/{id}(id=${category.id})}" class="btn btn-danger"
-                            type="submit"  > DELETE </a>
-                        <!--            <a >dalete</a>-->
+                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">UPDATE</a>
+                        <a type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteCategory">DELETE</a>
                     </td>
+                    <div th:action="@{/admin/category/update/{id}(id=${category.id})}" id="myModal" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Category Update</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form th:action="@{/admin/category/update/{id}(id=${category.id})}">
+
+                                        <div class="form-group">
+                                            <label    class="control-label" >Category Name:</label>
+                                            <input type="text" name="name" th:value= "${category.name}"
+                                                   class="form-control" placeholder="Enter category name" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Parent Id</label>
+                                            <select class="btn-group" required name="parentId">
+                                                <option>0</option>
+                                                <option th:each="category : ${categoryList}"
+                                                        th:text="${category.id}"/>
+                                            </select>
+                                        </div>
+                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="deleteCategory" class="modal" th:action="@{/admin/category/delete/{id}(id=${category.id})}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form th:action="@{/admin/category/delete/{id}(id=${category.id})}">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Delete Category</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to delete these Records?</p>
+                                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                        <input  type="submit" class="btn btn-danger" value="Delete">
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </tr>
                 </tbody>
             </table>
@@ -406,7 +459,7 @@
                         <select class="btn-group" required name="parentId">
                             <option>0</option>
                             <option th:each="category : ${categoryList}"
-                                    th:text="${category.parentId}"/>
+                                    th:text="${category.id}"/>
                         </select>
                     </div>
                 </div>
@@ -419,37 +472,6 @@
     </div>
 </div>
 
-<!-- Edit Modal HTML -->
-<div id="editEmployeeModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="post"  action="/admin/category/update/">
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit Category</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>Category Name</label>
-                        <input type="text" class="form-control" required name="name">
-                    </div>
-                    <div class="form-group">
-                        <label>Parent Id</label>
-                        <select class="btn-group" required name="parentId">
-                            <option>0</option>
-                            <option th:each="category : ${categoryList}"
-                                    th:text="${category.parentId}"/>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-info" value="Save">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 <!-- Delete Modal HTML -->
 <div id="deleteEmployeeModal" class="modal fade">

@@ -30,6 +30,10 @@ public class CategoryService {
         return categoryDao.getById(id);
     }
 
+    public boolean updateCategory(int id, CategoryRequest categoryRequest){
+        return categoryDao.updateCategory(categoryRequest, id);
+    }
+
     public boolean addCategory(final CategoryRequest categoryRequest){
         Category category1 = Category.builder()
                 .name(categoryRequest.getName())

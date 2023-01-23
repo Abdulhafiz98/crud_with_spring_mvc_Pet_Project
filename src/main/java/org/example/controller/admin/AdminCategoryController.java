@@ -56,12 +56,13 @@ public class AdminCategoryController {
     @GetMapping("/update/{id}")
     public String updateCategory(
             Model model,
-            @PathVariable("id") int id
+            @PathVariable("id") int id,
+            @ModelAttribute CategoryRequest categoryRequest
     ) {
-        Category category = categoryService.getCategory(id);
-        model.addAttribute("category", category);
-        model.addAttribute("categoryList", categoryService.getCategoryList());
-        return "/admin/category/list";
+        categoryService.updateCategory(id, categoryRequest);
+//        model.addAttribute("category", category);
+//        model.addAttribute("categoryList", categoryService.getCategoryList());
+        return "redirect:/admin/category/list";
     }
 
     @GetMapping("/add")
