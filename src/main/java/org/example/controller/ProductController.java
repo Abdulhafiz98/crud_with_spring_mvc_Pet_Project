@@ -1,7 +1,5 @@
 package org.example.controller;
 
-import org.example.dao.ProductDao;
-import org.example.dto.ProductUpdateRequest;
 import org.example.dto.response.ProductResponseDto;
 import org.example.file.FileUtils;
 import org.example.model.Product;
