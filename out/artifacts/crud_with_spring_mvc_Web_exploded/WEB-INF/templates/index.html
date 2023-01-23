@@ -14,55 +14,62 @@
 <div class="container1">
     <div class="header">
         <a href="/login" class="btn btn-outline-primary">Log in</a>
-        <a href="/admin/product/category">GGGGGGGGGGGGG</a>
+        <a href="/admin/product/category">Category</a>
     </div>
+    <li th:if="${condition}">
+        <h5 style="color: red">Login failed !!! Phone number or password is incorrect</h5>
+        <h5 style="color: red">Please try again</h5>
+    </li>
     <div class="container ">
-        <div class="card" th:each = "product: ${productList}">
+        <div class="card" th:each="product: ${productList}">
             <div class="card-header">
-                <img th:src="@{'~/' + ${product.productUrl}}" >
-        </div>
+                <img th:src="@{'~/' + ${product.productUrl}}">
+            </div>
 
-        <div class="card-footer">
-            <h3 class="card_name" th:text =  "${product.name}"></h3>
+            <div class="card-footer">
+                <h3 class="card_name" th:text="${product.name}"></h3>
 
-            <span class="price">Price:</span>
-          <del class="card_price_dic" th:text = "${product.price + ' $'}"></del>
+                <span class="price">Price:</span>
+                <del class="card_price_dic" th:text="${product.price + ' $'}"></del>
 
-            <br>
-            <span class="price">Discount:</span>
-            <span class="card_price" th:text = "${product.discount + ' %'}"></span>
-            <br>
-            <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
+                <br>
+                <span class="price">Discount:</span>
+                <span class="card_price" th:text="${product.discount + ' %'}"></span>
+                <br>
+                <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
 
-            <div  class="add-favourite">
-                <i  class='bx bxs-heart box' ></i>
+                <div class="add-favourite">
+                    <i class='bx bxs-heart box'></i>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </div>
 </body>
 <style>
-    .container{
+    .container {
         display: flex;
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 15px;
     }
-    .card{
+
+    .card {
         position: relative;
         width: auto;
         background: #fff;
         border: none;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
-    .card_name{
+
+    .card_name {
         color: black;
         font-size: 14px;
     }
-    .card-header{
+
+    .card-header {
         border: none;
         width: 230px;
         height: 230px;
@@ -70,26 +77,32 @@
         align-items: center;
         justify-content: center;
     }
-    .card-header img{
+
+    .card-header img {
         width: 100% !important;
     }
-    .card-footer{
+
+    .card-footer {
         border: none;
     }
-    .card_price_dic{
+
+    .card_price_dic {
         color: red;
         font-size: 14px;
     }
-    .card_price{
+
+    .card_price {
         font-size: 15px;
         font-weight: bold;
     }
-    .price{
+
+    .price {
         font-size: 15px;
         font-weight: 400;
     }
-    .add-favourite{
-     position: absolute;
+
+    .add-favourite {
+        position: absolute;
         top: 5px;
         right: 10px;
         z-index: 100;
@@ -101,23 +114,26 @@
         justify-content: center;
         border-radius: 50%;
     }
-    .add-favourite i{
+
+    .add-favourite i {
         font-size: 20px;
     }
-    .add-favourite i.active{
-        color:  red;
+
+    .add-favourite i.active {
+        color: red;
         animation-duration: 1s;
         animation-name: plus;
         animation-iteration-count: 1;
 
     }
+
     @keyframes plus {
         from {
-           scale: 0;
+            scale: 0;
         }
 
         to {
-          scale: 1.5;
+            scale: 1.5;
         }
 
     }

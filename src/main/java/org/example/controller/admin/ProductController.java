@@ -1,6 +1,7 @@
 package org.example.controller.admin;
 
 import org.example.dto.response.ProductResponseDto;
+import org.example.model.Info;
 import org.example.model.Product;
 import org.example.service.ProductService;
 import org.springframework.http.MediaType;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -40,7 +43,7 @@ public class ProductController {
 //    }
 
     @GetMapping("/info")
-    public String getInfoList(Model model,HttpServletRequest httpServletRequest){
+    public String getInfoList(Model model, HttpServletRequest httpServletRequest){
 //        String name = httpServletRequest.getParameter("name");
         List<Info> infoList = productService.getInfo(2);
         model.addAttribute("infoList",infoList);

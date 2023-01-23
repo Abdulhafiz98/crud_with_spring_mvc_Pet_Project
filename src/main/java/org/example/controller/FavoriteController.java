@@ -1,67 +1,54 @@
 package org.example.controller;
 
 import org.example.model.Favorite;
+import org.example.model.OrderStatus;
+import org.example.model.Product;
+import org.example.model.User;
 import org.example.service.FavoriteService;
+import org.example.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Controller
-@RequestMapping("/admin/favorite-product")
+@RequestMapping("/user/favorite")
 public class FavoriteController {
 
     private final FavoriteService favoriteProductService;
+    private final UserService userService;
 
-    public FavoriteController(FavoriteService favoriteProductService) {
+    public FavoriteController(FavoriteService favoriteProductService, UserService userService) {
         this.favoriteProductService = favoriteProductService;
+        this.userService = userService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("")
     public String getList(
             Model model, HttpServletRequest request, HttpServletResponse response
     ) {
-        Cookie[] cookies = request.getCookies();
-        Cookie signedInUser = Arrays.stream(cookies).filter(
-                        cookie -> cookie.getName().equals("SignedUser"))
-                .findFirst().orElse(null);
-
-        List<Favorite> favoriteProducts = new ArrayList<>();
-        List<String> favorites = new ArrayList<>();
-        if (signedInUser != null) {
-            favoriteProducts = favoriteProductService.getUserFavorites(
-                    Integer.parseInt(signedInUser.getValue()));
-            if (favoriteProducts.isEmpty()) {
-                model.addAttribute("message","You do not have any favorite product yet!!");
-            }
-        } else {
-            Cookie unsignedUser = Arrays.stream(cookies).filter(
-                            cookie -> cookie.getName().equals("UnsignedUser"))
-                    .findFirst().orElse(null);
-            if (Objects.isNull(unsignedUser)) {
-                // in this case unsigned user do not have any favorite product
-                // we should print a message in meaning - "There is no any favorite product."
-                model.addAttribute("message", "You do not have any favorite product yet!!");
-            } else {
-                // in this case unsigned user have some favorite products in a temporary cookie.
-                String value = unsignedUser.getValue();
-                String[] favoriteProductList = value.split("/");
-                favorites = new ArrayList<>(List.of(favoriteProductList));
+        Integer id = (Integer) ( request.getSession().getAttribute("userId"));
+        if(id!=0){
+            Optional<User> first = userService.getUserList().stream().filter(user -> user.getId()==id).findFirst();
+            if(first.isPresent()) {
+                List<Product> userFavorites = favoriteProductService.getUserFavorites(id);
+                System.out.println(userFavorites);
+                model.addAttribute("favorites",userFavorites);
+                model.addAttribute("userId",id);
             }
         }
-        if (favoriteProducts.size() > 0 || favorites.size() > 0) {
-            model.addAttribute("favorite-product",
-                    favoriteProducts.isEmpty() ? favorites : favoriteProducts);
-        }
-        return "admin/favorite-product";
+        return "user/favorite";
     }
 
+    @RequestMapping(value = "/{id}/{userId}",method = RequestMethod.GET)
+    public boolean addOrDeleteFavorite(@PathVariable int id, @PathVariable int userId){
+        return favoriteProductService.addOrDelete(id, userId);
+    }
 }

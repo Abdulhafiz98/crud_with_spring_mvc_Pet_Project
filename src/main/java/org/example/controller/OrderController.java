@@ -25,12 +25,6 @@ public class OrderController {
         this.orderService = orderService;
         this.cookieService=cookieService;
     }
-    public OrderController() {
-    }
-   // public OrderController(CookieService cookieService, OrderService orderService) {
-     //   this.cookieService = cookieService;
-       // this.orderService = orderService;
-    //}
     @GetMapping("/list")
     public String getOrderList(Model model,
                                HttpServletRequest httpServletRequest,

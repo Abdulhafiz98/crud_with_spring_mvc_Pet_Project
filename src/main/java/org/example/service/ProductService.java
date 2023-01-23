@@ -21,7 +21,8 @@ public class ProductService {
         this.categoryDao = categoryDao;
     }
     public List<Info> getInfo(int id) {
-     return productDao.getInfoList(id);
+//     return productDao.getInfoList(id);
+     return null;
     }
 
     public boolean addProduct(Product product) {

@@ -18,7 +18,8 @@ public class ProductResponseDto {
     private String productUrl;
     private double price;
     private int quantity;
-    private List<Info> info;
+//    private List<Info> info;
+    private String info;
     private String categoryName;
     private double discount;
 }

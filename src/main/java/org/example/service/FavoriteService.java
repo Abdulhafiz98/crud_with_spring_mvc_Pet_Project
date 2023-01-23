@@ -1,32 +1,25 @@
 package org.example.service;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.dao.FavoriteDao;
 import org.example.model.Favorite;
+import org.example.model.Product;
+
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class FavoriteService {
 
-    private FavoriteDao favoriteDao;
+    private final FavoriteDao favoriteDao;
 
-    public List<Favorite> getUserFavorites(int userId) {
-        List<Favorite> favoriteProductList = favoriteDao.getList();
-        return favoriteProductList.stream()
-                .filter(favoriteProduct ->
-                        favoriteProduct.getUserId() == userId)
-                .toList();
+    public FavoriteService(FavoriteDao favoriteDao) {
+        this.favoriteDao = favoriteDao;
     }
 
-    public boolean addFavorite(Favorite favorite){
-        return favoriteDao.add(favorite);
+    public List<Product> getUserFavorites(int userId) {
+        return favoriteDao.getUserfavorites(userId);
     }
 
-    public boolean deleteFavorite(int id){
-        return favoriteDao.delete(id);
+    public boolean addOrDelete(int productId, int userId){
+        return favoriteDao.addOrDeleteFavorite(productId,userId);
     }
 }

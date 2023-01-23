@@ -97,10 +97,14 @@ public class AppConfig implements WebMvcConfigurer {
     }
     @Bean
     CookieService cookieService(){return  new CookieService();}
-
+    @Bean
+    FavoriteDao favoriteDao(){
+        return new FavoriteDao(jdbcTemplate());
+    }
     @Bean
     FavoriteService favoriteProductService()
     {
-        return new FavoriteService(new FavoriteDao(jdbcTemplate()));
+        return new FavoriteService(favoriteDao());
     }
+
 }

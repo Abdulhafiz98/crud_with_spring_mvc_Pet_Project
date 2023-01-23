@@ -21,7 +21,8 @@ public class ProductMapper implements RowMapper<Product> {
                 rs.getString("product_url"),
                 rs.getDouble("price"),
                 rs.getInt("quantity"),
-                List.of(new Gson().fromJson(rs.getString("info"), Info[].class)),
+//                List.of(new Gson().fromJson(rs.getString("info"), Info[].class)).toString(),
+                rs.getString("info"),
                 rs.getInt("category_id"),
                 rs.getDouble("discount")
         );

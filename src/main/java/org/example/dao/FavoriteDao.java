@@ -1,12 +1,16 @@
 package org.example.dao;
 
-import org.example.dao.mapper.FavoriteMapper;
+import org.example.dao.mapper.ProductMapper;
 import org.example.model.Favorite;
+import org.example.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 
 import java.util.List;
 
-public class FavoriteDao implements BaseDao<Favorite>{
+public class FavoriteDao {
     private final JdbcTemplate jdbcTemplate;
 
     public FavoriteDao(JdbcTemplate jdbcTemplate) {
@@ -14,25 +18,19 @@ public class FavoriteDao implements BaseDao<Favorite>{
     }
 
 
-    @Override
-    public Favorite getById(int id) {
-        return null;
+    public List<Product> getUserfavorites(int userId) {
+        return jdbcTemplate.query("select * from product p inner join favorite f on f.product_id = p.id where f.user_id = ?",new Object[]{userId},new ProductMapper());
     }
 
-    @Override
-    public List<Favorite> getList() {
-        return jdbcTemplate.query("select * from favorite",new FavoriteMapper());
+    public boolean addOrDeleteFavorite(int productId,int userId){
+        try {
+            SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate.getDataSource()).withFunctionName("add_or_delete_favorite");
+            SqlParameterSource in = new MapSqlParameterSource().addValue("i_product_id",productId).addValue("i_user_id",userId);
+            return jdbcCall.executeFunction(boolean.class,in);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    @Override
-    public boolean delete(int id) {
-        return jdbcTemplate.update("delete from favorite where id = ?",id) > 0;
-    }
-
-    public boolean add(Favorite favoriteProduct) {
-        return jdbcTemplate.update(
-                "insert into favorite(product_id,user_id) values (?,?)",
-                new Object[]{favoriteProduct.getProductId(),favoriteProduct.getUserId()}
-        ) > 0;
-    }
 }
