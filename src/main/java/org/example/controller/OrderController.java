@@ -1,7 +1,6 @@
 package org.example.controller;
 
 import org.example.dao.UserDao;
-import org.example.model.Category;
 import org.example.service.CookieService;
 import org.example.service.OrderService;
 import org.springframework.http.MediaType;
@@ -25,12 +24,6 @@ public class OrderController {
         this.orderService = orderService;
         this.cookieService=cookieService;
     }
-    public OrderController() {
-    }
-   // public OrderController(CookieService cookieService, OrderService orderService) {
-     //   this.cookieService = cookieService;
-       // this.orderService = orderService;
-    //}
     @GetMapping("/list")
     public String getOrderList(Model model,
                                HttpServletRequest httpServletRequest,

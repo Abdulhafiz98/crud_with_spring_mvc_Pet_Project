@@ -19,7 +19,6 @@ public class UserDao implements BaseDao<User> {
     public UserDao() {
     }
 
-    @Autowired
     public UserDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
@@ -48,17 +47,15 @@ public class UserDao implements BaseDao<User> {
     @Override
     public boolean add(User user) {
         int update=0;
-try {
-
-    update = jdbcTemplate.update(
-            "insert into users(name, email, password, phone_number,role) values (?,?,?,?,?)",
-            user.getName(), user.getEmail(), user.getPassword(), user.getPhoneNumber(), user.getUserRole().name());
-}
-catch (Exception ex){
-    ex.printStackTrace();
-}
-return update>0;
-
+    try {
+        update = jdbcTemplate.update(
+        "insert into users(name, phone_number, password, email, userRole) values (?,?,?,?,?)",
+              user.getName(), user.getPhoneNumber(), user.getPassword(), user.getEmail(), user.getUserRole().name());
+    }
+    catch (Exception ex){
+        ex.printStackTrace();
+    }
+    return update>0;
     }
     public User login(final UserLoginRequest userLoginRequest) {
         try {
@@ -88,7 +85,7 @@ return update>0;
     }
 
     public boolean update(User user){
-        return jdbcTemplate.update("update users set name = ?, password = ? where id = ?;",
-                user.getName(),user.getPassword(),user.getId()) > 0;
+        return jdbcTemplate.update("update users set name = ?, password = ?,email = ? where id = ?;",
+                user.getName(),user.getPassword(),user.getEmail(),user.getId()) > 0;
     }
 }
