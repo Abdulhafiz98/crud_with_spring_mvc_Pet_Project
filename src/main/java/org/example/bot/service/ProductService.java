@@ -1,5 +1,6 @@
 package org.example.bot.service;
 
+import lombok.Data;
 import org.example.dao.ProductDao;
 import org.example.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -9,7 +10,6 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 
 import java.io.File;
 import java.util.List;
-
 public class ProductService extends BotService{
     public List<Product> getProductList(int parentId, int pageNumber) {
         ProductDao productDao = new ProductDao(new JdbcTemplate(dataSource()));

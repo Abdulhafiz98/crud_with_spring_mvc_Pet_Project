@@ -2,6 +2,7 @@ package org.example.model;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
