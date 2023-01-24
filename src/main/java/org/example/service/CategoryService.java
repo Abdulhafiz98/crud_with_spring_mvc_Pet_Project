@@ -3,6 +3,7 @@ package org.example.service;
 import org.example.dao.CategoryDao;
 import org.example.dto.CategoryRequest;
 import org.example.model.Category;
+import org.example.model.User;
 
 import java.util.List;
 
@@ -30,15 +31,15 @@ public class CategoryService {
         return categoryDao.getById(id);
     }
 
-    public boolean updateCategory(int id, CategoryRequest categoryRequest){
-        return categoryDao.updateCategory(categoryRequest, id);
+    public boolean updateCategory(int id, Category category){
+        return categoryDao.updateCategory(category, id);
     }
 
-    public boolean addCategory(final CategoryRequest categoryRequest){
+    public boolean addCategory(final CategoryRequest categoryRequest, final User user){
         Category category1 = Category.builder()
                 .name(categoryRequest.getName())
                 .parentId(categoryRequest.getParentId()).build();
-        return categoryDao.add(category1);
+        return categoryDao.addCat(category1, user);
     }
 }
 

@@ -3,6 +3,8 @@ package org.example.model;
 import lombok.*;
 import org.springframework.jdbc.core.RowMapper;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Builder
