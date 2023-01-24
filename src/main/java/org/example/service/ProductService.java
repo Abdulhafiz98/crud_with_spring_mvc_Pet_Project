@@ -6,7 +6,9 @@ import org.example.dto.response.ProductResponseDto;
 import org.example.model.Category;
 import org.example.model.Info;
 import org.example.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,6 +40,7 @@ public class ProductService {
                     .orElse(null);
 
             return new ProductResponseDto(
+                    product.getId(),
                     product.getName(),
                     product.getProductUrl(),
                     product.getPrice(),
@@ -48,8 +51,31 @@ public class ProductService {
             );
         }).toList();
     }
-    public List<Product> getProductCategoryIdList(String name){
-       return productDao.getProductCategoryIdList(name);
+    public Product getProduct(int id) {
+        return productDao.getById(id);
+    }
+    public List<Product> getProductCategoryIdList(int id){
+       return productDao.getProductCategoryIdList(id);
+    }
+
+    public  List<ProductResponseDto> getProductListByName(String productName){
+
+        List<Product> productListByName = productDao.getProductListByName(productName);
+
+        List<ProductResponseDto> productList = new ArrayList<>();
+
+        productListByName.stream().parallel().forEach(
+                (product)-> productList.add(new ProductResponseDto(
+                        product.getId(),
+                        product.getName(),
+                        product.getProductUrl(),
+                        product.getPrice(),
+                        product.getQuantity(),
+                        product.getInfo(),
+                        "",
+                        product.getDiscount())) //TODO
+        );
+        return productList;
     }
 
 }

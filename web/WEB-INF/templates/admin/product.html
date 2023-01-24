@@ -15,26 +15,26 @@
     <div class="row">
         <div class="col-md-2">
             <ul class="">
-                <li th:if="${userRole.equals('ADMIN')}">
+                <li>
                     <a href="/admin/product/list">product</a>
                 </li>
-                <li th:if="${userRole.equals('ADMIN')}">
+                <li>
                     <a href="/admin/category/list">category</a>
                 </li>
+                <li>
+                    <a href="/admin/order/list">order</a>
+                </li>
+                <li>
                 <li th:if="${userRole.equals('ADMIN')}">
                     <a href="/admin/user/list">user</a>
                 </li>
-                <li th:if="${userRole.equals('SELLER')}">
-                    <a href="/admin/order/list">order</a>
-                </li>
-                <li th:if="${userRole.equals('SUPER_ADMIN')}">
+                <li th:if="${isSuperAdmin}">
                     <a href="/user/list">admin</a>
                 </li>
-                </li>
+
             </ul>
         </div>
         <div class="col-md-10">
-
             <table class="table ">
                 <thead>
                 <tr>
@@ -45,33 +45,33 @@
                     <th>categoryName</th>
                 </tr>
                 </thead>
+                <div>
+                    <form th:action="@{/admin/product/search}" method="get" enctype="multipart/form-data">
+                        <input type="text" name="productName" placeholder="search..." multiple="multiple" >
+                        <button type="submit">SEARCH</button>
+                    </form>
+                </div>
 
                 <tbody>
                 <tr th:each="product: ${productList}">
-                    <td th:text="${product.name}"/>
-                    <td th:text="${product.quantity}"/>
-                    <td th:text="${product.price}"/>
-                    <td th:text="${product.info}"/>
-                    <td th:text="${product.categoryName}"/>
-                    <a th:href="@{/admin/product/info/{id}(id=${product.id})}" class="btn btn-primary">info</a>
-
-                    <!--                    <td>-->
-<!--                        <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>-->
-<!--                        <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>-->
-<!--                    </td>-->
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.quantity}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.info}"></td>
+                    <td th:text="${product.categoryName}"></td>>
+                    <td>
+                        <a th:href="@{/product/delete/{id}(id=${product.id})}">delete</a>
+                        <a th:href="@{/product/update/{id}(id=${product.id})}" class="btn btn-primary">update</a>
+                    </td>
                 </tr>
 
                 </tbody>
             </table>
-
-            <h1>WELCOME TO OUR ADMIN PANEL</h1>
         </div>
     </div>
 
 </div>
-</div>
-</div>
-</div>
+
 
 <script type="text/javascript">
     function getUser(id) {

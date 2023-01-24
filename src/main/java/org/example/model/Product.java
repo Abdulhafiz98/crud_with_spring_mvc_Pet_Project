@@ -2,12 +2,10 @@ package org.example.model;
 
 import lombok.*;
 
-import java.util.Date;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

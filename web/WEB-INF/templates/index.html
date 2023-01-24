@@ -14,8 +14,14 @@
 <div class="container1">
     <div class="header">
         <a href="/login" class="btn btn-outline-primary">Log in</a>
-        <a href="/admin/product/category">GGGGGGGGGGGGG</a>
     </div>
+    <div class="header">
+        <a href="/basket/basket" class="btn btn-outline-primary">My basket</a>
+    </div>
+    <li th:if="${condition}">
+        <h5 style="color: red">Login failed !!! Phone number or password is incorrect</h5>
+        <h5 style="color: red">Please try again</h5>
+    </li>
     <div class="container ">
         <div class="card" th:each = "product: ${productList}">
             <div class="card-header">
@@ -32,8 +38,8 @@
             <span class="price">Discount:</span>
             <span class="card_price" th:text = "${product.discount + ' %'}"></span>
             <br>
-            <a href="" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>
-
+<!--            <a th:href="${'add/'}{id}(id=${product.getId()})" type="btn" class="btn btn-outline-dark mt-3 w-100">Buy</a>-->
+           <button th:attr="onclick=|addBasket('${product.id}')|" type="btn" class="btn btn-outline-dark mt-3 w-100">Add basket</button>
             <div  class="add-favourite">
                 <i  class='bx bxs-heart box' ></i>
             </div>
@@ -124,6 +130,10 @@
 
 </style>
 <script>
+    function addBasket(productId){
+        fetch('basket/add/'+productId)
+        console.log(productId)
+    }
     const boxes = Array.from(document.getElementsByClassName('box'));
 
     boxes.forEach(box => {
