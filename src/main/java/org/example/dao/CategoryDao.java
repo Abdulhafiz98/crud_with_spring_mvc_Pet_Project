@@ -1,10 +1,9 @@
 package org.example.dao;
 
-import org.example.dto.CategoryRequest;
 import org.example.model.Category;
 import org.example.dao.mapper.CategoryMapper;
+import org.example.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -28,19 +27,24 @@ public class CategoryDao implements BaseDao<Category> {
 
     @Override
     public boolean delete(int id) {
-        return jdbcTemplate.update("delete from category where id = ?",id)>0;
+        return jdbcTemplate.update("delete category where id = ?", new Object[]{id}) > 0 ;
     }
 
-    public boolean updateCategory(CategoryRequest cRequest, int id){
-        return jdbcTemplate.update("update category set name = ?, parent_id = ? where id = ?",
-                new Object[]{cRequest.getName(), cRequest.getParentId(), id}) > 0;
+    public boolean updateCategory(Category cRequest, int id){
+        return jdbcTemplate.update("update category set name = ?, parent_id = ? update_date = ? where id = ?",
+                new Object[]{cRequest.getName(), cRequest.getParentId(), cRequest.getUpdatedDate() ,id}) > 0;
     }
+
 
     @Override
     public boolean add(Category category) {
+        return false;
+    }
+
+    public boolean addCat(Category category, User user) {
         return jdbcTemplate.update(
-                "insert into category(name, parent_id) values (?,?)",
-                new Object[] {category.getName(),category.getParentId()}) > 0;
+                "insert into category(name, parent_id, created_by) values (?,?,?)",
+                new Object[] {category.getName(),category.getParentId(), user.getFirstName()}) > 0;
     }
 
     public List<Category> getCategoryById(int id){
@@ -50,6 +54,7 @@ public class CategoryDao implements BaseDao<Category> {
     public List<Category> getCategoryList(int parentId){
         return jdbcTemplate.query("select * from get_category_list(?)", new Object[]{parentId}, new CategoryMapper());
     }
+
     public List<Category> getBackList(int parentId){
         return jdbcTemplate.query("select * from get_back_list(?)",new Object[]{parentId},new CategoryMapper());
     }

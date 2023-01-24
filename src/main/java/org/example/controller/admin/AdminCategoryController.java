@@ -1,8 +1,10 @@
 package org.example.controller.admin;
 
+import org.example.dao.CategoryDao;
 import org.example.dao.UserDao;
 import org.example.dto.CategoryRequest;
 import org.example.model.Category;
+import org.example.model.User;
 import org.example.service.CategoryService;
 
 import org.springframework.stereotype.Controller;
@@ -42,13 +44,10 @@ public class AdminCategoryController {
     }
 
 
-//    @RequestMapping(value = "delete", method = RequestMethod.POST)
     @GetMapping("/delete/{id}")
     public String deleteCategory(
-            HttpServletRequest request,
             @PathVariable("id") int id
     ) {
-//        int id = Integer.parseInt(request.getParameter("id"));
         categoryService.deleteCategory(id);
         return "redirect:/admin/category/list";
     }
@@ -57,11 +56,9 @@ public class AdminCategoryController {
     public String updateCategory(
             Model model,
             @PathVariable("id") int id,
-            @ModelAttribute CategoryRequest categoryRequest
+            @ModelAttribute Category category
     ) {
-        categoryService.updateCategory(id, categoryRequest);
-//        model.addAttribute("category", category);
-//        model.addAttribute("categoryList", categoryService.getCategoryList());
+        categoryService.updateCategory(id, category);
         return "redirect:/admin/category/list";
     }
 
@@ -69,7 +66,8 @@ public class AdminCategoryController {
     public String addCategory(
             @ModelAttribute CategoryRequest categoryRequest
     ) {
-        categoryService.addCategory(categoryRequest);
+        User user = new User();
+        categoryService.addCategory(categoryRequest, user);
         return "redirect:/admin/category/list";
     }
 
