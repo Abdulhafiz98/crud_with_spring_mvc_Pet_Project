@@ -42,10 +42,10 @@ public class ProductController {
 //        return "product/product";
 //    }
 
-    @GetMapping("/info")
-    public String getInfoList(Model model, HttpServletRequest httpServletRequest){
+    @GetMapping("/info/{id}")
+    public String getInfoList(Model model, HttpServletRequest httpServletRequest , @PathVariable("id") int id){
 //        String name = httpServletRequest.getParameter("name");
-        List<Info> infoList = productService.getInfo(2);
+        List<Info> infoList = productService.getInfo(id);
         model.addAttribute("infoList",infoList);
         return "product/info";
     }
