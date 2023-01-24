@@ -40,6 +40,7 @@ public class ProductService {
                     .orElse(null);
 
             return new ProductResponseDto(
+                    product.getId(),
                     product.getName(),
                     product.getProductUrl(),
                     product.getPrice(),
@@ -65,6 +66,7 @@ public class ProductService {
 
         productListByName.stream().parallel().forEach(
                 (product)-> productList.add(new ProductResponseDto(
+                        product.getId(),
                         product.getName(),
                         product.getProductUrl(),
                         product.getPrice(),

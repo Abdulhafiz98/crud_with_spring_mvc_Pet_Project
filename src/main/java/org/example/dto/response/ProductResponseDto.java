@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @ToString
 public class ProductResponseDto {
-
+    private int id;
     private String name;
     private String productUrl;
     private double price;

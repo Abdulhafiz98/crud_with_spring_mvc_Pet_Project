@@ -9,9 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,29 +31,22 @@ public class BasketController {
 
     }
 
-    //    test
-//    @GetMapping(value = "/basket")
-//    public String basket(Model model) {
-//        model.addAttribute("basket", productService.getProductList());
-//        return "basket/basket";
-//    }
-
     @GetMapping(value = "/order")
     public String payment(Model model , HttpServletRequest request ) {
+        User user = userService.getUserById(request);
+        if (user==null){
+            return "redirect:../login";
+        }
         double total= 0;
         for (Integer integer : cookieService.getProductIdFromCookie(request)) {
             Product product = productService.getProduct(integer);
           total+=product.getPrice();
         }
-        User user = userService.getUserById(request);
-        model.addAttribute("user",user);
-        model.addAttribute("total",total);
-      return "basket/payment";
+            model.addAttribute("user",user);
+            model.addAttribute("total",total);
+            return "basket/payment";
     }
 
-
-
-//    do not delete
     @GetMapping(value = "/basket")
     public String productsFromBasket(Model model, HttpServletRequest httpServletRequest) {
         List<Product> productList = new ArrayList<>();
@@ -62,5 +56,10 @@ public class BasketController {
         }
         model.addAttribute("basket", productList);
         return "basket/basket";
+    }
+
+    @GetMapping(value = "add/{id}")
+    public void addBasket(HttpServletRequest request , HttpServletResponse response, @PathVariable int id){
+        cookieService.addOrDeleteCookie(request, response, id);
     }
 }
