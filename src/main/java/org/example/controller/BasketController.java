@@ -57,6 +57,7 @@ public class BasketController {
         model.addAttribute("basket", productList);
         return "basket/basket";
     }
+
     @GetMapping(value = "add/{id}")
     public void addBasket(HttpServletRequest request , HttpServletResponse response, @PathVariable int id){
         cookieService.addOrDeleteCookie(request, response, id);
