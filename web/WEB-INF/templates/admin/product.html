@@ -50,7 +50,10 @@
                     <td th:text="${product.categoryName}"/>
                     <td>
                         <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" >delete</a>
-                        <a th:action="@{/admin/product/update/{id}(id=${product.id})}" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">update</a>
+                        <button th:attr="onclick=|updateId('${product.id}','${product.name}','${product.quantity}',
+                        '${product.price}','${product.info}','${product.categoryName}')|"
+                                type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#myModal">update</button>
                     </td>
                     <div id="myModal" class="modal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -62,48 +65,49 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form th:action="@{/admin/product/update/{id}(id=${product.id})}" method="post">
-
+                                    <form method="post" id="form-update" action="/admin/product/update/">
                                         <div class="form-group">
                                             <label    class="control-label" >Name</label>
-                                            <input type="text" name="name" th:value= "${product.name}"   class="form-control" >
+                                            <input type="text" name="name" id="name"  class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label">quantity</label>
-                                            <input type="text" name="quantity" th:value="${product.quantity}" class="form-control">
+                                            <input type="text" name="quantity" id="quantity" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label" >price</label>
-                                            <input type="text" name="price" th:value="${product.price}" class="form-control">
+                                            <input type="text" name="price" id="price" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label  class="control-label" >info </label>
-                                            <input type="text" name="info" th:value="${product.info}" class="form-control">
-
+                                            <input type="text" name="info" id="info" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label">category Name</label>
-                                            <input type="text" name="CategoryName" th:value="${product.CategoryName}" class="form-control">
+                                            <input type="text" name="categoryName" id="categoryName" class="form-control">
                                         </div>
                                         <button type="submit" class="btn btn-success">Submit</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </tr>
-
                 </tbody>
-
             </table>
         </div>
-
     </div>
-
 </div>
 
 <script type="text/javascript">
+    function updateId(productId,productName,productQuantity,productPrice,productInfo,productCategoryName){
+        document.getElementById("form-update").action +=productId
+        document.getElementById("name").value=productName;
+        document.getElementById("quantity").value=productQuantity;
+        document.getElementById("price").value=productPrice;
+        document.getElementById("info").value=productInfo;
+        document.getElementById("categoryName").value=productCategoryName;
+    }
     function getUser(id) {
         console.log("RAVSHAN")
         // fetch("/user/update/" + id).then((res) => {
