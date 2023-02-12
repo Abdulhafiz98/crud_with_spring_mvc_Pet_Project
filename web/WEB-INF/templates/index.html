@@ -29,8 +29,8 @@
         </div>
 
         <div class="card-footer">
-            <h3 class="card_name" th:text =  "${product.name}"></h3>
-
+<!--            <h3 class="card_name" th:text =  "${product.name}"></h3>-->
+            <a th:href="@{/admin/product/info/{id}(id=${product.id})}" action="get" ><td th:text="${product.name}"/>
             <span class="price">Price:</span>
           <del class="card_price_dic" th:text = "${product.price + ' $'}"></del>
 
